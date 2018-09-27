@@ -10,12 +10,37 @@
 <body>
 
 <div id="component-demo">
+
     <button-counter></button-counter>
+
+    <!--组件的复用-->
+    <button-counter></button-counter>
+    <button-counter></button-counter>
+    <!--每个组件各自独立维护它的data-->
+    <!--因为你每用一次组件，就会有一个它的新实例被创建。-->
+
+    <!--通过prop向子组件传递数据-->
+    <blog-post diy="传递数据给自定义属性"></blog-post>
+
+    <!--动态渲染-->
+    <blog-post
+            v-for="post in posts"
+            :diy="post.title"
+            :id="post.id">
+    </blog-post>
+
+    <!--单独的 post prop-->
+    <blog-post2
+    v-for="post in posts"
+    :post="post"
+    :key="post.id">
+    </blog-post2>
+
+
 </div>
 
 
-
-<script src="index.js"></script>
+<script src="index2.js"></script>
 
 </body>
 </html>
