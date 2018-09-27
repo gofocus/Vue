@@ -162,3 +162,64 @@ var app11 = new Vue({
 
     }
 });
+
+
+var app12 = new Vue({
+    el: '#app-12',
+    data: {
+        counter: 0,
+        name: 'Vue.js'
+    },
+    methods: {
+        greet: function (event) {
+            alert('Hello ' + this.name + '!');
+            if (event) {
+                alert(event.target.tagName);
+            }
+        },
+        say: function (message) {
+            alert(message);
+        },
+        warn: function (message, event) {
+            // 现在我们可以访问原生事件对象
+            if (event) event.preventDefault();
+            alert(message);
+        }
+    }
+});
+
+
+var app13 = new Vue({
+    el: '#app-13',
+    data: {
+        message: '',
+        checked: true,
+        checkedName: [],
+        picked: '',
+        selected: '',
+        selectedArray: [],
+        options: [
+            {text: 'One', value: 'A'},
+            {text: 'Two', value: 'B'},
+            {text: 'Three', value: 'C'}
+        ],
+        pick: '',
+        a: '123',
+        age: '',
+        msg: ''
+    }
+});
+
+// 定义一个名为 button-counter 的新组件
+Vue.component('button-counter', {
+    data: function () {
+        return {
+            count: 0
+        }
+    },
+    template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
+});
+
+new Vue({
+    el: '#component-demo'
+});
