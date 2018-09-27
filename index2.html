@@ -29,11 +29,11 @@
             :id="post.id">
     </blog-post>
 
-    <!--单独的 post prop-->
+    <!--重构：单独的 post prop-->
     <blog-post2
-    v-for="post in posts"
-    :post="post"
-    :key="post.id">
+            v-for="post in posts"
+            :post="post"
+            :key="post.id">
     </blog-post2>
 
 

@@ -18,10 +18,9 @@ Vue.component('blog-post', {
 
 Vue.component('blog-post2', {
     props: ['post'],
-    template: `
-        <div class="blog-post">
-            <h4>{{ post.title }}</h4>
-            <div v-html="post.content"></div>
+    template: `<div class="blog-post">
+        <h4>{{ post.title }}</h4>
+        <div v-html="post.content"></div>
         </div>
     `
 });
