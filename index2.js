@@ -18,12 +18,52 @@ Vue.component('blog-post', {
 
 Vue.component('blog-post2', {
     props: ['post'],
-    template: `<div class="blog-post">
-        <h4>{{ post.title }}</h4>
-        <div v-html="post.content"></div>
+    template: `
+        <div class="blog-post">
+            <h4>{{ post.title }}</h4>
+            <div v-html="post.content"></div>
         </div>
     `
 });
+
+Vue.component('blog-post3', {
+    props: ['post'],
+    template: `
+        <div class="blog-post">
+            <h4>{{ post.title }} <button @click="$emit('enlarge')">Enlarge</button></h4>
+            <div v-html="post.content"></div>
+        </div>
+    `
+});
+Vue.component('blog-post4', {
+    props: ['post'],
+    template: `
+        <div class="blog-post">
+            <h4>{{ post.title }}<button @click="$emit('enlarge', 0.5)">Enlarge</button></h4>
+            <div v-html="post.content"></div>
+        </div>
+    `
+});
+
+Vue.component('alert-box', {
+    template: `
+    <div class="demo-alert-box">
+      <strong>Error!</strong>
+      <slot></slot>
+    </div>
+  `
+})
+
+
+Vue.component('tab-home', {
+    template: '<div>Home component</div>'
+})
+Vue.component('tab-posts', {
+    template: '<div>Posts component</div>'
+})
+Vue.component('tab-archive', {
+    template: '<div>Archive component</div>'
+})
 
 // 必须要有一个Vue实例，才能使用组件
 new Vue({
@@ -33,6 +73,14 @@ new Vue({
             {id: 1, title: 'My journey with Vue'},
             {id: 2, title: 'Blogging with Vue'},
             {id: 3, title: 'Why Vue is so fun'}
-        ]
+        ],
+        postFontSize: 1,
+        currentTab: 'Home',
+        tabs: ['Home', 'Archive', 'Posts'],
+    },
+    computed: {
+        currentTabComponent: function () {
+            return 'tab-' + this.currentTab.toLowerCase();
+        }
     }
 });

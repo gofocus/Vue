@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -36,6 +36,41 @@
             :key="post.id">
     </blog-post2>
 
+    <div :style="{ fontSize: postFontSize + 'em' }">
+        <blog-post3
+                v-for="post in posts"
+                :post="post"
+                :key="post.id"
+                @enlarge="postFontSize += 0.1">
+        </blog-post3>
+    </div>
+
+    <div :style="{ fontSize: postFontSize + 'em' }">
+        <blog-post4
+                v-for="post in posts"
+                :post="post"
+                :key="post.id"
+                @enlarge="postFontSize += $event">
+        </blog-post4>
+    </div>
+
+    <alert-box>
+        Something bad happened.
+    </alert-box>
+
+
+    <div>
+        <button
+                v-for="tab in tabs"
+                @click="currentTab = tab"
+                :key="tab"
+                :class="['tab-button', {active: currentTab === tab}]"
+        >{{ tab }}
+        </button>
+
+        <component :is="currentTabComponent" class="tab"></component>
+
+    </div>
 
 </div>
 
