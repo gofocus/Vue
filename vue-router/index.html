@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+
+</head>
+<body>
+<div id="app">
+    <!-- 使用 router-link 组件来导航. -->
+    <!-- 通过传入 `to` 属性指定链接. -->
+    <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
+    <router-link to="/foo">Go to Foo</router-link>
+    <router-link to="/bar">Go to Bar</router-link>
+
+    <h4>动态路由匹配
+        <router-link to="/user/John">/user/John</router-link>
+        <router-link to="/user/Alice">/user/Alice</router-link>
+    </h4>
+    <h4>多段路径参数
+        <router-link to="/user/Marcus/post/123">/user/Marcus/post/123</router-link>
+    </h4>
+    <h4>嵌套路由
+        <router-link to="/user/Yuki">/user/Yuki</router-link>
+        <router-link to="/user/Yuki/profile">/user/Yuki/profile</router-link>
+        <router-link to="/user/Yuki/posts">/user/Yuki/posts</router-link>
+    </h4>
+    <h4>编程式导航
+        <el-button type="primary" @click="$router.push('/user/Python')">/user/Python</el-button>
+    </h4>
+    <h4>命名路由
+        <!--注意这里的 :to-->
+        <router-link :to="{name:'user', params:{id:'Flask'}}">/user/Flask</router-link>
+        <el-button type="primary" @click="$router.push({name:'user',params:{id:123}})">/user/123</el-button>
+        <!--问题：无法正确渲染空的子路由，刷新页面后正常渲染-->
+    </h4>
+    <h4>命名视图
+        <el-button type="success" @click="$router.push({name:'index'})">首页1</el-button>
+        <!--问题：注释上面这行后，下面这种写法将路由到/user/index-->
+        <!--问题2：放开首页1按钮，下面这种写法将路由到/index-->
+        <el-button type="success" @click="$router.push('index')">首页2</el-button>
+    </h4>
+    <h4>路由组件传参
+        <!--<router-link to="/user2/flask">/user/Flask</router-link>-->
+        <router-link :to="{name:'user2',params:{id:'Flask'}}">/user/Flask</router-link>
+    </h4>
+
+
+    <!-- 路由出口 -->
+    <!-- 路由匹配到的组件将渲染在这里 -->
+    <!--最高父级标签必须是#app-->
+    <router-view></router-view>
+    <!--多个同级视图-->
+    <!--通过属性name区分，没有name默认为default-->
+    <router-view class="view-one" name="a"></router-view>
+    <router-view class="view-two" name="b"></router-view>
+    <router-view class="view-three" name="sidebar"></router-view>
+</div>
+</body>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="index.js"></script>
+
+</html>
