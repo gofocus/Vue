@@ -397,7 +397,7 @@ function verifyLoggingCallbacks() {
 				global.console.warn(
 					"QUnit." + loggingCallback + " was replaced with a new value.\n" +
 					"Please, check out the documentation on how to apply logging callbacks.\n" +
-					"Reference: https://api.qunitjs.com/category/callbacks/"
+					"Reference: https://axios.qunitjs.com/category/callbacks/"
 				);
 			}
 		}

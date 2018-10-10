@@ -245,7 +245,7 @@ $(function () {
       .bootstrapModal('show')
   })
 
-  QUnit.test('should restore focus to toggling element when modal is hidden after having been opened via data-api', function (assert) {
+  QUnit.test('should restore focus to toggling element when modal is hidden after having been opened via data-axios', function (assert) {
     assert.expect(1)
     var done = assert.async()
 

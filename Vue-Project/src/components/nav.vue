@@ -3,7 +3,9 @@
     <!--<img src="./assets/logo.png">-->
     <el-menu :default-active="activeIndex2" class="el-menu-demo" mode="horizontal" @select="handleSelect"
              background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
-      <el-menu-item index="1">首页</el-menu-item>
+      <el-menu-item index="1" @click="$router.push({name:'home'})">首页</el-menu-item>
+      <!--下面这种写法无法映射到"/"，会映射到"/home"-->
+      <!--<el-menu-item index="1" @click="$router.push('home')">首页</el-menu-item>-->
       <el-submenu index="2">
         <template slot="title">我的账户</template>
         <el-menu-item index="2-1">选项1</el-menu-item>
@@ -18,7 +20,7 @@
       </el-submenu>
       <el-menu-item index="3" disabled>消息中心</el-menu-item>
       <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
-      <el-menu-item class="header-login" index="5"><span @click="$router.push('/login')" >Sign in</span></el-menu-item>
+      <el-menu-item class="header-login" index="5"><span @click="$router.push('login')" >Sign in</span></el-menu-item>
     </el-menu>
     <router-view></router-view>
   </div>
@@ -26,7 +28,7 @@
 
 <script>
   export default {
-    name: 'Login',
+    // name: 'Login',
     data () {
       return {
         activeIndex: '1',
