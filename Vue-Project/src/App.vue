@@ -3,6 +3,7 @@
     <!--<img src="./assets/logo.png">-->
     <!--普通组件-->
     <nav-bar></nav-bar>
+    <h1>123</h1>
 
     <!--路由组件-->
     <!--vue-router特有标签，将组件映射到这里-->

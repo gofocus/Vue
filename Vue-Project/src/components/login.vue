@@ -1,4 +1,5 @@
 <template>
+
   <el-form :model="form" class="login-container" :rules="rules" ref="form">
     <h3 class="title">Sign In</h3>
     <el-form-item prop="email">
@@ -13,10 +14,12 @@
       </el-button>
     </el-form-item>
   </el-form>
+
 </template>
 
 <script>
   import {requestLogin} from "../axios/api";
+
   export default {
     // name: "login",
     data: function () {
@@ -45,10 +48,11 @@
         this.$refs.form.validate((valid) => {
           if (valid) {
             this.logining = true;
-            var loginParams = {username: this.form.email, password: this.form.password};
+            var loginParams = {email: this.form.email, password: this.form.password};
             loginParams = JSON.stringify(loginParams);
 
             requestLogin(loginParams).then(res => {
+              console.log(res.data, res);
               this.logining = false;
               if (res.status !== 200) {
                 this.$message({
@@ -71,7 +75,7 @@
             return false;
           }
         });
-      }
+      },
     },
 
   }

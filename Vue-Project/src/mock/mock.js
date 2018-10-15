@@ -5,9 +5,9 @@ import {LoginUsers} from "./data/user";
 export default {
 
   init(){
-    var mock = new MockAdapter(axios);
+    const mock = new MockAdapter(axios);
 
-    mock.onPost('/login').reply( config => {
+    mock.onPost('/user/loginMock').reply( config => {
       let {email, password} = JSON.parse(config.data);
       return new Promise((resolve, reject) => {
         let user = null;
