@@ -7,7 +7,7 @@ export default {
   init(){
     const mock = new MockAdapter(axios);
 
-    mock.onPost('/user/loginMock').reply( config => {
+    mock.onPost('/user/loginTest').reply( config => {
       let {email, password} = JSON.parse(config.data);
       return new Promise((resolve, reject) => {
         let user = null;
