@@ -20,27 +20,13 @@
       </el-submenu>
       <el-menu-item index="3" disabled>消息中心</el-menu-item>
       <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
-      <el-menu-item class="header-login" index="5"><span @click="dialogFormVisible = true">Sign in</span></el-menu-item>
+      <el-menu-item class="header-login" index="5"><span @click="dialogFormVisible=true">Sign in</span></el-menu-item>
       <!--<el-menu-item class="header-login" index="5"><span @click="$router.push('login')" >Sign in</span></el-menu-item>-->
     </el-menu>
     <router-view></router-view>
+    <loginDialog :dialogFormVisible.sync="dialogFormVisible"></loginDialog>
+    <!--<loginDialog :dialogFormVisible="dialogFormVisible" @visibilityChange="changeVisibility"></loginDialog>-->
 
-    <el-dialog :visible.sync="dialogFormVisible"  class="login-container2" width="30%">
-      <el-form :model="form" class="login-container" :rules="rules" ref="form">
-        <h3 class="title">Sign In</h3>
-        <el-form-item prop="email">
-          <el-input type="email" v-model="form.email" auto-complete="off" placeholder="Email"></el-input>
-        </el-form-item>
-        <el-form-item prop="password">
-          <el-input type="password" v-model="form.password" placeholder="Password"></el-input>
-        </el-form-item>
-        <el-checkbox v-model="checked" checked class="remember">Stay signed in</el-checkbox>
-        <el-form-item style="width: 100%;">
-          <el-button type="primary" style="width: 100%;" @click.native.prevent="handleSubmit" :loading="logining">Submit
-          </el-button>
-        </el-form-item>
-      </el-form>
-    </el-dialog>
   </div>
 
 
@@ -48,6 +34,7 @@
 
 <script>
   import {requestLogin} from "../axios/api";
+  import loginDialog from "./loginDialog.vue";
 
   export default {
     data: function () {
@@ -75,6 +62,9 @@
       }
     },
     methods: {
+      /*changeVisibility(visibility){
+        this.dialogFormVisible = visibility;
+      },*/
       handleSelect(key, keyPath) {
         console.log(key, keyPath)
       },
@@ -112,6 +102,9 @@
           }
         });
       }
+    },
+    components: {
+      'loginDialog': loginDialog
     }
   }
 </script>
@@ -121,27 +114,5 @@
     position: absolute;
     right: 5px;
   }
-  .login-container2 {
-    /*box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02);*/
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    background-clip: padding-box;
-    margin:  auto;
-    /*width: 350px;*/
-    padding: 35px 35px 15px 35px;
-    /*background: #fff;*/
-    border: 1px solid #eaeaea;
-    /*box-shadow: 0 0 25px #cac6c6;*/
-  }
 
-  .login-container .title {
-    margin: 0px auto 30px auto;
-    text-align: center;
-    color: #505458;
-  }
-
-  .login-container .remember {
-    margin: 0 0 25px 0;
-  }
 </style>
