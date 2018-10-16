@@ -20,12 +20,11 @@
       </el-submenu>
       <el-menu-item index="3" disabled>消息中心</el-menu-item>
       <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
-      <el-menu-item class="header-login" index="5"><span @click="dialogFormVisible=true">Sign in</span></el-menu-item>
+      <el-menu-item class="header-login" index="5"><span @click="dialogFormVisibleParent=true">Sign in</span></el-menu-item>
       <!--<el-menu-item class="header-login" index="5"><span @click="$router.push('login')" >Sign in</span></el-menu-item>-->
     </el-menu>
+    <loginDialog :dialogFormVisibleParent.sync="dialogFormVisibleParent" ></loginDialog>
     <router-view></router-view>
-    <loginDialog :dialogFormVisible.sync="dialogFormVisible"></loginDialog>
-    <!--<loginDialog :dialogFormVisible="dialogFormVisible" @visibilityChange="changeVisibility"></loginDialog>-->
 
   </div>
 
@@ -41,7 +40,7 @@
       return {
         activeIndex: '1',
         activeIndex2: '1',
-        dialogFormVisible: false,
+        dialogFormVisibleParent: false,
         form: {
           email: 'admin',
           password: '111111',
@@ -62,9 +61,6 @@
       }
     },
     methods: {
-      /*changeVisibility(visibility){
-        this.dialogFormVisible = visibility;
-      },*/
       handleSelect(key, keyPath) {
         console.log(key, keyPath)
       },

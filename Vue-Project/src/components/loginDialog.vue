@@ -1,6 +1,6 @@
 <template>
-  <el-dialog :visible.sync="dialogFormVisible" class="login-container" width="30%">
-    <el-form :model="form"  :rules="rules" ref="form">
+  <el-dialog :visible.sync="dialogFormVisibleChild" class="login-container" width="30%">
+    <el-form :model="form" :rules="rules" ref="form">
       <h3 class="title">Sign In</h3>
       <el-form-item prop="email">
         <el-input type="email" v-model="form.email" auto-complete="off" placeholder="Email"></el-input>
@@ -21,11 +21,10 @@
   import {requestLogin} from "../axios/api";
 
   export default {
-    props: ['dialogFormVisible'],
+    props: ['dialogFormVisibleParent'],
     data: function () {
       return {
-        // dialogFormVisible:false,
-        // currentVisibility: this.dialogFormVisible,
+        dialogFormVisibleChild: this.dialogFormVisibleParent,
         form: {
           email: 'admin',
           password: '111111',
@@ -45,23 +44,19 @@
         }
       }
     },
-    computed:{
-      currentVisibility: {
-        get:function () {
-          return this.dialogFormVisible
-        },
-        set:function (newValue) {
-          this.$emit('update:currentVisibility', newValue)
-        }
-      }
-    },
-
-    /*watch: {
-      currentVisibility: function (currentVisibility) {
-        // this.$emit('visibilityChange', this.dialogFormVisible)
-        this.$emit('update:dialogFormVisible', currentVisibility)
+ /*   computed:{
+      dialogFormVisibleChild: function () {
+        return this.dialogFormVisibleParent;
       }
     },*/
+    watch: {
+      dialogFormVisibleParent: function (v) {
+        if (v) this.dialogFormVisibleChild = v
+      },
+      dialogFormVisibleChild: function (v) {
+        if (!v) this.$emit('update:dialogFormVisibleParent', v);
+      }
+    },
     methods: {
       handleSubmit() {
         this.$refs.form.validate((valid) => {
