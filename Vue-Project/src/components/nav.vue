@@ -23,16 +23,14 @@
       <el-menu-item class="header-login" index="5"><span @click="dialogFormVisibleParent=true">Sign in</span></el-menu-item>
       <!--<el-menu-item class="header-login" index="5"><span @click="$router.push('login')" >Sign in</span></el-menu-item>-->
     </el-menu>
-    <loginDialog :dialogFormVisibleParent.sync="dialogFormVisibleParent" ></loginDialog>
+    <loginDialog :dialogFormVisibleParent.sync="dialogFormVisibleParent"></loginDialog>
     <router-view></router-view>
-
   </div>
 
 
 </template>
 
 <script>
-  import {requestLogin} from "../axios/api";
   import loginDialog from "./loginDialog.vue";
 
   export default {
@@ -64,40 +62,6 @@
       handleSelect(key, keyPath) {
         console.log(key, keyPath)
       },
-      handleSubmit() {
-        this.$refs.form.validate((valid) => {
-          if (valid) {
-            this.logining = true;
-            var loginParams = {email: this.form.email, password: this.form.password};
-            loginParams = JSON.stringify(loginParams);
-
-            requestLogin(loginParams).then(res => {
-              console.log(res.data, res);
-              this.logining = false;
-              if (res.status !== 200) {
-                this.$message({
-                  message: '邮箱/密码错误',
-                  type: 'error'
-                });
-              } else {
-                sessionStorage.setItem('user', JSON.stringify(res.data.user));
-                this.dialogFormVisible = false;
-                this.$message({
-                  message: '登陆成功',
-                  type: 'success'
-                });
-                this.$router.push({path: '/'});
-              }
-            }).catch((error) => {
-              this.logining = false;
-              console.log(error)
-            });
-          } else {
-            console.log('error submit!!');
-            return false;
-          }
-        });
-      }
     },
     components: {
       'loginDialog': loginDialog

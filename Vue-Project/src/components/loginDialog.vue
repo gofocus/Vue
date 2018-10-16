@@ -15,6 +15,7 @@
       </el-form-item>
     </el-form>
   </el-dialog>
+
 </template>
 
 <script>
@@ -44,11 +45,6 @@
         }
       }
     },
- /*   computed:{
-      dialogFormVisibleChild: function () {
-        return this.dialogFormVisibleParent;
-      }
-    },*/
     watch: {
       dialogFormVisibleParent: function (v) {
         if (v) this.dialogFormVisibleChild = v
@@ -79,7 +75,7 @@
                   message: '登陆成功',
                   type: 'success'
                 });
-                this.$router.push({path: '/'});
+                this.dialogFormVisibleChild = false;
               }
             }).catch((error) => {
               console.log(error)
