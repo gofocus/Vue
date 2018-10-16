@@ -20,10 +20,13 @@
       </el-submenu>
       <el-menu-item index="3" disabled>消息中心</el-menu-item>
       <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
-      <el-menu-item class="header-login" index="5"><span @click="dialogFormVisibleParent=true">Sign in</span></el-menu-item>
+      <el-menu-item class="header-login" index="5" @click="dialogFormVisibleParent=true"><span>Sign in</span></el-menu-item>
       <!--<el-menu-item class="header-login" index="5"><span @click="$router.push('login')" >Sign in</span></el-menu-item>-->
     </el-menu>
+
+    <!--.sync实现双向数据绑定-->
     <loginDialog :dialogFormVisibleParent.sync="dialogFormVisibleParent"></loginDialog>
+    <carousel></carousel>
     <router-view></router-view>
   </div>
 
@@ -32,6 +35,7 @@
 
 <script>
   import loginDialog from "./loginDialog.vue";
+  import carousel from "./carousel.vue";
 
   export default {
     data: function () {
@@ -64,7 +68,8 @@
       },
     },
     components: {
-      'loginDialog': loginDialog
+      loginDialog: loginDialog,
+      carousel: carousel
     }
   }
 </script>

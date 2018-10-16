@@ -1,5 +1,5 @@
 <template>
-  <el-dialog :visible.sync="dialogFormVisibleChild" class="login-container" width="30%">
+  <el-dialog :visible.sync="dialogFormVisibleChild" class="login-container" width="30%" :modal="true">
     <el-form :model="form" :rules="rules" ref="form">
       <h3 class="title">Sign In</h3>
       <el-form-item prop="email">
@@ -100,10 +100,10 @@
     background-clip: padding-box;
     margin: 10px auto;
     /*width: 350px;*/
-    padding: 35px 35px 15px 35px;
+    /*padding: 35px 35px 35px 35px;*/
     /*background: #fff;*/
-    border: 1px solid #eaeaea;
-    box-shadow: 0 0 25px #cac6c6;
+    /*border: 1px solid #eaeaea;*/
+    /*box-shadow: 0 0 25px #cac6c6;*/
   }
 
   .login-container .title {
