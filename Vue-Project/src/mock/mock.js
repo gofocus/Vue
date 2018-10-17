@@ -9,7 +9,7 @@ export default {
     const mock = new MockAdapter(axios);    //JavaScript对大小写敏感，所以下面可以用Mock指代 mock js
 
     mock.onGet('/carouselList').reply(200, Mock.mock({
-        "Array|7-4": ['https://picsum.photos/1632/420/?image=@integer(1,999)']
+        "Array|7-4": ['https://picsum.photos/1232/420/?image=@integer(1,999)']
         // "Array|3-5":[mocks.Random.image('728x90')]
       })
     );

@@ -3,12 +3,10 @@
     <!--<img src="./assets/logo.png">-->
     <!--普通组件-->
     <nav-bar></nav-bar>
-    <h5>123</h5>
 
-    <!--路由组件-->
-    <!--vue-router特有标签，将组件映射到这里-->
-    <router-view/>
-    <router-view class="view two" name="login"></router-view>
+    <!--路由组件--><!--vue-router特有标签，将组件映射到这里-->
+    <router-view></router-view>
+    <router-view name="carousel"></router-view>
 
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="nav">
     <!--<img src="./assets/logo.png">-->
     <el-menu :default-active="activeIndex2" class="el-menu-demo" mode="horizontal" @select="handleSelect"
              background-color="#545c64" text-color="#fff" active-text-color="#ffd04b" >
@@ -18,18 +18,16 @@
           <el-menu-item index="2-4-3">选项3</el-menu-item>
         </el-submenu>
       </el-submenu>
-      <el-menu-item index="3" disabled>消息中心</el-menu-item>
-      <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
+      <!--<el-menu-item index="3" disabled>消息中心</el-menu-item>-->
+      <!--<el-menu-item index="4"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>-->
       <el-menu-item class="header-login" index="5" @click="dialogFormVisibleParent=true"><span>Sign in</span></el-menu-item>
       <!--<el-menu-item class="header-login" index="5"><span @click="$router.push('login')" >Sign in</span></el-menu-item>-->
     </el-menu>
 
     <!--.sync实现双向数据绑定-->
     <loginDialog :dialogFormVisibleParent.sync="dialogFormVisibleParent"></loginDialog>
-    <carousel></carousel>
-    <router-view></router-view>
-  </div>
 
+  </div>
 
 </template>
 
@@ -69,7 +67,6 @@
     },
     components: {
       loginDialog: loginDialog,
-      carousel: carousel
     }
   }
 </script>
@@ -78,10 +75,15 @@
   .header-login {
     position: absolute;
     right: 5px;
+    /*height: 31px;*/
+    /*line-height: 30px;*/
+
   }
-  .el-menu-demo {
+  .el-menu-demo .el-menu--horizontal .el-menu-item {
     height: 31px;
+    line-height: 30px;
   }
+
   .el-menu--horizontal>.el-submenu .el-submenu__title {
     height: 31px;
     line-height: 31px;
@@ -90,13 +92,9 @@
     height: 31px;
     line-height: 31px;
   }
-  .el-menu-item.is-disabled{
+/*  .el-menu-item.is-disabled{
     height: 31px;
     line-height: 31px;
-  }
-  .el-menu--horizontal
-  {
-    height: 31px;
-    line-height: 31px;
-  }
+  }*/
+
 </style>

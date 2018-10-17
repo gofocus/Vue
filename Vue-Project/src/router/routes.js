@@ -1,13 +1,15 @@
-import login from '../components/login'
+import carousel from '../components/carousel'
+
 
 
 let routes = [
   {
-    path: '/login',
-    name: 'login',
+    path: '/',
+    name: 'home',
     components: {
-      login,
+      // carousel: carousel,
     }
+    // component: carousel
   },
 
 ];
