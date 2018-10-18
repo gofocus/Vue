@@ -2,7 +2,7 @@
 
   <!--<div class="block">-->
     <!--<span class="demonstration">默认 Hover 指示器触发</span> -->
-    <el-carousel height="110px">
+    <el-carousel height="40px" class="elCarousel">
       <!--<el-carousel height="150px" trigger="click">-->
       <el-carousel-item v-for="item in carouselList" :key="item">
         <img class="img-box" :src="item" alt=""
@@ -38,9 +38,9 @@
 </script>
 
 <style scoped>
-  .block {
+  .elCarousel {
     max-width: 1100px;
-    margin: 30px auto;
+    margin: 0 auto;
   }
 
   /*  .el-carousel__item h3 {

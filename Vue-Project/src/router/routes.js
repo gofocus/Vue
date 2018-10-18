@@ -7,10 +7,8 @@ let routes = [
     path: '/',
     name: 'home',
     components: {
-      // carousel: carousel,
       home: Home
     }
-    // component: carousel
   },
 
 ];
