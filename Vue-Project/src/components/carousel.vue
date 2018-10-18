@@ -2,10 +2,11 @@
 
   <!--<div class="block">-->
     <!--<span class="demonstration">默认 Hover 指示器触发</span> -->
-    <el-carousel height="220px">
+    <el-carousel height="110px">
       <!--<el-carousel height="150px" trigger="click">-->
       <el-carousel-item v-for="item in carouselList" :key="item">
-        <img class="img-box" :src="item" alt="" onerror="this.onerror=null; this.src='http://woxin2.jx139.com/cztx/images/ic_default_head.png'">
+        <img class="img-box" :src="item" alt=""
+             onerror="this.onerror=null; this.src='http://woxin2.jx139.com/cztx/images/ic_default_head.png'">
       </el-carousel-item>
     </el-carousel>
   <!--</div>-->
@@ -37,31 +38,36 @@
 </script>
 
 <style scoped>
-/*  .el-carousel__item h3 {
- !*   color: #475669;
-    font-size: 14px;
-    opacity: 0.75;
-    line-height: 150px;
-    margin: 0;*!
-  }
-
-!*  .el-carousel__item:nth-child(2n) {
-    background-color: #99a9bf;
-  }*!
-
-  .el-carousel__item:nth-child(2n+1) {
-    background-color: #d3dce6;
-  }
-
   .block {
-    !*padding: 60px 60px 0 190px ;*!
-    !*width: 1500px;*!
-    !*position: fixed;*!
+    max-width: 1100px;
+    margin: 30px auto;
   }
 
+  /*  .el-carousel__item h3 {
+   !*   color: #475669;
+      font-size: 14px;
+      opacity: 0.75;
+      line-height: 150px;
+      margin: 0;*!
+    }
 
-  .img-box  {
-    !*width: 100%;*!
-  }*/
+  !*  .el-carousel__item:nth-child(2n) {
+      background-color: #99a9bf;
+    }*!
+
+    .el-carousel__item:nth-child(2n+1) {
+      background-color: #d3dce6;
+    }
+
+    .block {
+      !*padding: 60px 60px 0 190px ;*!
+      !*width: 1500px;*!
+      !*position: fixed;*!
+    }
+
+
+    .img-box  {
+      !*width: 100%;*!
+    }*/
 
 </style>

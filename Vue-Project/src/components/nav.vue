@@ -2,7 +2,7 @@
   <div id="nav">
     <!--<img src="./assets/logo.png">-->
     <el-menu :default-active="activeIndex2" class="el-menu-demo" mode="horizontal" @select="handleSelect"
-             background-color="#545c64" text-color="#fff" active-text-color="#ffd04b" >
+             background-color="#545c64" text-color="#fff" active-text-color="#ffd04b" id="testmenu">
       <el-menu-item index="1" @click="$router.push({name:'home'})">首页</el-menu-item>
       <!--下面这种写法无法映射到"/"，会映射到"/home"-->
       <!--<el-menu-item index="1" @click="$router.push('home')">首页</el-menu-item>-->
@@ -67,7 +67,12 @@
     },
     components: {
       loginDialog: loginDialog,
-    }
+    },
+/*    created: function () {
+      alert("123")
+      alert( $('#header-nav').height())
+      $('#testmenu').css('height', $('#header-nav').height())
+    }*/
   }
 </script>
 
@@ -79,19 +84,25 @@
     /*line-height: 30px;*/
 
   }
-  .el-menu-demo .el-menu--horizontal .el-menu-item {
+/*  #nav {
+    box-sizing: border-box;
+  }*/
+/*  el-menu {
+    box-sizing: border-box;
+  }*/
+/*  .el-menu-demo .el-menu--horizontal .el-menu-item {
     height: 31px;
     line-height: 30px;
-  }
+  }*/
 
-  .el-menu--horizontal>.el-submenu .el-submenu__title {
+/*  .el-menu--horizontal>.el-submenu .el-submenu__title {
     height: 31px;
     line-height: 31px;
   }
   .el-menu--horizontal>.el-menu-item.is-active {
     height: 31px;
     line-height: 31px;
-  }
+  }*/
 /*  .el-menu-item.is-disabled{
     height: 31px;
     line-height: 31px;

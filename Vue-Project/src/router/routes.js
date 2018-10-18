@@ -1,4 +1,4 @@
-import carousel from '../components/carousel'
+import Home from '../components/Home'
 
 
 
@@ -8,6 +8,7 @@ let routes = [
     name: 'home',
     components: {
       // carousel: carousel,
+      home: Home
     }
     // component: carousel
   },
