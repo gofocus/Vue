@@ -1,24 +1,22 @@
 <template>
   <div id="app">
-    <!--<img src="./assets/logo.png">-->
-
     <section class="el-container" style="">
       <header class="el-header" style="width: 100%;">
         <nav-bar></nav-bar>
       </header>
     </section>
+
     <br>
+
     <!--路由组件--><!--vue-router特有标签，将组件映射到这里-->
     <router-view></router-view>
     <router-view name="home"></router-view>
-
 
   </div>
 </template>
 
 <script>
   import nav from './components/nav'
-  import carousel from './components/carousel'
 
   export default {
     name: 'app',
@@ -30,18 +28,13 @@
 </script>
 
 <style>
-  .el-header, .el-footer {
+  .el-header {
     background-color: #B3C0D1;
     color: #333;
     text-align: center;
     line-height: 60px;
   }
-  .el-main {
-    background-color: #E9EEF3;
-    color: #333;
-    text-align: center;
-    line-height: 160px;
-  }
+
   /*#app {
     height: 1100px;
     !*width: 1990px;*!

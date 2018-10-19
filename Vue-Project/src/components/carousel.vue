@@ -2,7 +2,7 @@
 
   <!--<div class="block">-->
     <!--<span class="demonstration">默认 Hover 指示器触发</span> -->
-    <el-carousel height="40px" class="elCarousel">
+    <el-carousel class="elCarousel" height="100px">
       <!--<el-carousel height="150px" trigger="click">-->
       <el-carousel-item v-for="item in carouselList" :key="item">
         <img class="img-box" :src="item" alt=""
@@ -38,10 +38,21 @@
 </script>
 
 <style scoped>
-  .elCarousel {
+
+ /*el-carousel > .el-carousel__container {
     max-width: 1100px;
     margin: 0 auto;
-  }
+    !*position: inherit;*!
+    height: 30px;
+  }*/
+
+
+ el-carousel::after {
+   content: "";
+   display: block;
+   clear: both;
+ }
+
 
   /*  .el-carousel__item h3 {
    !*   color: #475669;
