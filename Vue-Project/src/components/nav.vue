@@ -2,7 +2,7 @@
   <!--<div id="nav">-->
     <!--<img src="./assets/logo.png">-->
     <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect"
-             background-color="#545c64" text-color="#fff" active-text-color="#ffd04b" id="testmenu" >
+             background-color="#00a0e9" text-color="#fff" active-text-color="#ffd04b" id="testmenu" >
       <el-menu-item index="1" @click="$router.push({name:'home'})">首页</el-menu-item>
       <!--下面这种写法无法映射到"/"，会映射到"/home"-->
       <!--<el-menu-item index="1" @click="$router.push('home')">首页</el-menu-item>-->
@@ -78,6 +78,7 @@
 </script>
 
 <style>
+
   .header-login {
     position: absolute;
     right: 5px;

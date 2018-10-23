@@ -1,4 +1,5 @@
 import Home from '../components/Home'
+import layout from '../components/layout'
 
 
 
@@ -10,6 +11,10 @@ let routes = [
       home: Home
     }
   },
+  {
+    path: '/layout',
+    component: layout
+  }
 
 ];
 

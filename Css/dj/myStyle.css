@@ -1,0 +1,85 @@
+
+.footer {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.content {
+    margin: 0 auto;
+    width: 950px;
+    /*background: skyblue;*/
+    height: 100px;
+}
+
+.logo, .phone {
+    float: left;
+    /*width: 300px;*/
+    height: 100px;
+}
+
+.reg {
+    float: right;
+    height: 100px;
+    /*text-align: center;*/
+
+}
+
+.content::after {
+    content: ' ';
+    clear: both;
+}
+
+.logo p {
+    height: 60px;
+    line-height: 60px;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-top: 20px;
+    border-right: 1px solid #ddd;
+    background: url("./img/logo.png") no-repeat 10px 0;
+    font-size: 16px;
+    color: #fff;
+}
+
+.phone p {
+    background: url("./img/tel.png") no-repeat ;
+    padding-left: 25px;
+    margin-left: 20px;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.phone .time {
+    background: url("./img/work-time.png") no-repeat;
+}
+
+span {
+    color: #000;
+}
+
+.register {
+    display: block;
+    width: 135px;
+    height: 40px;
+    background: orange;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.login a{
+    text-decoration: none;
+    color: #ddd;
+    padding-left: 15px;
+    /*padding: 0 15px;*/
+}

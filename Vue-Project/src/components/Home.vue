@@ -1,6 +1,41 @@
 <template>
   <div class="layout-test">
 
+    <div class="source">
+      <el-row :gutter="20">
+        <el-col :span="16">
+          <div class="grid-content bg-purple"></div>
+        </el-col>
+        <el-col :span="8">
+          <div class="grid-content bg-purple"></div>
+        </el-col>
+      </el-row>
+      <el-row :gutter="20">
+        <el-col :span="8">
+          <div class="grid-content bg-purple"></div>
+        </el-col>
+        <el-col :span="8">
+          <div class="grid-content bg-purple"></div>
+        </el-col>
+        <el-col :span="4">
+          <div class="grid-content bg-purple"></div>
+        </el-col>
+        <el-col :span="4">
+          <div class="grid-content bg-purple"></div>
+        </el-col>
+      </el-row>
+      <el-row :gutter="20">
+        <el-col :span="4">
+          <div class="grid-content bg-purple"></div>
+        </el-col>
+        <el-col :span="16">
+          <div class="grid-content bg-purple"></div>
+        </el-col>
+        <el-col :span="4">
+          <div class="grid-content bg-purple"></div>
+        </el-col>
+      </el-row>
+    </div>
     <div class="constr">
       <div class="nav">
         <a href="" class="nav-a width">导航1</a>
@@ -15,7 +50,7 @@
       </header>
       <br>
       <section class="el-container">
-        <aside class="el-aside" >
+        <aside class="el-aside">
           <div class="constr">
             <div class="nav">
               <a href="" class="nav-a width">导航1</a>
@@ -32,6 +67,7 @@
         </section>
       </section>
     </section>
+
   </div>
 </template>
 
@@ -47,7 +83,40 @@
 </script>
 
 <style scoped>
+  .el-row {
+    margin-bottom: 20px;
 
+  &
+  :last-child {
+    margin-bottom: 0;
+  }
+
+  }
+  .el-col {
+    border-radius: 4px;
+  }
+
+  .bg-purple-dark {
+    background: #99a9bf;
+  }
+
+  .bg-purple {
+    background: #d3dce6;
+  }
+
+  .bg-purple-light {
+    background: #e5e9f2;
+  }
+
+  .grid-content {
+    border-radius: 4px;
+    min-height: 36px;
+  }
+
+  .row-bg {
+    padding: 10px 0;
+    background-color: #f9fafc;
+  }
 
   .el-header, .el-footer {
     background-color: #B3C0D1;
