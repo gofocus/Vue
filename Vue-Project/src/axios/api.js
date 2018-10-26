@@ -4,6 +4,12 @@ import axios from 'axios';
 export const base = '';
 // let base = '/api';
 
+
+export const requestItemList = params => axios.get(`${base}/itemList`).then(res => res) ;
+
+
+
+
 export const requestLogin = params => axios.post(`${base}/user/loginTest`, params, {headers: {'Content-Type': 'application/json'}}).then(res => res) ;
 // export const requestLogin = params => axios.post(`${base}/user/loginTest`, params, {headers: {'Content-Type': 'application/json'}}).then(res => res) ;
 

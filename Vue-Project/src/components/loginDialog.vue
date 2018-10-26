@@ -107,7 +107,7 @@
   }
 
   .login-container .title {
-    margin: 0px auto 30px auto;
+    margin: 0 auto 30px auto;
     text-align: center;
     color: #505458;
   }

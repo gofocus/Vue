@@ -1,97 +1,231 @@
 <template>
-  <div class="layout-test">
+  <el-container>
+    <el-header height="100px" class="header-carousel">
+      <carousel></carousel>
+      <!--carousel-->
+    </el-header>
 
-    <div class="source">
-      <el-row :gutter="20">
-        <el-col :span="16">
-          <div class="grid-content bg-purple"></div>
-        </el-col>
-        <el-col :span="8">
-          <div class="grid-content bg-purple"></div>
-        </el-col>
-      </el-row>
-      <el-row :gutter="20">
-        <el-col :span="8">
-          <div class="grid-content bg-purple"></div>
-        </el-col>
-        <el-col :span="8">
-          <div class="grid-content bg-purple"></div>
-        </el-col>
-        <el-col :span="4">
-          <div class="grid-content bg-purple"></div>
-        </el-col>
-        <el-col :span="4">
-          <div class="grid-content bg-purple"></div>
-        </el-col>
-      </el-row>
-      <el-row :gutter="20">
-        <el-col :span="4">
-          <div class="grid-content bg-purple"></div>
-        </el-col>
-        <el-col :span="16">
-          <div class="grid-content bg-purple"></div>
-        </el-col>
-        <el-col :span="4">
-          <div class="grid-content bg-purple"></div>
-        </el-col>
-      </el-row>
-    </div>
-    <div class="constr">
-      <div class="nav">
-        <a href="" class="nav-a width">导航1</a>
-        <a href="" class="nav-a width">导航2</a>
-        <a href="" class="nav-a width">导航3</a>
-      </div>
-    </div>
+    <el-container>
+      <el-aside width="50px" class="left-aside"></el-aside>
+      <el-container class="main-content">
+        <el-main>
+          <el-container class="main1">
+            <el-main>
+              <div class="source">
+                <!--第一行-->
+                <el-row :gutter="20">
+                  <el-col :span="4">
+                    <div class="grid-content bg-purple"></div>
+                  </el-col>
+                  <el-col :span="5" v-for="(item,index) in itemList" v-if="index < 4">
+                    <div class="grid-content bg-purple">
+                      <a href="//qianggou.yhd.com/1-47793680" target="_blank"
+                         :title="item.title" title="英国进口 麦维他（Mcvitie's）原味全麦粗粮酥性消化饼干 400g"
+                         :href="item.url" class="superSingle_a">
+                        <div class="single_top">
+                          <img class="single_top_img"
+                               src="https://img11.360buyimg.com/mobilecms/s450x450_jfs/t5944/343/5666623751/199570/e50a1a36/596c93c7Nf4804b2e.jpg"
+                               :src="item.url"
+                               alt="">
+                        </div>
+                        <div class="single_bottom">
+                          <div class="s_title">{{ item.s_title}}</div>
+                          <div class="s_con">
+                            <div class="s_num">
+                              <span class="s_num_unit">￥</span><span class="s_num_act">{{ item.s_num}}</span>
+                              <span class="s_num_underline"><span class="s_num_unit">￥</span><span class="s_num_line">{{ item.s_num_underline}}</span></span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </el-col>
+                </el-row>
+                <!--第二行-->
+                <el-row :gutter="20">
+                  <el-col :span="(index===4)? 4 : 5"  v-for="(item,index) in itemList" v-if="index >= 4 && index < 9">
+                    <div class="grid-content bg-purple">
+                      <a href="//qianggou.yhd.com/1-47793680" target="_blank"
+                         :title="item.title" title="英国进口 麦维他（Mcvitie's）原味全麦粗粮酥性消化饼干 400g"
+                         :href="item.url" class="superSingle_a">
+                        <div class="single_top" :class="(index===4)?'unique':''">
+                          <img class="single_top_img"
+                               src="https://img11.360buyimg.com/mobilecms/s450x450_jfs/t5944/343/5666623751/199570/e50a1a36/596c93c7Nf4804b2e.jpg"
+                               :src="item.url"
+                               alt="">
+                        </div>
+                        <div class="single_bottom">
+                          <div class="s_title">{{ item.s_title}}</div>
+                          <div class="s_con">
+                            <div class="s_num">
+                              <span class="s_num_unit">￥</span><span class="s_num_act">{{ item.s_num}}</span>
+                              <span class="s_num_underline"><span class="s_num_unit">￥</span><span class="s_num_line">{{ item.s_num_underline}}</span></span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </el-col>
+                </el-row>
 
-    <section class="el-container is-vertical">
-      <header id="header-nav" class="el-header" style="">
-        <carousel></carousel>
-      </header>
-      <br>
-      <section class="el-container">
-        <aside class="el-aside">
-          <div class="constr">
-            <div class="nav">
-              <a href="" class="nav-a width">导航1</a>
-              <a href="" class="nav-a width">导航2</a>
-              <a href="" class="nav-a width">导航3</a>
-            </div>
-          </div>
-        </aside>
-        <section class="el-container is-vertical">
-          <main class="el-main">
+              </div>
+            </el-main>
 
-          </main>
-          <footer class="el-footer" style="height: 60px;">Footer</footer>
-        </section>
-      </section>
-    </section>
+          </el-container>
 
-  </div>
+          <el-container class="main2">
+            <el-main>
+              <div class="source">
+                <el-row :gutter="20">
+                  <el-col :span="12">
+                    <div class="grid-content bg-purple"></div>
+                  </el-col>
+                  <el-col :span="12">
+                    <div class="grid-content bg-purple"></div>
+                  </el-col>
+                </el-row>
+              </div>
+            </el-main>
+          </el-container>
+
+          <el-container class="main3">
+            <el-main>main3</el-main>
+          </el-container>
+
+        </el-main>
+      </el-container>
+      <el-aside width="50px" class="right-aside"></el-aside>
+
+    </el-container>
+
+
+    <el-footer></el-footer>
+
+  </el-container>
+
 </template>
 
 <script>
   import carousel from '../components/carousel'
+  import {requestItemList} from "../axios/api";
 
   export default {
     name: "Home",
+    data: function () {
+      return {
+        itemList: requestItemList().then(res => {
+          console.log(res);
+          this.itemList = res.data.Data;
+          console.log(this.itemList)
+        })
+      }
+    },
     components: {
       'carousel': carousel
     }
   }
 </script>
 
-<style scoped>
+<style>
+
+  .single_bottom .s_con .s_num .s_num_underline {
+    text-decoration: line-through;
+    font-size: 12px;
+    color: #999;
+    font-weight: normal;
+    margin-left: 4px;
+  }
+
+  .superSingle_a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .single_bottom .s_title {
+    width: 153px;
+    height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    text-decoration-style: wavy;
+  }
+
+  .single_bottom .s_con {
+    height: 33px;
+    padding-top: 12px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .single_bottom .s_con .s_num {
+    display: inline-block;
+    color: #e50113;
+    font-weight: bold;
+    font-size: 14px;
+    height: 20px;
+  }
+
+  .single_bottom {
+    height: 61px;
+    width: 150px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .single_top {
+    width: 210px;
+    height: 135px;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    position: relative;
+  }
+
+  .unique {
+    width: 161px;
+  }
+
+  .single_con .superSingle ul li .superSingle_a {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .main1 .grid-content {
+    border-radius: 4px;
+    min-height: 200px;
+    background: white;
+
+  }
+
+  .main1 img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .main2 .grid-content {
+    border-radius: 4px;
+    min-height: 400px;
+  }
+
+  .main-content section.el-container {
+    margin: 50px 0;
+    background: whitesmoke;
+    /*background: #00a2d4;*/
+  }
+
+  .header-carousel {
+    /*padding: 20px 0;*/
+    margin: 20px 0;
+  }
+
   .el-row {
     margin-bottom: 20px;
-
-  &
-  :last-child {
-    margin-bottom: 0;
   }
 
-  }
   .el-col {
     border-radius: 4px;
   }
@@ -119,14 +253,14 @@
   }
 
   .el-header, .el-footer {
-    background-color: #B3C0D1;
+    background-color: whitesmoke;
     color: #333;
     text-align: center;
     line-height: 60px;
   }
 
   .el-aside {
-    background-color: #D3DCE6;
+    background-color: white;
     color: #333;
     text-align: center;
     /*line-height: 200px;*/
@@ -135,18 +269,8 @@
   }
 
   .el-main {
-    background-color: #E9EEF3;
     color: #333;
     text-align: center;
-    line-height: 160px;
-  }
-
-  /* .width {
-     width: 100%;
-   }*/
-
-  .constr {
-    width: 150px;
   }
 
   .nav {

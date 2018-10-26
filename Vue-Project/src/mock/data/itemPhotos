@@ -1,0 +1,9 @@
+
+
+const photos = [
+  "https://img10.360buyimg.com/mobilecms/s450x450_jfs/t6805/8/2154661812/367702/f306c342/59897525Ndc098f1c.jpg",
+  "https://img11.360buyimg.com/mobilecms/s450x450_jfs/t5944/343/5666623751/199570/e50a1a36/596c93c7Nf4804b2e.jpg",
+  "https://img11.360buyimg.com/mobilecms/s450x450_jfs/t19240/318/1069823894/371474/e7355c95/5aba1065Nf2ff1c1f.jpg"
+]
+
+export {photos}

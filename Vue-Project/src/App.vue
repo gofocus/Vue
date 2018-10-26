@@ -1,16 +1,14 @@
 <template>
   <div id="app">
-    <section class="el-container" style="">
-      <header class="el-header" style="width: 100%;">
+    <el-container class="el-container myNav">
+      <el-header>
         <nav-bar></nav-bar>
-      </header>
-    </section>
+      </el-header>
+    </el-container>
 
-    <br>
-
-    <!--路由组件--><!--vue-router特有标签，将组件映射到这里-->
-    <router-view></router-view>
     <router-view name="home"></router-view>
+
+    <!--<router-view></router-view>-->
 
   </div>
 </template>
@@ -27,12 +25,19 @@
 
 </script>
 
-<style>
+<style scoped>
   .el-header {
     background-color: #B3C0D1;
+    height: 40px !important;
+    line-height: 40px;
     color: #333;
     text-align: center;
-    line-height: 60px;
+    padding: 0 0;
+
+  }
+
+  .myNav {
+    padding-bottom: 15px;
   }
 
   /*#app {
