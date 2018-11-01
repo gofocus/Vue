@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>float</title>
+    <style>
+        .container {
+            /*overflow: hidden;*/
+            width: 1070px;
+            /*position: absolute;*/
+            /*top: 0;*/
+            /*left: 50%;*/
+            /*margin-left: -535px;*/
+            height: 380px;
+        }
+
+        .a1 {
+            float: left;
+            width: 300px;
+            height: 140px;
+            /*position: relative;*/
+            background-color: #dd0000;
+        }
+
+        .a2 {
+            float: left;
+            width: 300px;
+            height: 140px;
+            /*position: relative;*/
+            background-color: blue;
+
+        }
+
+        .b1 {
+            /*position: absolute;*/
+            height: 48px;
+            /*line-height: 38px;*/
+            /*bottom: 0;*/
+            /*width: 100%;*/
+        }
+
+        .container::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        /* .clear {
+             clear: both;
+             display: block;
+         }*/
+
+    </style>
+</head>
+<body>
+
+    <div class="container" style="overflow: auto;">
+        <div class="a1">float1</div>
+        <div class="a2">float2</div>
+        <div class="b1" style="clear: both;">导航栏</div>
+        <!--<div class="clear"></div>-->
+    </div>
+
+</body>
+</html>

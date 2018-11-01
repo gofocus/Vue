@@ -1,9 +1,10 @@
 <template>
   <el-container>
-    <el-header height="100px" class="header-carousel">
+    <header-bp></header-bp>
+
+<!--    <el-header class="header-carousel" style="height: 300px;">
       <carousel></carousel>
-      <!--carousel-->
-    </el-header>
+    </el-header>-->
 
     <el-container>
       <el-aside width="50px" class="left-aside"></el-aside>
@@ -13,7 +14,7 @@
             <el-main>
               <div class="source">
                 <!--第一行-->
-                <el-row :gutter="20">
+                <el-row :gutter="0">
                   <el-col :span="4">
                     <div class="grid-content bg-purple"></div>
                   </el-col>
@@ -42,7 +43,7 @@
                   </el-col>
                 </el-row>
                 <!--第二行-->
-                <el-row :gutter="20">
+                <el-row :gutter="0">
                   <el-col :span="(index===4)? 4 : 5"  v-for="(item,index) in itemList" v-if="index >= 4 && index < 9">
                     <div class="grid-content bg-purple">
                       <a href="//qianggou.yhd.com/1-47793680" target="_blank"
@@ -107,6 +108,7 @@
 
 <script>
   import carousel from '../components/carousel'
+  import header_bp from '../components/header-bp'
   import {requestItemList} from "../axios/api";
 
   export default {
@@ -121,12 +123,28 @@
       }
     },
     components: {
-      'carousel': carousel
+      'carousel': carousel,
+      'header-bp': header_bp,
     }
   }
 </script>
 
 <style>
+
+  .el-col:hover {
+     transform:translate3d(0px,0px,15px);
+    box-shadow: 0 15px 30px rgba(0,0,0,.1);
+    background: whitesmoke;
+    -webkit-transition: 5ms time;
+    -moz-transition: 5ms time;
+    -ms-transition: 5ms time;
+    -o-transition: 5ms time;
+    transition: 5ms time;
+  }
+
+  body {
+    margin: 0 0;
+  }
 
   .single_bottom .s_con .s_num .s_num_underline {
     text-decoration: line-through;
@@ -176,16 +194,11 @@
   }
 
   .single_top {
-    width: 210px;
+    top: 10px;
     height: 135px;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: no-repeat center;
     text-align: center;
     position: relative;
-  }
-
-  .unique {
-    width: 161px;
   }
 
   .single_con .superSingle ul li .superSingle_a {
@@ -195,7 +208,7 @@
   }
 
   .main1 .grid-content {
-    border-radius: 4px;
+    /*border-radius: 4px;*/
     min-height: 200px;
     background: white;
 
@@ -207,23 +220,23 @@
   }
 
   .main2 .grid-content {
-    border-radius: 4px;
+    /*border-radius: 4px;*/
     min-height: 400px;
   }
 
   .main-content section.el-container {
     margin: 50px 0;
-    background: whitesmoke;
+    /*background: whitesmoke;*/
+    background: url("http://img.yihaodianimg.com/front-homepage/index/images/super_single_bg.png?1be4686");
     /*background: #00a2d4;*/
   }
 
-  .header-carousel {
-    /*padding: 20px 0;*/
-    margin: 20px 0;
+  .el-header {
+    padding: 0;
   }
 
   .el-row {
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
   }
 
   .el-col {
@@ -243,7 +256,7 @@
   }
 
   .grid-content {
-    border-radius: 4px;
+    /*border-radius: 4px;*/
     min-height: 36px;
   }
 
@@ -256,7 +269,7 @@
     background-color: whitesmoke;
     color: #333;
     text-align: center;
-    line-height: 60px;
+    /*line-height: 60px;*/
   }
 
   .el-aside {
@@ -271,6 +284,7 @@
   .el-main {
     color: #333;
     text-align: center;
+    padding: 10px;
   }
 
   .nav {

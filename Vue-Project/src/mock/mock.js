@@ -24,7 +24,7 @@ export default {
     }));
 
     mock.onGet('/carouselList').reply(200, Mock.mock({
-        "Array|7-4": ['https://picsum.photos/1232/420/?image=@integer(1,999)']
+        "Array|7-4": ['https://picsum.photos/1263/920/?image=@integer(1,999)']
         // "Array|3-5":[mocks.Random.image('728x90')]
       })
     );

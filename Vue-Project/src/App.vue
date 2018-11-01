@@ -27,18 +27,14 @@
 
 <style scoped>
   .el-header {
-    background-color: #B3C0D1;
-    height: 40px !important;
-    line-height: 40px;
+    /*background-color: #B3C0D1;*/
+    height: 31px !important;
     color: #333;
     text-align: center;
-    padding: 0 0;
-
+    padding: 0 96px;
+    border-bottom: solid 1px #e6e6e6;
   }
 
-  .myNav {
-    padding-bottom: 15px;
-  }
 
   /*#app {
     height: 1100px;

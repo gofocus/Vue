@@ -2,7 +2,7 @@
 
   <!--<div class="block">-->
     <!--<span class="demonstration">默认 Hover 指示器触发</span> -->
-    <el-carousel class="elCarousel" height="100px">
+    <el-carousel class="elCarousel">
       <!--<el-carousel height="150px" trigger="click">-->
       <el-carousel-item v-for="item in carouselList" :key="item">
         <img class="img-box" :src="item" alt=""

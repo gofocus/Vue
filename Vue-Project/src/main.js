@@ -9,6 +9,17 @@ import axios from 'axios';
 import ElementUI from "element-ui";
 import 'element-ui/lib/theme-chalk/index.css'
 import 'font-awesome/css/font-awesome.min.css';
+
+// import SvgIcon from './components/svg-icon.vue';
+import FontIcon from './components/font-icon.vue';
+import './assets/icon/iconfont.css';
+import './assets/icon/iconfont.js';
+
+// Vue.component('SvgIcon', SvgIcon);
+Vue.component('FontIcon', FontIcon);
+
+
+
 import Mock from './mock'
 Mock.init();
 
