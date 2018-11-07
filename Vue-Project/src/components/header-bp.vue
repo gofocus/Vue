@@ -10,7 +10,7 @@
             <img src="//img.yihaodianimg.com/front-homepage/global/images/logo/logo_new@2x.png" alt="" title="logo">
           </a>
           <a href="" class="hd_logo hd_slogan">
-            <img src="//img12.360buyimg.com/img/jfs/t1/780/29/13514/21040/5bd6b177E12af4805/17760932fe70ca01.jpg"
+            <img src="//img13.360buyimg.com/img/jfs/t1/1396/16/14352/76151/5bdabbfaE8361975e/00939743b8194909.png"
                  alt="" title="slogan">
           </a>
         </div>
@@ -46,7 +46,17 @@
 
         <div class="hd_header_nav">
           <ul>
-            <li class="category-list"><a href="">全部类目</a></li>
+            <li class="category-list">
+              <a href="">
+                <i class="iconfont icon-xitongcaidan"></i>
+<!--                <svg class="icon icon-xitongcaidan" aria-hidden="true">
+                  <use xlink:href="#icon-xitongcaidan"></use>
+                </svg>-->
+                全部类目
+                <i class="iconfont icon-moreunfold"></i>
+
+
+              </a></li>
             <li><a href="">领金币</a></li>
             <li><a href="">领券中心</a></li>
             <li><a href="">充值</a></li>
@@ -66,6 +76,17 @@
 </script>
 
 <style scoped>
+
+  .icon-xitongcaidan{
+    position: relative;
+    left: -2px;
+  }
+
+  .icon-moreunfold {
+
+  }
+
+
   .category-list {
     background-color: red !important;
   }
@@ -198,7 +219,7 @@
     margin: 0 auto;
     height: 180px;
     width: 100%;
-    background: url(//img11.360buyimg.com/img/jfs/t1/5247/38/13854/29444/5bd9245cEfefa7618/b3c16c0384eb97e9.jpg) center no-repeat
+    background: url(//img10.360buyimg.com/img/jfs/t1/9777/13/4381/33990/5bdab14eEe1811832/634b2008eab9f84e.jpg) center no-repeat
   }
 
   .hd_header {
@@ -227,7 +248,7 @@
   }
 
   .hd_slogan {
-    width: 140px;
+    width: 160px;
     height: 90px;
     position: relative;
     top: 29px;
