@@ -18,15 +18,16 @@ import './assets/icon/iconfont.js';
 // Vue.component('SvgIcon', SvgIcon);
 Vue.component('FontIcon', FontIcon);
 
+// import Mock from './mock'
 
-
-import Mock from './mock'
-Mock.init();
+// 不使用mock数据时要注释掉MockAdapter的注册
+// Mock.init();
 
 Vue.use(Vuex);
 Vue.use(VueRouter);
 Vue.use(ElementUI);
 // Vue.prototype.$axios = axios;
+Vue.prototype.$itemPicUrl = "http://localhost:8080/pic/";
 
 const router = new VueRouter({
   routes

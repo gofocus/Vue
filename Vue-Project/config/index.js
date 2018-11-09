@@ -7,11 +7,16 @@ const path = require('path')
 module.exports = {
   dev: {
 
-    // Paths
+    // 静态资源文件夹
     assetsSubDirectory: 'static',
+
+    //发布路径
     assetsPublicPath: '/',
+
+    //跨域问题用proxyTable
     proxyTable: {
       '/api': {
+        // target: 'localhost:8080',//目标接口域名
         target: 'http://127.0.0.1:8080/',//目标接口域名
         // target: 'http://127.0.0.1/VIP_221/?c=list&cs=cp',//目标接口域名
         changeOrigin: true,//是否跨域
@@ -24,7 +29,7 @@ module.exports = {
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
-    port: 8081, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,

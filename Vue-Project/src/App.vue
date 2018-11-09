@@ -6,9 +6,8 @@
       </el-header>
     </el-container>
 
-    <router-view name="home"></router-view>
-
-    <!--<router-view></router-view>-->
+    <!--<router-view name="home"></router-view>-->
+    <router-view></router-view>
 
   </div>
 </template>

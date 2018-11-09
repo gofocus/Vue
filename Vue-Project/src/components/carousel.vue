@@ -25,11 +25,12 @@
       }
     },
     mounted: function () {
-      const _this = this;                                      // axios中的this不会指向当前实例，需要将当前实例存储起来
+      const _this = this;                                      // axios中的this不会指向当前实例，需要将当前实例提前存储起来
       // getCarousel
       axios.get(`${base}/carouselList`)
         .then(function (response) {
-          return _this.carouselList = response.data.Array;    //只写response.data不行，Mock传回来的数据是一个Object，里面包含Array和其他对象
+          console.log(response)
+          return _this.carouselList = response.data;    //只写response.data不行，Mock传回来的数据是一个Object，里面包含Array和其他对象
         })
       // .then(response => (this.carousel = response.data))   //箭头函数内部的this是词法作用域，由上下文确定。此处匿名函数内部的this已经绑定了外部的Vue实例了
     },
