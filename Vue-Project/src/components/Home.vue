@@ -1,6 +1,6 @@
 <template>
   <el-container>
-    <header-bp></header-bp>
+    <header-bp class="home_header_bp" ></header-bp>
 
     <el-header class="header-carousel" style="height: 300px;">
       <carousel></carousel>
@@ -195,22 +195,19 @@
 </template>
 
 <script>
-  // import axios from 'axios';
   import carousel from '../components/carousel'
   import header_bp from '../components/header-bp'
-  import {requestItemList} from "../axios/api";
 
   export default {
     name: "Home",
     data: function () {
       return {
-        itemList: requestItemList().then(res => {
+        // itemList: requestItemList().then(res => {
+        itemList: this.$axios.get('/api').then(res=>{
           console.log(res);
           this.itemList = res.data;
-          // this.itemList = res.data.Data;
           console.log(this.itemList)
-        })
-        // itemList: axios.get('/api/items/classInfo').then(res=> res)
+        }),
       }
     },
     components: {
@@ -229,5 +226,25 @@
 </script>
 
 <style lang="scss">
+  /*div.hd_header_right /deep/ div.hd_search {*/
+  div.hd_header_right .hd_search {
+    border: 2px solid black;
+  }
+</style>
+
+<style lang="scss" scoped>
   @import "../css/home.scss";
+
+  .hd_header_right .hd_header_right /deep/ .hd_search {
+    border: 2px solid #e2e2e2 ;
+  }
+
+  .hd_search {
+    /*border: 1px solid black!important;*/
+  }
+
+  .home_header_bp {
+      background: url(//img10.360buyimg.com/img/jfs/t1/9777/13/4381/33990/5bdab14eEe1811832/634b2008eab9f84e.jpg) center no-repeat
+  }
+
 </style>

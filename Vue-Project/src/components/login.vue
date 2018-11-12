@@ -45,13 +45,14 @@
     },
     methods: {
       handleSubmit() {
+        var _this = this;
         this.$refs.form.validate((valid) => {
           if (valid) {
-            this.logining = true;
+            _this.logining = true;
             var loginParams = {email: this.form.email, password: this.form.password};
             loginParams = JSON.stringify(loginParams);
 
-            requestLogin(loginParams).then(res => {
+/*            requestLogin(loginParams).then(res => {
               console.log(res.data, res);
               this.logining = false;
               if (res.status !== 200) {
@@ -69,7 +70,7 @@
               }
             }).catch((error) => {
               console.log(error)
-            });
+            });*/
           } else {
             console.log('error submit!!');
             return false;

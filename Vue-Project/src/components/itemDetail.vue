@@ -1,10 +1,13 @@
 <template>
   <div>
-    <header-bp></header-bp>
+    <!--<header-bp class="itemDetail_header_bp" :searchBorder="searchBorder"></header-bp>-->
+    <header-bp class="itemDetail_header_bp" ></header-bp>
+
     <el-container>
-      <el-header>
-        <div>
-          <router-link to="/">首页</router-link>
+      <el-header style="height: 20px;">
+        <div class="detail_crumb">
+          <!--<router-link to="/">首页</router-link>-->
+          <button @click="goIndex">首页button</button>
         </div>
 
       </el-header>
@@ -14,9 +17,11 @@
             <el-row>
               <el-col :span="8">
                 <div class="detail1_pic">
-                  <!--<img :src="$itemPicUrl + itemId" alt="">-->
+                  <img :src=" this.$itemPicUrl + item.pic" alt="">
                 </div>
-                <div class="detail1_itemInfo"></div>
+                <div class="detail1_itemInfo">
+                  <div>商品编号{{item.id}}</div>
+                </div>
               </el-col>
               <el-col :span="12">
                 <div><p>12</p></div>
@@ -27,6 +32,7 @@
             </el-row>
           </el-main>
         </el-container>
+
         <el-container class="detail_2">
           <el-aside width="250px">
             <div>用户还购买了</div>
@@ -50,7 +56,7 @@
 
 <script>
   import header_bp from '../components/header-bp'
-  import {requestItemInfo} from '../axios/api';
+  // import {requestItemInfo} from '../axios/api';
 
   export default {
     name: "itemDetail",
@@ -60,63 +66,80 @@
     data: function () {
       return {
         itemId: this.$route.params.itemId,
-        // item: function () {
-        //   console.log()
-        //   return requestItemInfo(this.itemId).then(res => res.data);
-        // }
+        item: {},
+        // searchBorder: 'border: 1px solid red',
       }
     },
-    computed: {
-      item: {
-        get: function () {
-          // var id = {itemId: this.itemId};
-          var id = this.itemId;
-          // id = JSON.stringify(id);
-          requestItemInfo(id).then(res => {
-            console.log(res.data);
-            return res.data;
-          })
-        },
-        set:function () {
-
-        }
+    methods:{
+      goIndex:function () {
+        this.$router.push('/');
       }
-    }
+    },
+
+    mounted:
+      function () {
+        const id = this.itemId;
+        this.$axios.post(`/api/items/getItemInfo`, id, {headers: {'Content-Type': 'application/json'}}).then(res => {
+          // requestItemInfo(id).then(res => {
+          console.log(res.data);
+          this.item = res.data;
+        })
+      }
   }
 
 </script>
 
+<style lang="scss">
+  /*  .hd_header_right /deep/ .hd_search {
+      border: 1px solid red !important;
+    }*/
+
+  div.hd_header_right div.hd_search {
+    border: 3px solid red ;
+  }
+</style>
+
 <style lang="scss" scoped>
   @import "../css/itemDetail";
 
-  .el-header, .el-footer {
-    background-color: #B3C0D1;
-    color: #333;
-    text-align: center;
-    line-height: 60px;
+  .itemDetail_header_bp {
+    border-bottom: 2px solid #ff4040;
   }
 
-  .grid-content {
-    border-radius: 4px;
-    min-height: 36px;
-  }
+  /*  .el-header, .el-footer {
+      background-color: #B3C0D1;
+      color: #333;
+      text-align: center;
+      line-height: 60px;
+    }
 
-  .el-main {
-    background-color: #E9EEF3;
-    color: #333;
-    text-align: center;
-    line-height: 160px;
-    border: 1px solid;
-  }
+    .grid-content {
+      border-radius: 4px;
+      min-height: 36px;
+    }
 
-  .el-aside {
-    background-color: #D3DCE6;
-    color: #333;
-    text-align: center;
-    line-height: 300px;
-  }
+    .el-main {
+      background-color: #E9EEF3;
+      color: #333;
+      text-align: center;
+      line-height: 160px;
+      border: 1px solid;
+    }
+
+    .el-aside {
+      background-color: #D3DCE6;
+      color: #333;
+      text-align: center;
+      line-height: 300px;
+    }*/
 
   body {
     margin: 0 0;
+    background-color: white;
+  }
+
+  a {
+    color: #555;
+    text-decoration: none;
   }
 </style>

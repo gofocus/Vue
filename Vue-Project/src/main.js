@@ -26,16 +26,31 @@ Vue.component('FontIcon', FontIcon);
 Vue.use(Vuex);
 Vue.use(VueRouter);
 Vue.use(ElementUI);
-// Vue.prototype.$axios = axios;
+Vue.prototype.$axios = axios;
 Vue.prototype.$itemPicUrl = "http://localhost:8080/pic/";
 
 const router = new VueRouter({
   routes
 });
 
-/* eslint-disable no-new */
+const store = new Vuex.Store({
+  state: {
+    count: 0
+  },
+  mutations: {
+    increment: state => state.count++,
+    decrement: state => state.count--
+  }
+});
+
+
 new Vue({
   el: '#app',
+  computed:{
+    count(){
+      return store.state.count;
+    }
+  },
   router,
   template: '<App/>',
   components: { App },
@@ -49,6 +64,5 @@ new Vue({
 
 /*new Vue({
   router,
-  component: nav,
   render: h => h(App)
 }).$mount('#app');*/

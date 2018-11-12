@@ -58,10 +58,11 @@
         this.$refs.form.validate((valid) => {
           if (valid) {
             this.logining = true;
-            var loginParams = {email: this.form.email, password: this.form.password};
-            loginParams = JSON.stringify(loginParams);
+            const loginParams = {email: this.form.email, password: this.form.password};
+            // loginParams = JSON.stringify(loginParams);
 
-            requestLogin(loginParams).then(res => {
+            this.$axios.post(`/api/user/loginTest`, loginParams, {headers: {'Content-Type': 'application/json'}}).then( function (res) {
+            // requestLogin(loginParams).then(res => {
               console.log(res.data, res);
               this.logining = false;
               if (res.status !== 200) {
