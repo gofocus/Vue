@@ -1,17 +1,38 @@
-$type: itemDetail!global;
 
-.detail_crumb {
-  padding-left: 18px;
-  padding-top: 12px;
-  font-size: 14px;
-}
+.itemDetail {
+  margin: 0 0;
+  background-color: white ;
 
-.detail1_pic {
-  height: 360px;
-  width: 354px;
-  padding: 19px;
-  border: 1px solid;
-  img {
+  .header_bp .hd_header_right .hd_search {
+    border: 1px solid red;
+  }
+
+  .itemDetail_header_bp {
+    border-bottom: 2px solid #ff4040;
+  }
+
+  .detail_crumb {
+    padding-left: 18px;
+    padding-top: 12px;
+    font-size: 14px;
+  }
+
+  .detail1_pic {
+    height: 360px;
     width: 354px;
+    padding: 19px;
+    border: 1px solid;
+    img {
+      width: 354px;
+    }
+  }
+
+  body {
+
+  }
+
+  a {
+    color: #555;
+    text-decoration: none;
   }
 }

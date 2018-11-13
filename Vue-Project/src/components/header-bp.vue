@@ -18,7 +18,7 @@
         <div class="hd_header_right">
           <div class="hd_head_search">
             <!--<div class="hd_search" :style="searchBorder" >-->
-            <div class="hd_search" :style="searchBorder" :class="$style.border">
+            <div class="hd_search" :style="searchBorder">
               <input type="text" placeholder="图书超级品类日 满199减100">
               <button onclick="">
                 <font-icon id="icon-sousuo"><a href="#"></a></font-icon>
@@ -78,18 +78,7 @@
   }
 </script>
 
-
-<style lang="scss" module>
-  .hd_head_search .hd_search {
-    border: 1px solid #e2e2e2;
-  }
-
-  .border {
-    border: 5px solid #e2e2e2;
-  }
-
-</style>
-<style lang="scss" scoped>
+<style lang="scss">
   @import "../css/header-bp.scss";
 
   li {

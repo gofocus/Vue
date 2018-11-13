@@ -46,12 +46,8 @@ const store = new Vuex.Store({
 
 new Vue({
   el: '#app',
-  computed:{
-    count(){
-      return store.state.count;
-    }
-  },
   router,
+  store,
   template: '<App/>',
   components: { App },
   created() {

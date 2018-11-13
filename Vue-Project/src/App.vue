@@ -1,14 +1,13 @@
 <template>
   <div id="app">
     <el-container class="el-container myNav">
-      <el-header>
+      <el-main>
         <nav-bar></nav-bar>
-      </el-header>
+      </el-main>
     </el-container>
 
     <!--<router-view name="home"></router-view>-->
     <router-view></router-view>
-
   </div>
 </template>
 
@@ -24,18 +23,22 @@
 
 </script>
 
-<style scoped>
-  .el-header {
-    height: 31px !important;
-    color: #333;
-    text-align: center;
-    padding: 0px;
-    margin:0 96px;
-  }
+<style lang="scss">
+  #app {
+    .myNav {
+      height: 31px;
+      color: #333;
+      text-align: center;
+      padding: 0 98px;
+      background-color: #f4f4f4;
+      border-bottom: solid 1px #e6e6e6;
 
-  .myNav{
-    background-color: #f4f4f4;
-    border-bottom: solid 1px #e6e6e6!important;
+      .el-main {
+        padding: 0;
+        height: 30px;
+      }
+    }
+
   }
 
 </style>

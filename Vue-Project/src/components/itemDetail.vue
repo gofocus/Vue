@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="itemDetail" >
     <!--<header-bp class="itemDetail_header_bp" :searchBorder="searchBorder"></header-bp>-->
-    <header-bp class="itemDetail_header_bp" ></header-bp>
+    <header-bp class="itemDetail_header_bp"></header-bp>
 
     <el-container>
       <el-header style="height: 20px;">
@@ -90,21 +90,7 @@
 </script>
 
 <style lang="scss">
-  /*  .hd_header_right /deep/ .hd_search {
-      border: 1px solid red !important;
-    }*/
-
-  div.hd_header_right div.hd_search {
-    border: 3px solid red ;
-  }
-</style>
-
-<style lang="scss" scoped>
   @import "../css/itemDetail";
-
-  .itemDetail_header_bp {
-    border-bottom: 2px solid #ff4040;
-  }
 
   /*  .el-header, .el-footer {
       background-color: #B3C0D1;
@@ -133,13 +119,4 @@
       line-height: 300px;
     }*/
 
-  body {
-    margin: 0 0;
-    background-color: white;
-  }
-
-  a {
-    color: #555;
-    text-decoration: none;
-  }
 </style>

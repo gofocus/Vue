@@ -61,7 +61,7 @@
             const loginParams = {email: this.form.email, password: this.form.password};
             // loginParams = JSON.stringify(loginParams);
 
-            this.$axios.post(`/api/user/loginTest`, loginParams, {headers: {'Content-Type': 'application/json'}}).then( function (res) {
+            this.$axios.post(`/api/user/loginTest`, loginParams, {headers: {'Content-Type': 'application/json'}}).then( res=>{
             // requestLogin(loginParams).then(res => {
               console.log(res.data, res);
               this.logining = false;

@@ -1,5 +1,5 @@
 <template>
-  <el-container>
+  <el-container class="home">
     <header-bp class="home_header_bp" ></header-bp>
 
     <el-header class="header-carousel" style="height: 300px;">
@@ -226,25 +226,6 @@
 </script>
 
 <style lang="scss">
-  /*div.hd_header_right /deep/ div.hd_search {*/
-  div.hd_header_right .hd_search {
-    border: 2px solid black;
-  }
-</style>
-
-<style lang="scss" scoped>
   @import "../css/home.scss";
-
-  .hd_header_right .hd_header_right /deep/ .hd_search {
-    border: 2px solid #e2e2e2 ;
-  }
-
-  .hd_search {
-    /*border: 1px solid black!important;*/
-  }
-
-  .home_header_bp {
-      background: url(//img10.360buyimg.com/img/jfs/t1/9777/13/4381/33990/5bdab14eEe1811832/634b2008eab9f84e.jpg) center no-repeat
-  }
 
 </style>

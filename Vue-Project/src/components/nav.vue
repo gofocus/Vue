@@ -117,8 +117,9 @@
 </script>
 
 <style>
-
-
+  .el-menu.el-menu--horizontal {
+    border-bottom: none!important;
+  }
 
   .hd_indxProvce {
     float: left;
@@ -128,7 +129,7 @@
     padding-left: 10px;
   }
 
-  .icon-wodedingdan, .icon-wodejuhuasuan  {
+  .icon-wodedingdan, .icon-wodejuhuasuan {
     font-size: 13px;
   }
 
@@ -136,7 +137,6 @@
     font-size: 13px;
     color: red;
   }
-
 
   .topbar_right a, .hd_indxProvce a {
     text-decoration: none;
