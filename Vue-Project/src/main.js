@@ -7,7 +7,8 @@ import VueRouter from 'vue-router';
 import routes from './router/routes'
 import axios from 'axios';
 import ElementUI from "element-ui";
-import 'element-ui/lib/theme-chalk/index.css'
+import 'element-ui/lib/theme-chalk/index.css';
+// import 'element-ui/lib/theme-chalk/reset.css';
 import 'font-awesome/css/font-awesome.min.css';
 
 // import SvgIcon from './components/svg-icon.vue';

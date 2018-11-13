@@ -1,7 +1,7 @@
 
 .itemDetail {
   margin: 0 0;
-  background-color: white ;
+  background-color: white;
 
   .header_bp .hd_header_right .hd_search {
     border: 1px solid red;
@@ -16,23 +16,126 @@
     padding-top: 12px;
     font-size: 14px;
   }
+  .detail_1 {
 
-  .detail1_pic {
-    height: 360px;
-    width: 354px;
-    padding: 19px;
-    border: 1px solid;
-    img {
-      width: 354px;
+    .el-main {
+      height: 500px;
+    }
+    .detail_1_left {
+
+      .detail1_pic {
+        height: 360px;
+        width: 354px;
+        padding: 19px;
+        border: 1px solid #ddd;
+        img {
+          width: 354px;
+        }
+      }
+
+      .detail1_itemInfo {
+        height: 16px;
+        margin-top: 10px;
+        span {
+          float: left;
+          color: #999;
+          font-size: 11px;
+          //line-height: 12px;
+          height: 14px;
+
+          i {
+            font-size: 14px;
+          }
+
+          &:first-child {
+            border-right: 1px solid #999;
+            padding-right: 10px;
+          }
+
+          &:last-child {
+            padding-left: 10px;
+          }
+          &:last-child:hover {
+            color: red;
+          }
+        }
+      }
+
+    }
+
+    .detail_1_middle {
+      margin-left: 25px;
+
+      .name_detail {
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .price {
+        line-height: 28px;
+        overflow: hidden;
+
+        ul {
+          overflow: hidden;
+          padding-left: 0;
+          li {
+            &:first-child {
+              color: #666;
+              font-size: 12px;
+              padding-right: 10px;
+            }
+            &:last-child {
+              color: #e60012;
+              font-size: 26px;
+            }
+          }
+        }
+
+      }
+
+      .cart {
+        position: absolute;
+        bottom: 26px;
+        //line-height: 50px;
+
+        a {
+          float: left;
+          display: block;
+          background-color: #df3033;
+          color: white;
+          height: 50px;
+          width: 140px;
+          font-size: 18px;
+          font-weight: 700;
+          text-align: center;
+          line-height: 50px;
+          .icon-gouwuche {
+            padding-right: 5px;
+            font-weight: normal;
+          }
+        }
+
+      }
+    }
+
+    .detail_1_right {
+
     }
   }
 
-  body {
-
+  .detail_2 {
+    border: 1px solid;
   }
+
+
 
   a {
     color: #555;
     text-decoration: none;
+  }
+
+  li {
+    list-style: none;
+    float: left;
   }
 }

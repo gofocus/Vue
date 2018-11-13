@@ -1,9 +1,9 @@
 <template>
   <el-container class="home">
-    <header-bp class="home_header_bp" ></header-bp>
+    <header-bp class="home_header_bp"></header-bp>
 
-    <el-header class="header-carousel" style="height: 300px;">
-      <carousel></carousel>
+    <el-header style="height: 300px;">
+      <carousel class="home_carousel"></carousel>
     </el-header>
 
     <el-container>
@@ -227,5 +227,4 @@
 
 <style lang="scss">
   @import "../css/home.scss";
-
 </style>
