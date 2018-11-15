@@ -37,9 +37,16 @@
     <ul class="topbar_right">
       <li class="global_unlogin">
         <div>
-          <span class="hd_login_span">{{ time }}</span>
-          <a href="javascript:;" class="hd_login_link" target="_self" @click="dialogFormVisibleParent=true">登录</a>
-          <a href="" class="hd_register_link" target="_blank">注册</a>
+          <span class="hd_login_span">{{ greeting }}</span>
+          <!--<a v-if="currentUser!==''">-->
+          <a v-if="currentUser!== null">
+            <span>{{ currentUser }}</span>
+            <button class="logout" @click="logout">登出</button>
+          </a>
+          <template v-else>
+            <a href="javascript:" class="hd_login_link" target="_self" @click="dialogFormVisibleParent=true">登录</a>
+            <a href="" class="hd_register_link" target="_blank">注册</a>
+          </template>
         </div>
       </li>
       <li>
@@ -62,14 +69,12 @@
 
   </el-menu>
 
-
-  <!--</div>-->
-
 </template>
 
 <script>
   import loginDialog from "./loginDialog.vue";
-  import carousel from "./carousel.vue";
+  import {mapGetters} from 'vuex';
+  import {currentUser} from "../vuex/getters";
 
   export default {
     data: function () {
@@ -93,22 +98,38 @@
             {required: true, message: '输入密码', trigger: 'change'},
             {min: 6, max: 20, message: '长度在6-20个字符之间', trigger: 'change'},
           ]
-        }
+        },
       }
     },
     computed: {
-      time: function () {
+      greeting: function () {
         const date = new Date();
         const hour = date.getHours();
-        if (hour > 6 && hour < 12) return "上午好,请";
-        else if (hour >= 12 && hour < 18) return "下午好,请";
-        else return "晚上好,请";
+        if (hour > 6 && hour < 12) return "上午好,";
+        else if (hour >= 12 && hour < 18) return "下午好,";
+        else return "晚上好,";
+      },
+      localStorage: function () {
+        if (sessionStorage.getItem('currentUser'))
+          return sessionStorage.getItem('currentUser');
+      },
+      ...mapGetters(
+        ['currentUser'])
+    },
+    mounted: function () {
+      //刷新页面 vuex的数据会消失，通过sessionStorage将currentUser重新赋值给vuex
+      const currentUser = sessionStorage.getItem("currentUser");
+      if (currentUser !== null) {
+        this.$store.commit('userStatus', currentUser);
       }
     },
     methods: {
       handleSelect(key, keyPath) {
         console.log(key, keyPath)
       },
+      logout: function () {
+        this.$store.commit('userStatus', null);
+      }
     },
     components: {
       loginDialog: loginDialog,
@@ -118,7 +139,14 @@
 
 <style>
   .el-menu.el-menu--horizontal {
-    border-bottom: none!important;
+    border-bottom: none !important;
+  }
+
+  .logout {
+    margin: 0;
+    padding: 0;
+    border: 1px solid transparent;
+    outline: none;
   }
 
   .hd_indxProvce {

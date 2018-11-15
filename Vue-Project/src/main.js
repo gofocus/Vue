@@ -2,8 +2,9 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import App from './App'
 import Vue from 'vue'
+import store from './vuex/store.js'
 import Vuex from 'vuex'
-import VueRouter from 'vue-router';
+import VueRouter from 'vue-router'
 import routes from './router/routes'
 import axios from 'axios';
 import ElementUI from "element-ui";
@@ -15,6 +16,7 @@ import 'font-awesome/css/font-awesome.min.css';
 import FontIcon from './components/font-icon.vue';
 import './assets/icon/iconfont.css';
 import './assets/icon/iconfont.js';
+
 
 // Vue.component('SvgIcon', SvgIcon);
 Vue.component('FontIcon', FontIcon);
@@ -33,7 +35,7 @@ Vue.prototype.$itemPicUrl = "http://localhost:8080/pic/";
 const router = new VueRouter({
   routes
 });
-
+/*
 const store = new Vuex.Store({
   state: {
     count: 0
@@ -42,7 +44,7 @@ const store = new Vuex.Store({
     increment: state => state.count++,
     decrement: state => state.count--
   }
-});
+});*/
 
 
 new Vue({

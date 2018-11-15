@@ -19,16 +19,14 @@
 </template>
 
 <script>
-  import {requestLogin} from "../axios/api";
-
   export default {
     props: ['dialogFormVisibleParent'],
     data: function () {
       return {
         dialogFormVisibleChild: this.dialogFormVisibleParent,
         form: {
-          email: 'admin',
-          password: '111111',
+          email: "admin",
+          password: 111111,
         },
         checked: true,
         logining: false,
@@ -44,6 +42,8 @@
           ]
         }
       }
+    },
+    computed:{
     },
     watch: {
       dialogFormVisibleParent: function (v) {
@@ -63,7 +63,6 @@
 
             this.$axios.post(`/api/user/loginTest`, loginParams, {headers: {'Content-Type': 'application/json'}}).then( res=>{
             // requestLogin(loginParams).then(res => {
-              console.log(res.data, res);
               this.logining = false;
               if (res.status !== 200) {
                 this.$message({
@@ -71,7 +70,7 @@
                   type: 'error'
                 });
               } else {
-                sessionStorage.setItem('user', JSON.stringify(res.data.user));
+                this.$store.commit('userStatus', res.data.user.email);
                 this.$message({
                   message: '登陆成功',
                   type: 'success'

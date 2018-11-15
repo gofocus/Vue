@@ -2,9 +2,9 @@
   <el-container class="home">
     <header-bp class="home_header_bp"></header-bp>
 
-    <el-header style="height: 300px;">
+<!--    <el-header style="height: 300px;">
       <carousel class="home_carousel"></carousel>
-    </el-header>
+    </el-header>-->
 
     <el-container>
       <!--<el-aside width="85px" class="left-aside" style="background-color: #f5f5f5;"></el-aside>-->
@@ -202,11 +202,8 @@
     name: "Home",
     data: function () {
       return {
-        // itemList: requestItemList().then(res => {
         itemList: this.$axios.get('/api').then(res=>{
-          console.log(res);
           this.itemList = res.data;
-          console.log(this.itemList)
         }),
       }
     },
@@ -217,7 +214,6 @@
     methods: {
       goItemDetails: function (itemId) {
         // this.$router.push("/item/" + itemId)
-
         //对于上面，假如itemDetail的路由变化，就需要相应的修改路径。这种写法可维护性（适应性）更高，
         this.$router.push({name: 'itemDetail', params: {itemId: itemId}})
       }
