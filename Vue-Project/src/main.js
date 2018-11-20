@@ -17,6 +17,7 @@ import FontIcon from './components/font-icon.vue';
 import './assets/icon/iconfont.css';
 import './assets/icon/iconfont.js';
 
+import Qs from 'qs';
 
 // Vue.component('SvgIcon', SvgIcon);
 Vue.component('FontIcon', FontIcon);
@@ -31,6 +32,8 @@ Vue.use(VueRouter);
 Vue.use(ElementUI);
 Vue.prototype.$axios = axios;
 Vue.prototype.$itemPicUrl = "http://localhost:8080/pic/";
+Vue.prototype.$qs = Qs;
+
 
 const router = new VueRouter({
   routes

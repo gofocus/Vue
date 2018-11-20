@@ -2,8 +2,8 @@
   <el-dialog :visible.sync="dialogFormVisibleChild" class="login-container" width="30%" :modal="true">
     <el-form :model="form" :rules="rules" ref="form">
       <h3 class="title">Sign In</h3>
-      <el-form-item prop="email">
-        <el-input type="email" v-model="form.email" auto-complete="off" placeholder="Email"></el-input>
+      <el-form-item prop="username">
+        <el-input type="email" v-model="form.username" auto-complete="off" placeholder="Email"></el-input>
       </el-form-item>
       <el-form-item prop="password">
         <el-input type="password" v-model="form.password" placeholder="Password"></el-input>
@@ -25,26 +25,25 @@
       return {
         dialogFormVisibleChild: this.dialogFormVisibleParent,
         form: {
-          email: "admin",
-          password: 111111,
+          username: "ddd",
+          password: 111,
         },
         checked: true,
         logining: false,
         rules: {
           email: [
-            {required: true, message: '输入邮箱', trigger: 'change'},
+            {required: true, message: '输入用户名', trigger: 'change'},
             // { type: 'email', message:'输入正确的邮箱', trigger: 'change'}
             //{ validator: validaePass }
           ],
           password: [
             {required: true, message: '输入密码', trigger: 'change'},
-            {min: 6, max: 20, message: '长度在6-20个字符之间', trigger: 'change'},
+            {min: 3, max: 20, message: '长度在3-20个字符之间', trigger: 'change'},
           ]
         }
       }
     },
-    computed:{
-    },
+    computed: {},
     watch: {
       dialogFormVisibleParent: function (v) {
         if (v) this.dialogFormVisibleChild = v
@@ -55,28 +54,54 @@
     },
     methods: {
       handleSubmit() {
+        var _this = this;
         this.$refs.form.validate((valid) => {
           if (valid) {
             this.logining = true;
-            const loginParams = {email: this.form.email, password: this.form.password};
-            // loginParams = JSON.stringify(loginParams);
+            const url = `/api/user/login`;
+            // const url = `/api/user/loginTest`;
+            const loginParams = this.$qs.stringify({username: this.form.username, password: this.form.password});
 
-            this.$axios.post(`/api/user/loginTest`, loginParams, {headers: {'Content-Type': 'application/json'}}).then( res=>{
-            // requestLogin(loginParams).then(res => {
+            this.$axios.post(url, loginParams).then(res => {
               this.logining = false;
-              if (res.status !== 200) {
+              if (res.status!==200) {
                 this.$message({
-                  message: '邮箱/密码错误',
+                  message: '未知错误',
                   type: 'error'
                 });
-              } else {
-                this.$store.commit('userStatus', res.data.user.email);
+              }
+              else if (res.data !== null) {
+                this.$axios.post(url).then(res=>{
+                  console.log(res)
+                  console.log(res.data)
+                  // _this.$store.dispatch('setUser',res.data);
+                  this.$store.commit('userStatus',res.data);
+                  this.$message({
+                    message: '登陆成功',
+                    type: 'success'
+                  });
+                  this.dialogFormVisibleChild = false;
+                });
+              }
+              else if (res.data === null) {
+                this.$message({
+                  message: '用户名/密码错误',
+                  type: 'error'
+                });
+              }
+              /*else if(res.data === true || res.data === ""){
+                this.$store.commit('userStatus',this.form.username );
                 this.$message({
                   message: '登陆成功',
                   type: 'success'
                 });
                 this.dialogFormVisibleChild = false;
-              }
+              } else if (res.data === false) {
+                this.$message({
+                  message: '用户名/密码错误',
+                  type: 'error'
+                });
+              }*/
             }).catch((error) => {
               console.log(error)
             });
