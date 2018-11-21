@@ -47,6 +47,7 @@
             <template v-else>
               <a href="javascript:" class="hd_login_link" target="_self" @click="dialogFormVisibleParent=true">登录</a>
               <a href="" class="hd_register_link" target="_blank">注册</a>
+
             </template>
 
           </div>

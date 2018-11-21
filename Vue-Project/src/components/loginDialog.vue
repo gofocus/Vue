@@ -54,28 +54,24 @@
     },
     methods: {
       handleSubmit() {
-        var _this = this;
         this.$refs.form.validate((valid) => {
           if (valid) {
             this.logining = true;
             const url = `/api/user/login`;
-            // const url = `/api/user/loginTest`;
+            //shiro使用表单认证，因此这里将JSON数据转换格式（form?）
             const loginParams = this.$qs.stringify({username: this.form.username, password: this.form.password});
 
             this.$axios.post(url, loginParams).then(res => {
               this.logining = false;
-              if (res.status!==200) {
+              if (res.status !== 200) {
                 this.$message({
                   message: '未知错误',
                   type: 'error'
                 });
               }
-              else if (res.data !== null) {
-                this.$axios.post(url).then(res=>{
-                  console.log(res)
-                  console.log(res.data)
-                  // _this.$store.dispatch('setUser',res.data);
-                  this.$store.commit('userStatus',res.data);
+              else if (res.data === "") {
+                this.$axios.post("/api/user/currentUser").then(res => {
+                  this.$store.commit('userStatus', res.data);
                   this.$message({
                     message: '登陆成功',
                     type: 'success'
@@ -83,25 +79,18 @@
                   this.dialogFormVisibleChild = false;
                 });
               }
-              else if (res.data === null) {
+              else if (res.data === false) {
                 this.$message({
                   message: '用户名/密码错误',
                   type: 'error'
                 });
               }
-              /*else if(res.data === true || res.data === ""){
-                this.$store.commit('userStatus',this.form.username );
+              else if (res.data === true) {
                 this.$message({
-                  message: '登陆成功',
-                  type: 'success'
-                });
-                this.dialogFormVisibleChild = false;
-              } else if (res.data === false) {
-                this.$message({
-                  message: '用户名/密码错误',
-                  type: 'error'
-                });
-              }*/
+                  message: "您已经登录",
+                  type: 'warn'
+                })
+              }
             }).catch((error) => {
               console.log(error)
             });
