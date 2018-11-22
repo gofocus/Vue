@@ -8,6 +8,12 @@
       <el-form-item prop="password">
         <el-input type="password" v-model="form.password" placeholder="Password"></el-input>
       </el-form-item>
+      <el-form-item prop="captcha">
+        <el-input type="text" v-model="form.captcha" placeholder="验证码"></el-input>
+        <div id="captcha">
+          <img :src="captchaUrl" alt="" ref="captcha" @click="getNewCaptcha"><a href="javascript:"
+                                                                                @click="getNewCaptcha">看不清?</a></div>
+      </el-form-item>
       <el-checkbox v-model="checked" checked class="remember">Stay signed in</el-checkbox>
       <el-form-item style="width: 100%;">
         <el-button type="primary" style="width: 100%;" @click.native.prevent="handleSubmit" :loading="logining">Submit
@@ -23,10 +29,12 @@
     props: ['dialogFormVisibleParent'],
     data: function () {
       return {
+        captchaUrl: "http://127.0.0.1:8080/user/getGifCode?rrr=",
         dialogFormVisibleChild: this.dialogFormVisibleParent,
         form: {
           username: "ddd",
-          password: 111,
+          password: 123,
+          captcha: "",
         },
         checked: true,
         logining: false,
@@ -59,7 +67,11 @@
             this.logining = true;
             const url = `/api/user/login`;
             //shiro使用表单认证，因此这里将JSON数据转换格式（form?）
-            const loginParams = this.$qs.stringify({username: this.form.username, password: this.form.password});
+            const loginParams = this.$qs.stringify({
+              username: this.form.username,
+              password: this.form.password,
+              captcha: this.form.captcha,
+            });
 
             this.$axios.post(url, loginParams).then(res => {
               this.logining = false;
@@ -79,17 +91,11 @@
                   this.dialogFormVisibleChild = false;
                 });
               }
-              else if (res.data === false) {
+              else {
                 this.$message({
-                  message: '用户名/密码错误',
+                  message: JSON.stringify(res.data),
                   type: 'error'
                 });
-              }
-              else if (res.data === true) {
-                this.$message({
-                  message: "您已经登录",
-                  type: 'warn'
-                })
               }
             }).catch((error) => {
               console.log(error)
@@ -100,12 +106,15 @@
           }
         });
       },
+      getNewCaptcha() {
+        this.captchaUrl += "1";
+      }
     },
 
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   .login-container {
     /*box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02);*/
     -webkit-border-radius: 5px;
@@ -128,6 +137,14 @@
 
   .login-container .remember {
     margin: 0 0 25px 0;
+  }
+
+  #captcha {
+    overflow: hidden;
+    padding-top: 10px;
+    img {
+      float: left;
+    }
   }
 
 </style>
