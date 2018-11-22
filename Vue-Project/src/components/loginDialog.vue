@@ -1,4 +1,4 @@
-<template>
+<template xmlns:shiro="http://www.w3.org/1999/xhtml">
   <el-dialog :visible.sync="dialogFormVisibleChild" class="login-container" width="30%" :modal="true">
     <el-form :model="form" :rules="rules" ref="form">
       <h3 class="title">Sign In</h3>
@@ -10,9 +10,11 @@
       </el-form-item>
       <el-form-item prop="captcha">
         <el-input type="text" v-model="form.captcha" placeholder="验证码"></el-input>
-        <div id="captcha">
-          <img :src="captchaUrl" alt="" ref="captcha" @click="getNewCaptcha"><a href="javascript:"
-                                                                                @click="getNewCaptcha">看不清?</a></div>
+        <div id="captcha" >
+          <img :src="captchaBit" alt="" @click="getCaptcha">
+          <!--<img  src="" alt="" ref="captcha" @click="getCaptcha">-->
+          <a href="javascript:" @click="getCaptcha">看不清?</a>
+        </div>
       </el-form-item>
       <el-checkbox v-model="checked" checked class="remember">Stay signed in</el-checkbox>
       <el-form-item style="width: 100%;">
@@ -26,10 +28,10 @@
 
 <script>
   export default {
-    props: ['dialogFormVisibleParent'],
+    props: ['dialogFormVisibleParent','currentUser'],
     data: function () {
       return {
-        captchaUrl: "http://127.0.0.1:8080/user/getGifCode?rrr=",
+        captchaBit: this.getCaptcha(),
         dialogFormVisibleChild: this.dialogFormVisibleParent,
         form: {
           username: "ddd",
@@ -39,14 +41,17 @@
         checked: true,
         logining: false,
         rules: {
-          email: [
+          username: [
             {required: true, message: '输入用户名', trigger: 'change'},
             // { type: 'email', message:'输入正确的邮箱', trigger: 'change'}
             //{ validator: validaePass }
           ],
           password: [
             {required: true, message: '输入密码', trigger: 'change'},
-            {min: 3, max: 20, message: '长度在3-20个字符之间', trigger: 'change'},
+            // {min: 3, max: 20, message: '长度在3-20个字符之间', trigger: 'change'},
+          ],
+          captcha: [
+            {required: true, message: '输入验证码', trigger: 'change'},
           ]
         }
       }
@@ -58,6 +63,10 @@
       },
       dialogFormVisibleChild: function (v) {
         if (!v) this.$emit('update:dialogFormVisibleParent', v);
+      },
+      currentUser:function () {
+        // this.getCaptcha();
+        console.log("watch taking")
       }
     },
     methods: {
@@ -106,15 +115,33 @@
           }
         });
       },
-      getNewCaptcha() {
-        this.captchaUrl += "1";
+      getCaptcha() {
+        // console.log("ref:methods " + this.$refs.captcha);
+        this.$axios.get(`/api/user/getGifCode`, {
+          responseType: 'arraybuffer'
+        }).then(res => {
+          console.log("axios");
+          return 'data:image/jpg;base64,' + btoa(
+            new Uint8Array(res.data).reduce((data, byte) => data + String.fromCharCode(byte), '')
+          );
+        }).then(data => {
+          console.log(data);
+          this.captchaBit = data;
+          // this.$refs.captcha.src = data;
+        }).catch(ex => {
+          console.error(ex);
+        });
       }
     },
+    mounted() {
+      // console.log("ref:mounted" + this.$refs.captcha)
+      // this.getCaptcha()
+    }
 
   }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
   .login-container {
     /*box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02);*/
     -webkit-border-radius: 5px;

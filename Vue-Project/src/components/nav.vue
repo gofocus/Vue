@@ -1,4 +1,4 @@
-<template>
+<template xmlns:shiro="http://www.w3.org/1999/xhtml">
   <div class="nav">
     <!--<img src="./assets/logo.png">-->
     <el-menu :default-active="activeIndex" mode="horizontal" @select="handleSelect"
@@ -25,7 +25,7 @@
 
       <!--<el-menu-item class="header-login" index="5"><span @click="$router.push('login')" >Sign in</span></el-menu-item>-->
       <!--.sync实现双向数据绑定-->
-      <loginDialog :dialogFormVisibleParent.sync="dialogFormVisibleParent"></loginDialog>
+      <loginDialog :dialogFormVisibleParent.sync="dialogFormVisibleParent" :currentUser="currentUser" ref="loginDialog"></loginDialog>
 
       <div class="hd_indxProvce">
         <a href="">
@@ -38,6 +38,7 @@
         <li class="global_unlogin">
           <div>
             <span class="hd_login_span">{{ greeting }}</span>
+            <span shiro:hasPermission="item:create">test</span>
             <template v-if="currentUser">
               <a class="hd_login_currentUser">
                 <span>{{ currentUser.username }}</span>
@@ -47,6 +48,7 @@
             <template v-else>
               <a href="javascript:" class="hd_login_link" target="_self" @click="dialogFormVisibleParent=true">登录</a>
               <a href="" class="hd_register_link" target="_blank">注册</a>
+              <a href="javascript:" class="hd_login_logout" @click="logout">登出</a>
 
             </template>
 
@@ -124,7 +126,6 @@
     mounted: function () {
       //刷新页面 vuex的数据会消失，通过sessionStorage将currentUser重新赋值给vuex
       const currentUser_storage = sessionStorage.getItem("currentUser");
-      console.log(currentUser_storage);
       if (currentUser_storage) {
         this.$store.commit('userStatus', JSON.parse(currentUser_storage));
       }
@@ -134,7 +135,8 @@
         console.log(key, keyPath)
       },
       logout: function () {
-        this.$axios.post("/api/logout");
+        this.$axios.post("/api/logout")
+          .then(this.$refs.loginDialog.getCaptcha());
         this.$store.commit('userStatus', null);
       },
     },
