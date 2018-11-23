@@ -18,21 +18,19 @@
       <ul class="topbar_right">
         <li class="global_unlogin">
           <div>
-            <span class="hd_login_span">{{ greeting }}</span>
+            <span class="hd_login_span">{{ greeting }} {{test}}</span>
 
-            <span shiro:hasPermission="item:query">test</span>
-
+            <!--<shiro:hasPermission name="item:query"><span>test</span></shiro:hasPermission>-->
+            <a v-if="hasPermission('captcha')" href="javascript:" class="hd_login_link" target="_self"
+               @click="dialogFormVisibleParent=true">登录2</a>
             <template v-if="currentUser">
-              <a class="hd_login_currentUser">
-                <span>{{ currentUser.username }}</span>
-              </a>
+              <a class="hd_login_currentUser"><span>{{ currentUser.username }}</span></a>
               <a href="javascript:" class="hd_login_logout" @click="logout">登出</a>
             </template>
             <template v-else>
               <a href="javascript:" class="hd_login_link" target="_self" @click="dialogFormVisibleParent=true">登录</a>
               <a href="" class="hd_register_link" target="_blank">注册</a>
               <a href="javascript:" class="hd_login_logout" @click="logout">登出</a>
-
             </template>
 
           </div>
@@ -67,6 +65,10 @@
   export default {
     data: function () {
       return {
+        initial: this.initial_vuex_currentUser(),
+        // test:this.$store.state.currentUser.username,
+        // test:this.currentUser.username,
+
         activeIndex: '1',
         activeIndex2: '1',
         dialogFormVisibleParent: false,
@@ -75,7 +77,7 @@
           password: '111111',
         },
         checked: true,
-        logining: false,
+        loginIng: false,
         rules: {
           email: [
             {required: true, message: '输入邮箱', trigger: 'change'},
@@ -90,6 +92,7 @@
     },
     computed: {
       greeting() {
+        console.log("computed1")
         const date = new Date();
         const hour = date.getHours();
         if (hour > 6 && hour < 12) return "上午好,";
@@ -97,27 +100,54 @@
         else return "晚上好,";
       },
       ...mapGetters(
-        ['currentUser'])
-    },
-    mounted: function () {
-      //刷新页面vuex的数据会消失，重新获取当前用户
-      this.$axios.get(`/api/user/currentUser`).then(res => {
-        this.$store.commit('userStatus', res.data);
-      })
-      // 通过sessionStorage将currentUser重新赋值给vuex
-      /*      const currentUser_storage = sessionStorage.getItem("currentUser");
-            if (currentUser_storage) {
-              this.$store.commit('userStatus', JSON.parse(currentUser_storage));
-            }*/
+        ['currentUser']),
+      test(){
+        console.log("computed2")
+        return this.currentUser.username
+      }
     },
     methods: {
       handleSelect(key, keyPath) {
         console.log(key, keyPath)
       },
-      logout: function () {
+      logout() {
         this.$axios.post("/api/logout").then(() => this.$refs.loginDialog.getCaptcha());
         this.$store.commit('userStatus', null);
       },
+      // 通过sessionStorage将currentUser重新赋值给vuex
+      initial_vuex_currentUser() {
+        console.log("initial_currentUser()");
+        const currentUser_storage = sessionStorage.getItem("currentUser");
+        if (currentUser_storage) {
+          this.$store.commit('userStatus', JSON.parse(currentUser_storage));
+        }
+        console.log("currentUser initialized");
+        // return "currentUser initialized";
+      },
+      hasPermission(permission) {
+        /*        console.log("judge hasPermission")
+                if (this.$store.state.currentUser) {
+                  console.log("dfsdfsfs")
+                  var index = this.$store.state.currentUser.permissionList.indexOf(permission);
+                  return !(index === -1);
+                }
+                else {
+                  console.log("qwer")
+                  return false;
+                }*/
+        return true;
+      }
+    },
+    mounted: function () {
+      //刷新页面vuex的数据会消失，重新获取当前用户
+      /*     this.$axios.get(`/api/user/currentUser`).then(res => {
+             this.$store.commit('userStatus', res.data);
+           })*/
+
+      /*      const currentUser_storage = sessionStorage.getItem("currentUser");
+            if (currentUser_storage) {
+              this.$store.commit('userStatus', JSON.parse(currentUser_storage));
+            }*/
     },
     components: {
       loginDialog: loginDialog,

@@ -16,8 +16,9 @@
           <a href="javascript:" @click="getCaptcha">看不清?</a>
         </div>
       </el-form-item>
-      <a href="javascript:" @click="turn_captcha" >{{form.requireCaptcha?"关闭":"开启"}}验证码  </a>
-
+      <div v-if="hasPermission('captcha')">
+        <a href="javascript:" @click="turn_captcha">{{form.requireCaptcha?"关闭":"开启"}}验证码 </a>
+      </div>
       <el-checkbox v-model="checked" checked class="remember">Stay signed in</el-checkbox>
       <el-form-item style="width: 100%;">
         <el-button type="primary" style="width: 100%;" @click.native.prevent="handleSubmit" :loading="loginIng">Submit
@@ -36,7 +37,7 @@
       const captchaRule = (rule, value, callback) => {
         if (this.form.requireCaptcha) {
           if (!value) return callback(new Error('请输入验证码！'));
-          else if (value.length !== 4 ) return callback(new Error("输入4位验证码"));
+          else if (value.length !== 4) return callback(new Error("输入4位验证码"));
           else callback();
         }
         else callback();
@@ -129,7 +130,6 @@
         this.$axios.get(`/api/user/getGifCode`, {
           responseType: 'arraybuffer'
         }).then(res => {
-          console.log("axios");
           return 'data:image/jpg;base64,' + btoa(
             new Uint8Array(res.data).reduce((data, byte) => data + String.fromCharCode(byte), '')
           );
@@ -141,8 +141,15 @@
           console.error(ex);
         });
       },
-      turn_captcha(){
+      turn_captcha() {
         this.form.requireCaptcha = !this.form.requireCaptcha;
+      },
+      hasPermission(permission) {
+        if (this.$store.state.currentUser) {
+          var index = this.$store.state.currentUser.permissionList.indexOf(permission);
+          return !(index === -1);
+        }
+        else return false;
       }
     },
     mounted() {
