@@ -6,7 +6,7 @@
 
       <!--<el-menu-item class="header-login" index="5"><span @click="$router.push('login')" >Sign in</span></el-menu-item>-->
       <!--.sync实现双向数据绑定-->
-      <loginDialog :dialogFormVisibleParent.sync="dialogFormVisibleParent"  ref="loginDialog"></loginDialog>
+      <loginDialog :dialogFormVisibleParent.sync="dialogFormVisibleParent" ref="loginDialog"></loginDialog>
 
       <div class="hd_indxProvce">
         <a href="">
@@ -19,7 +19,9 @@
         <li class="global_unlogin">
           <div>
             <span class="hd_login_span">{{ greeting }}</span>
+
             <span shiro:hasPermission="item:query">test</span>
+
             <template v-if="currentUser">
               <a class="hd_login_currentUser">
                 <span>{{ currentUser.username }}</span>
@@ -114,7 +116,7 @@
         console.log(key, keyPath)
       },
       logout: function () {
-        this.$axios.post("/api/logout").then(()=>this.$refs.loginDialog.getCaptcha());
+        this.$axios.post("/api/logout").then(() => this.$refs.loginDialog.getCaptcha());
         this.$store.commit('userStatus', null);
       },
     },

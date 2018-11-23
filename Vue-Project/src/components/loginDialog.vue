@@ -16,6 +16,8 @@
           <a href="javascript:" @click="getCaptcha">看不清?</a>
         </div>
       </el-form-item>
+      <a href="javascript:" @click="turn_captcha" >{{form.requireCaptcha?"关闭":"开启"}}验证码  </a>
+
       <el-checkbox v-model="checked" checked class="remember">Stay signed in</el-checkbox>
       <el-form-item style="width: 100%;">
         <el-button type="primary" style="width: 100%;" @click.native.prevent="handleSubmit" :loading="loginIng">Submit
@@ -34,7 +36,8 @@
       const captchaRule = (rule, value, callback) => {
         if (this.form.requireCaptcha) {
           if (!value) return callback(new Error('请输入验证码！'));
-          else if (value.length !== 4 ) return callback(new Error("输入4位验证码"))
+          else if (value.length !== 4 ) return callback(new Error("输入4位验证码"));
+          else callback();
         }
         else callback();
       };
@@ -137,6 +140,9 @@
         }).catch(ex => {
           console.error(ex);
         });
+      },
+      turn_captcha(){
+        this.form.requireCaptcha = !this.form.requireCaptcha;
       }
     },
     mounted() {
