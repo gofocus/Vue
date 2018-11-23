@@ -28,7 +28,7 @@
 
 <script>
   export default {
-    props: ['dialogFormVisibleParent','currentUser'],
+    props: ['dialogFormVisibleParent',],
     data: function () {
       return {
         captchaBit: this.getCaptcha(),
@@ -64,10 +64,6 @@
       dialogFormVisibleChild: function (v) {
         if (!v) this.$emit('update:dialogFormVisibleParent', v);
       },
-      currentUser:function () {
-        // this.getCaptcha();
-        console.log("watch taking")
-      }
     },
     methods: {
       handleSubmit() {

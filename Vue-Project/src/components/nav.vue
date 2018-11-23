@@ -3,29 +3,10 @@
     <!--<img src="./assets/logo.png">-->
     <el-menu :default-active="activeIndex" mode="horizontal" @select="handleSelect"
              background-color="#f4f4f4" text-color="black" active-text-color="#ffd04b">
-      <!--<el-menu-item index="1" @click="$router.push({name:'home'})">首页</el-menu-item>
-      &lt;!&ndash;下面这种写法无法映射到"/"，会映射到"/home"&ndash;&gt;
-      &lt;!&ndash;<el-menu-item index="1" @click="$router.push('home')">首页</el-menu-item>&ndash;&gt;
-      <el-submenu index="2">
-        <template slot="title">我的账户</template>
-        <el-menu-item index="2-1">选项1</el-menu-item>
-        <el-menu-item index="2-2">选项2</el-menu-item>
-        <el-menu-item index="2-3">选项3</el-menu-item>
-        <el-submenu index="2-4">
-          <template slot="title">选项4</template>
-          <el-menu-item index="2-4-1">选项1</el-menu-item>
-          <el-menu-item index="2-4-2">选项2</el-menu-item>
-          <el-menu-item index="2-4-3">选项3</el-menu-item>
-        </el-submenu>
-      </el-submenu>
-      <el-menu-item index="3" disabled>消息中心</el-menu-item>
-      <el-menu-item index="4" id="test"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
-      &lt;!&ndash;<el-menu-item class="header-login" index="5" @click="dialogFormVisibleParent=true"><span>Sign in</span>
-      </el-menu-item>&ndash;&gt;-->
 
       <!--<el-menu-item class="header-login" index="5"><span @click="$router.push('login')" >Sign in</span></el-menu-item>-->
       <!--.sync实现双向数据绑定-->
-      <loginDialog :dialogFormVisibleParent.sync="dialogFormVisibleParent" :currentUser="currentUser" ref="loginDialog"></loginDialog>
+      <loginDialog :dialogFormVisibleParent.sync="dialogFormVisibleParent"  ref="loginDialog"></loginDialog>
 
       <div class="hd_indxProvce">
         <a href="">
@@ -117,26 +98,28 @@
       localStorage() {
         if (this.currentUser) {
         }
-        // return sessionStorage.getItem('currentUser');
         return this.currentUser;
       },
       ...mapGetters(
         ['currentUser'])
     },
     mounted: function () {
-      //刷新页面 vuex的数据会消失，通过sessionStorage将currentUser重新赋值给vuex
-      const currentUser_storage = sessionStorage.getItem("currentUser");
-      if (currentUser_storage) {
-        this.$store.commit('userStatus', JSON.parse(currentUser_storage));
-      }
+      //刷新页面vuex的数据会消失，重新获取当前用户
+      this.$axios.get(`/api/user/currentUser`).then(res => {
+        this.$store.commit('userStatus', res.data);
+      })
+      // 通过sessionStorage将currentUser重新赋值给vuex
+      /*      const currentUser_storage = sessionStorage.getItem("currentUser");
+            if (currentUser_storage) {
+              this.$store.commit('userStatus', JSON.parse(currentUser_storage));
+            }*/
     },
     methods: {
       handleSelect(key, keyPath) {
         console.log(key, keyPath)
       },
       logout: function () {
-        this.$axios.post("/api/logout")
-          .then(this.$refs.loginDialog.getCaptcha());
+        this.$axios.post("/api/logout").then(()=>this.$refs.loginDialog.getCaptcha());
         this.$store.commit('userStatus', null);
       },
     },
