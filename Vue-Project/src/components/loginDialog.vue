@@ -8,7 +8,7 @@
       <el-form-item prop="password">
         <el-input type="password" v-model="form.password" placeholder="Password"></el-input>
       </el-form-item>
-      <el-form-item prop="captcha">
+      <el-form-item prop="captcha" v-if="form.requireCaptcha">
         <el-input type="text" v-model="form.captcha" placeholder="验证码"></el-input>
         <div id="captcha">
           <img :src="captchaBit" alt="" @click="getCaptcha">

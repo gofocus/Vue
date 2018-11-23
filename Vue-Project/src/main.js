@@ -33,7 +33,7 @@ Vue.use(ElementUI);
 Vue.prototype.$axios = axios;
 Vue.prototype.$itemPicUrl = "http://localhost:8080/pic/";
 Vue.prototype.$qs = Qs;
-axios.defaults.withCredentials=true;
+// axios.defaults.withCredentials=true;
 
 const router = new VueRouter({
   routes

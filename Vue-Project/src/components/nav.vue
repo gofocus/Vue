@@ -38,10 +38,10 @@
           </div>
         </li>
         <li>
-          <div class="hd_menu" v-if="currentUser">
+          <div class="hd_menu">
             <a href="" target="_blank">
               <font-icon id="icon-wodejuhuasuan"></font-icon>
-              <span>会员俱乐部{{currentUser.userid}}</span>
+              <span>会员俱乐部</span>
             </a>
           </div>
         </li>
@@ -80,7 +80,6 @@
           email: [
             {required: true, message: '输入邮箱', trigger: 'change'},
             // { type: 'email', message:'输入正确的邮箱', trigger: 'change'}
-            //{ validator: validaePass }
           ],
           password: [
             {required: true, message: '输入密码', trigger: 'change'},
