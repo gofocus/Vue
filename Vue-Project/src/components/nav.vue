@@ -19,7 +19,7 @@
         <li class="global_unlogin">
           <div>
             <span class="hd_login_span">{{ greeting }}</span>
-            <span shiro:hasPermission="item:create">test</span>
+            <span shiro:hasPermission="item:query">test</span>
             <template v-if="currentUser">
               <a class="hd_login_currentUser">
                 <span>{{ currentUser.username }}</span>
@@ -94,11 +94,6 @@
         if (hour > 6 && hour < 12) return "上午好,";
         else if (hour >= 12 && hour < 18) return "下午好,";
         else return "晚上好,";
-      },
-      localStorage() {
-        if (this.currentUser) {
-        }
-        return this.currentUser;
       },
       ...mapGetters(
         ['currentUser'])

@@ -10,7 +10,7 @@
       </el-form-item>
       <el-form-item prop="captcha">
         <el-input type="text" v-model="form.captcha" placeholder="验证码"></el-input>
-        <div id="captcha" >
+        <div id="captcha">
           <img :src="captchaBit" alt="" @click="getCaptcha">
           <!--<img  src="" alt="" ref="captcha" @click="getCaptcha">-->
           <a href="javascript:" @click="getCaptcha">看不清?</a>
@@ -18,7 +18,7 @@
       </el-form-item>
       <el-checkbox v-model="checked" checked class="remember">Stay signed in</el-checkbox>
       <el-form-item style="width: 100%;">
-        <el-button type="primary" style="width: 100%;" @click.native.prevent="handleSubmit" :loading="logining">Submit
+        <el-button type="primary" style="width: 100%;" @click.native.prevent="handleSubmit" :loading="loginIng">Submit
         </el-button>
       </el-form-item>
     </el-form>
@@ -27,9 +27,17 @@
 </template>
 
 <script>
+
   export default {
-    props: ['dialogFormVisibleParent',],
+    props: ['dialogFormVisibleParent'],
     data: function () {
+      const captchaRule = (rule, value, callback) => {
+        if (this.form.requireCaptcha) {
+          if (!value) return callback(new Error('请输入验证码！'));
+          else if (value.length !== 4 ) return callback(new Error("输入4位验证码"))
+        }
+        else callback();
+      };
       return {
         captchaBit: this.getCaptcha(),
         dialogFormVisibleChild: this.dialogFormVisibleParent,
@@ -37,9 +45,10 @@
           username: "ddd",
           password: 123,
           captcha: "",
+          requireCaptcha: false,
         },
         checked: true,
-        logining: false,
+        loginIng: false,
         rules: {
           username: [
             {required: true, message: '输入用户名', trigger: 'change'},
@@ -51,7 +60,7 @@
             // {min: 3, max: 20, message: '长度在3-20个字符之间', trigger: 'change'},
           ],
           captcha: [
-            {required: true, message: '输入验证码', trigger: 'change'},
+            {validator: captchaRule, trigger: 'change'},
           ]
         }
       }
@@ -69,17 +78,18 @@
       handleSubmit() {
         this.$refs.form.validate((valid) => {
           if (valid) {
-            this.logining = true;
+            this.loginIng = true;
             const url = `/api/user/login`;
-            //shiro使用表单认证，因此这里将JSON数据转换格式（form?）
+            //shiro使用表单认证，因此这里将JSON数据转换格式（转成了form-xxx..?）
             const loginParams = this.$qs.stringify({
               username: this.form.username,
               password: this.form.password,
               captcha: this.form.captcha,
+              requireCaptcha: this.form.requireCaptcha,
             });
 
             this.$axios.post(url, loginParams).then(res => {
-              this.logining = false;
+              this.loginIng = false;
               if (res.status !== 200) {
                 this.$message({
                   message: '未知错误',
@@ -130,8 +140,6 @@
       }
     },
     mounted() {
-      // console.log("ref:mounted" + this.$refs.captcha)
-      // this.getCaptcha()
     }
 
   }
