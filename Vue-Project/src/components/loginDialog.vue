@@ -17,7 +17,8 @@
         </div>
       </el-form-item>
       <el-form-item>
-        <a v-if="hasPermission('captcha')" href="javascript:" @click="turn_captcha">{{form.requireCaptcha?"关闭":"开启"}}验证码 </a>
+        <!--<a v-if="hasPermission('captcha')" href="javascript:" @click="turn_captcha">{{form.requireCaptcha?"关闭":"开启"}}验证码 </a>-->
+        <a v-if="this.$hasPermission('captcha')" href="javascript:" @click="turn_captcha">{{form.requireCaptcha?"关闭":"开启"}}验证码 </a>
         <el-checkbox v-model="checked" checked class="remember">Stay signed in</el-checkbox>
       </el-form-item>
 
@@ -145,14 +146,6 @@
       turn_captcha() {
         this.form.requireCaptcha = !this.form.requireCaptcha;
       },
-      hasPermission(permission) {
-        if (this.$store.state.currentUser) {
-          const index = this.$store.state.currentUser.permissionList.indexOf(permission);
-          return !(index === -1);
-        }
-        else
-          return false;
-      }
     },
     mounted() {
     }
