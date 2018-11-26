@@ -68,7 +68,6 @@
         initial: this.initial_vuex_currentUser(),
         // test:this.$store.state.currentUser.username,
         // test:this.currentUser.username,
-
         activeIndex: '1',
         activeIndex2: '1',
         dialogFormVisibleParent: false,
@@ -103,7 +102,7 @@
         ['currentUser']),
       test(){
         console.log("computed2")
-        return this.currentUser.username
+        // return this.currentUser.username
       }
     },
     methods: {
@@ -116,13 +115,13 @@
       },
       // 通过sessionStorage将currentUser重新赋值给vuex
       initial_vuex_currentUser() {
-        console.log("initial_currentUser()");
-        const currentUser_storage = sessionStorage.getItem("currentUser");
+/*        const currentUser_storage = sessionStorage.getItem("currentUser");
         if (currentUser_storage) {
           this.$store.commit('userStatus', JSON.parse(currentUser_storage));
-        }
-        console.log("currentUser initialized");
-        // return "currentUser initialized";
+        }*/
+        this.$axios.get(`/api/user/currentUser`).then(res => {
+          this.$store.commit('userStatus', res.data);
+        });
       },
       hasPermission(permission) {
         /*        console.log("judge hasPermission")

@@ -8,7 +8,7 @@
       <el-form-item prop="password">
         <el-input type="password" v-model="form.password" placeholder="Password"></el-input>
       </el-form-item>
-      <el-form-item prop="captcha" v-if="form.requireCaptcha">
+      <el-form-item prop="captcha" v-if="form.requireCaptcha" class="captcha">
         <el-input type="text" v-model="form.captcha" placeholder="验证码"></el-input>
         <div id="captcha">
           <img :src="captchaBit" alt="" @click="getCaptcha">
@@ -16,10 +16,11 @@
           <a href="javascript:" @click="getCaptcha">看不清?</a>
         </div>
       </el-form-item>
-      <div v-if="hasPermission('captcha')">
-        <a href="javascript:" @click="turn_captcha">{{form.requireCaptcha?"关闭":"开启"}}验证码 </a>
-      </div>
-      <el-checkbox v-model="checked" checked class="remember">Stay signed in</el-checkbox>
+      <el-form-item>
+        <a v-if="hasPermission('captcha')" href="javascript:" @click="turn_captcha">{{form.requireCaptcha?"关闭":"开启"}}验证码 </a>
+        <el-checkbox v-model="checked" checked class="remember">Stay signed in</el-checkbox>
+      </el-form-item>
+
       <el-form-item style="width: 100%;">
         <el-button type="primary" style="width: 100%;" @click.native.prevent="handleSubmit" :loading="loginIng">Submit
         </el-button>
@@ -146,10 +147,11 @@
       },
       hasPermission(permission) {
         if (this.$store.state.currentUser) {
-          var index = this.$store.state.currentUser.permissionList.indexOf(permission);
+          const index = this.$store.state.currentUser.permissionList.indexOf(permission);
           return !(index === -1);
         }
-        else return false;
+        else
+          return false;
       }
     },
     mounted() {
@@ -171,6 +173,23 @@
     /*background: #fff;*/
     /*border: 1px solid #eaeaea;*/
     /*box-shadow: 0 0 25px #cac6c6;*/
+
+    .el-dialog__body {
+      padding: 7px 20px;
+    }
+
+    .captcha {
+      margin-bottom: 0;
+    }
+
+    #captcha {
+      overflow: hidden;
+      padding-top: 10px;
+      img {
+        float: left;
+      }
+    }
+
   }
 
   .login-container .title {
@@ -179,16 +198,5 @@
     color: #505458;
   }
 
-  .login-container .remember {
-    margin: 0 0 25px 0;
-  }
-
-  #captcha {
-    overflow: hidden;
-    padding-top: 10px;
-    img {
-      float: left;
-    }
-  }
 
 </style>
