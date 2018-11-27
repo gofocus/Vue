@@ -139,6 +139,9 @@
                   message: JSON.stringify(res.data),
                   type: 'error'
                 });
+                if (res.data === "您已经登录") {
+                  this.loginDialogVisible_ = false;
+                }
               }
             }).catch((error) => {
               console.log(error)
