@@ -109,8 +109,10 @@
                     type: 'success'
                   });
                   this.dialogFormVisibleChild = false;
-                  console.log("认证成功，跳转到：",this.$route.query.redirect);
-                  this.$router.push(this.$route.query.redirect)
+                  // console.log("认证成功，跳转到：",this.$route.query.redirect);
+                  console.log("认证成功，跳转到：",this.$store.state.authUrl);
+                  // this.$router.push(this.$route.query.redirect)
+                  this.$router.push(this.$store.state.authUrl)
                 });
               }
               else {

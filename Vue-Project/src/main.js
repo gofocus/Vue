@@ -43,12 +43,14 @@ router.beforeEach((to, from, next) => {
   //拦截需要认证的路由
   if (!store.state.currentUser) {
     if (to.matched.some(record => record.meta.requireAuth)) {
+      //暂时手动打开登录框
       console.log("需要认证，跳转到首页，弹出登录框");
-      // next(false);
-      next({
+      store.commit('mu_authUrl', to.fullPath);
+      next(false);
+ /*     next({
         path: "/",
         query: {redirect: to.fullPath}
-      })
+      })*/
     }
     else {
       console.log("无需认证，直接访问");

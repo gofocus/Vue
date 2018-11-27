@@ -1,3 +1,4 @@
+
 export const userStatus = (state, user) => {
   if (user) {
     state.isLogin = true;
@@ -12,5 +13,12 @@ export const userStatus = (state, user) => {
     state.currentUser = null;
     state.isLogin = false;
     state.token = "";
+  }
+};
+
+
+export const mu_authUrl = (state, authUrl) => {
+  if (authUrl !== "") {
+    state.authUrl = authUrl;
   }
 };
