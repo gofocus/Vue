@@ -1,5 +1,6 @@
 <template xmlns:shiro="http://www.w3.org/1999/xhtml">
-  <el-dialog :visible.sync="dialogFormVisibleChild" class="login-container" width="30%" :modal="true">
+  <!--<el-dialog :visible.sync="dialogFormVisibleChild" class="login-container" width="30%" :modal="true">-->
+  <el-dialog :visible.sync="loginDialogVisible_" class="login-container" width="30%" :modal="true">
     <el-form :model="form" :rules="rules" ref="form">
       <h3 class="title">Sign In</h3>
       <el-form-item prop="username">
@@ -31,9 +32,10 @@
 </template>
 
 <script>
+  import {mapGetters} from 'vuex'
 
   export default {
-    props: ['dialogFormVisibleParent'],
+    // props: ['dialogFormVisibleParent'],
     data: function () {
       const captchaRule = (rule, value, callback) => {
         if (this.form.requireCaptcha) {
@@ -44,8 +46,9 @@
         else callback();
       };
       return {
+        loginDialogVisible_:this.loginDialogVisible,
         captchaBit: this.getCaptcha(),
-        dialogFormVisibleChild: this.dialogFormVisibleParent,
+        // dialogFormVisibleChild: this.dialogFormVisibleParent,
         form: {
           username: "ddd",
           password: 123,
@@ -70,14 +73,26 @@
         }
       }
     },
-    computed: {},
+    computed: {
+      ...mapGetters(['loginDialogVisible'])
+    },
     watch: {
-      dialogFormVisibleParent: function (v) {
+/*      dialogFormVisibleParent: function (v) {
         if (v) this.dialogFormVisibleChild = v
       },
       dialogFormVisibleChild: function (v) {
         if (!v) this.$emit('update:dialogFormVisibleParent', v);
+      },*/
+      loginDialogVisible_:function (v) {
+        if (!v) {
+          this.$store.commit('mu_loginDialogVisible', v);
+        }
       },
+      loginDialogVisible:function (v) {
+        if (v) {
+          this.loginDialogVisible_ = v;
+        }
+      }
     },
     methods: {
       handleSubmit() {
@@ -108,7 +123,8 @@
                     message: '登陆成功',
                     type: 'success'
                   });
-                  this.dialogFormVisibleChild = false;
+                  // this.dialogFormVisibleChild = false;
+                  this.loginDialogVisible_ = false;
                   // console.log("认证成功，跳转到：",this.$route.query.redirect);
                   console.log("认证成功，跳转到：",this.$store.state.authUrl);
                   // this.$router.push(this.$route.query.redirect)

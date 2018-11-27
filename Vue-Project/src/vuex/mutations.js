@@ -22,3 +22,6 @@ export const mu_authUrl = (state, authUrl) => {
     state.authUrl = authUrl;
   }
 };
+export const mu_loginDialogVisible = (state, loginDialogVisible) => {
+    state.loginDialogVisible = loginDialogVisible;
+};

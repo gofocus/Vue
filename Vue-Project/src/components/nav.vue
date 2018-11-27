@@ -6,7 +6,8 @@
 
       <!--<el-menu-item class="header-login" index="5"><span @click="$router.push('login')" >Sign in</span></el-menu-item>-->
       <!--.sync实现双向数据绑定-->
-      <loginDialog :dialogFormVisibleParent.sync="dialogFormVisibleParent" ref="loginDialog"></loginDialog>
+      <!--<loginDialog :dialogFormVisibleParent.sync="dialogFormVisibleParent" ref="loginDialog"></loginDialog>-->
+      <loginDialog ref="loginDialog"></loginDialog>
 
       <div class="hd_indxProvce">
         <a href="">
@@ -19,14 +20,15 @@
         <li class="global_unlogin">
           <div>
             <span class="hd_login_span">{{ greeting }}</span>
-            <a href="javascript:" class="hd_login_link" target="_self"
-               @click="dialogFormVisibleParent=true">登录2</a>
+            <!--<a href="javascript:" class="hd_login_link" target="_self" @click="dialogFormVisibleParent=true">登录2</a>-->
+            <a href="javascript:" class="hd_login_link" target="_self" @click="change_loginDialogVisible">登录2</a>
             <template v-if="currentUser">
               <a class="hd_login_currentUser"><span>{{ currentUser.username }}</span></a>
               <a href="javascript:" class="hd_login_logout" @click="logout">登出</a>
             </template>
             <template v-else>
-              <a href="javascript:" class="hd_login_link" target="_self" @click="dialogFormVisibleParent=true">登录</a>
+              <!--<a href="javascript:" class="hd_login_link" target="_self" @click="dialogFormVisibleParent=true">登录</a>-->
+              <a href="javascript:" class="hd_login_link" target="_self" @click="change_loginDialogVisible">登录</a>
               <a href="" class="hd_register_link" target="_blank">注册</a>
               <a href="javascript:" class="hd_login_logout" @click="logout">登出</a>
             </template>
@@ -68,7 +70,7 @@
         // test:this.currentUser.username,
         activeIndex: '1',
         activeIndex2: '1',
-        dialogFormVisibleParent: false,
+        // dialogFormVisibleParent: false,
         form: {
           email: 'admin',
           password: '111111',
@@ -99,6 +101,9 @@
         ['currentUser']),
     },
     methods: {
+      change_loginDialogVisible(){
+        this.$store.commit('mu_loginDialogVisible', true);
+      },
       handleSelect(key, keyPath) {
         console.log(key, keyPath)
       },

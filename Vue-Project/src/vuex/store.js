@@ -13,6 +13,7 @@ const store = new Vuex.Store({
     isLogin: false,
     token: "",
     authUrl:"",
+    loginDialogVisible: false,
   },
   getters,
   mutations,
