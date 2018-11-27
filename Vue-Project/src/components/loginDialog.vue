@@ -1,4 +1,4 @@
-<template xmlns:shiro="http://www.w3.org/1999/xhtml">
+<template>
   <!--<el-dialog :visible.sync="dialogFormVisibleChild" class="login-container" width="30%" :modal="true">-->
   <el-dialog :visible.sync="loginDialogVisible_" class="login-container" width="30%" :modal="true">
     <el-form :model="form" :rules="rules" ref="form">
@@ -46,7 +46,8 @@
         else callback();
       };
       return {
-        loginDialogVisible_:this.loginDialogVisible,
+        loginDialogVisible_: this.$store.state.loginDialogVisible,
+        test1: this.test(),
         captchaBit: this.getCaptcha(),
         // dialogFormVisibleChild: this.dialogFormVisibleParent,
         form: {
@@ -74,7 +75,7 @@
       }
     },
     computed: {
-      ...mapGetters(['loginDialogVisible'])
+      ...mapGetters(['loginDialogVisible']),
     },
     watch: {
 /*      dialogFormVisibleParent: function (v) {
@@ -95,6 +96,8 @@
       }
     },
     methods: {
+      test(){
+        console.log("Test")},
       handleSubmit() {
         this.$refs.form.validate((valid) => {
           if (valid) {
