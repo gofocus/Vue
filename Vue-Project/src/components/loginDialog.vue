@@ -17,7 +17,6 @@
         </div>
       </el-form-item>
       <el-form-item>
-        <!--<a v-if="hasPermission('captcha')" href="javascript:" @click="turn_captcha">{{form.requireCaptcha?"关闭":"开启"}}验证码 </a>-->
         <a v-if="this.$hasPermission('captcha')" href="javascript:" @click="turn_captcha">{{form.requireCaptcha?"关闭":"开启"}}验证码 </a>
         <el-checkbox v-model="checked" checked class="remember">Stay signed in</el-checkbox>
       </el-form-item>
@@ -110,6 +109,8 @@
                     type: 'success'
                   });
                   this.dialogFormVisibleChild = false;
+                  console.log("认证成功，跳转到：",this.$route.query.redirect);
+                  this.$router.push(this.$route.query.redirect)
                 });
               }
               else {
@@ -129,16 +130,13 @@
       },
       getCaptcha() {
         // console.log("ref:methods " + this.$refs.captcha);
-        this.$axios.get(`/api/user/getGifCode`, {
-          responseType: 'arraybuffer'
-        }).then(res => {
+        this.$axios.get(`/api/user/getGifCode`, {responseType: 'arraybuffer'}
+        ).then(res => {
           return 'data:image/jpg;base64,' + btoa(
             new Uint8Array(res.data).reduce((data, byte) => data + String.fromCharCode(byte), '')
           );
         }).then(data => {
-          console.log(data);
           this.captchaBit = data;
-          // this.$refs.captcha.src = data;
         }).catch(ex => {
           console.error(ex);
         });

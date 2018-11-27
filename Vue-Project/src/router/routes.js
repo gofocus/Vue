@@ -9,16 +9,27 @@ let routes = [
     name: 'home',
     components: {
       default: Home
-    }
+    },
+    // redirect: '/layout'
   },
-  {
+/*  {
     path: '/layout',
     component: layout
-  },
+  },*/
   {
     path: '/item/:itemId',
     name: 'itemDetail',
-    component: itemDetail
+    component: itemDetail,
+    meta: {
+      requireAuth: true,
+      requirePermission: "itemDetail"
+    },
+    children:[
+      {
+        path:'/layout',
+        component:layout
+      }
+    ]
   }
 
 ];

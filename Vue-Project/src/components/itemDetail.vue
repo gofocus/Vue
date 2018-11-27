@@ -1,5 +1,6 @@
 <template>
   <div class="itemDetail">
+    <!--<router-view></router-view>-->
     <header-bp class="itemDetail_header_bp"></header-bp>
 
     <el-container>
@@ -39,7 +40,9 @@
                   </div>
                   <div class="cart">
                     <inputNumber></inputNumber>
-                    <a href="javascript:"><font-icon id="icon-gouwuche"></font-icon><span>加入购物车</span></a></div>
+                    <a href="javascript:">
+                      <font-icon id="icon-gouwuche"></font-icon>
+                      <span>加入购物车</span></a></div>
                 </div>
               </el-col>
               <el-col :span="4">
@@ -73,7 +76,6 @@
 <script>
   import header_bp from '../components/header-bp'
   import inputNumber from '../components/inputNumber';
-  // import {requestItemInfo} from '../axios/api';
 
   export default {
     name: "itemDetail",
@@ -93,14 +95,33 @@
         this.$router.push('/');
       },
     },
-
-    created:
-      function () {
-        const id = this.itemId;
-        this.$axios.post(`/api/items/getItemInfo`, id, {headers: {'Content-Type': 'application/json'}}).then(res => {
-          this.item = res.data;
-        })
-      }
+    created: function () {
+      const id = this.itemId;
+      this.$axios.post(`/api/items/getItemInfo`, id, {headers: {'Content-Type': 'application/json'}}).then(res => {
+        this.item = res.data;
+      })
+    },
+//     beforeRouteEnter(to, from, next) {
+//       //检查权限，登录拦截在全局守卫里进行
+//       next(vm => {
+//         console.log("传入回调函数，仅限beforeRouteEnter");
+//         if (vm.$store.state.currentUser) {
+//           if (vm.$hasPermission(to.name)) {
+//             console.log("啥也不做")
+//           }
+//           else {
+//             console.log("已登陆，无权访问,跳转页面");
+//             // next({name: "home"});
+//             // next({path: "/"});
+//             next("/");
+//           }
+//         }
+// /*        else {
+//           console.log("未登陆，无权访问");
+//           next("/");
+//         }*/
+//       })
+//     }
   }
 
 </script>

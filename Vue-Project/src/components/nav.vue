@@ -18,10 +18,8 @@
       <ul class="topbar_right">
         <li class="global_unlogin">
           <div>
-            <span class="hd_login_span">{{ greeting }} {{test}}</span>
-
-            <!--<shiro:hasPermission name="item:query"><span>test</span></shiro:hasPermission>-->
-            <a v-if="hasPermission('captcha')" href="javascript:" class="hd_login_link" target="_self"
+            <span class="hd_login_span">{{ greeting }}</span>
+            <a href="javascript:" class="hd_login_link" target="_self"
                @click="dialogFormVisibleParent=true">登录2</a>
             <template v-if="currentUser">
               <a class="hd_login_currentUser"><span>{{ currentUser.username }}</span></a>
@@ -91,7 +89,6 @@
     },
     computed: {
       greeting() {
-        console.log("computed1")
         const date = new Date();
         const hour = date.getHours();
         if (hour > 6 && hour < 12) return "上午好,";
@@ -100,10 +97,6 @@
       },
       ...mapGetters(
         ['currentUser']),
-      test(){
-        console.log("computed2")
-        // return this.currentUser.username
-      }
     },
     methods: {
       handleSelect(key, keyPath) {
@@ -113,40 +106,18 @@
         this.$axios.post("/api/logout").then(() => this.$refs.loginDialog.getCaptcha());
         this.$store.commit('userStatus', null);
       },
-      // 通过sessionStorage将currentUser重新赋值给vuex
       initial_vuex_currentUser() {
-/*        const currentUser_storage = sessionStorage.getItem("currentUser");
-        if (currentUser_storage) {
-          this.$store.commit('userStatus', JSON.parse(currentUser_storage));
-        }*/
+        // 通过sessionStorage将currentUser重新赋值给vuex
+        /*        const currentUser_storage = sessionStorage.getItem("currentUser");
+                if (currentUser_storage) {
+                  this.$store.commit('userStatus', JSON.parse(currentUser_storage));
+                }*/
         this.$axios.get(`/api/user/currentUser`).then(res => {
           this.$store.commit('userStatus', res.data);
         });
       },
-      hasPermission(permission) {
-        /*        console.log("judge hasPermission")
-                if (this.$store.state.currentUser) {
-                  console.log("dfsdfsfs")
-                  var index = this.$store.state.currentUser.permissionList.indexOf(permission);
-                  return !(index === -1);
-                }
-                else {
-                  console.log("qwer")
-                  return false;
-                }*/
-        return true;
-      }
     },
     mounted: function () {
-      //刷新页面vuex的数据会消失，重新获取当前用户
-      /*     this.$axios.get(`/api/user/currentUser`).then(res => {
-             this.$store.commit('userStatus', res.data);
-           })*/
-
-      /*      const currentUser_storage = sessionStorage.getItem("currentUser");
-            if (currentUser_storage) {
-              this.$store.commit('userStatus', JSON.parse(currentUser_storage));
-            }*/
     },
     components: {
       loginDialog: loginDialog,

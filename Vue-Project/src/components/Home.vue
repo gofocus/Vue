@@ -215,7 +215,10 @@
       goItemDetails: function (itemId) {
         // this.$router.push("/item/" + itemId)
         //对于上面，假如itemDetail的路由变化，就需要相应的修改路径。这种写法可维护性（适应性）更高，
-        this.$router.push({name: 'itemDetail', params: {itemId: itemId}})
+        // if (this.$hasPermission('item:query')) {
+          this.$router.push({name: 'itemDetail', params: {itemId: itemId}});
+        // }
+
       }
     }
   }

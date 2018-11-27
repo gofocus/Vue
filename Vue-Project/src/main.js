@@ -34,17 +34,59 @@ Vue.prototype.$qs = Qs;
 // axios.defaults.withCredentials=true;
 
 
-
 const router = new VueRouter({
   routes
 });
+
+router.beforeEach((to, from, next) => {
+  console.log("to:",to);
+  //拦截需要认证的路由
+  if (!store.state.currentUser) {
+    if (to.matched.some(record => record.meta.requireAuth)) {
+      console.log("需要认证，跳转到首页，弹出登录框");
+      // next(false);
+            next({
+        // path: "/",
+        // path: to.fullPath,
+        query: {redirect: to.fullPath}
+      })
+    }
+    else {
+      console.log("无需认证，直接访问");
+      next();
+    }
+  }
+  //拦截需要权限的路由
+  else {
+    if (to.meta.requirePermission) {
+      // if (to.matched.some(record => record.meta.requirePermission !== null)) {
+        if ((store.state.currentUser.permissionList.indexOf(to.matched[0].meta.requirePermission)) !== -1) {
+          console.log("授权成功，拥有权限：", to.matched[0].meta.requirePermission);
+          next();
+        }
+        else {
+          console.log("没有访问权限：",to.matched[0].meta.requirePermission);
+          next(false);
+        }
+      // }
+/*      else {
+        next();
+      }*/
+    }
+    else{
+      console.log("无需权限，直接访问");
+      next();
+    }
+  }
+});
+
 
 new Vue({
   el: '#app',
   router,
   store,
   template: '<App/>',
-  components: { App },
+  components: {App},
   created() {
     axios({
       method: 'get',
