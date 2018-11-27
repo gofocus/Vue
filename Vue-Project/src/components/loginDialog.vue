@@ -169,6 +169,12 @@
         this.form.requireCaptcha = !this.form.requireCaptcha;
       },
     },
+    beforeCreate(){
+      console.log(this.form)
+    },    created(){
+      console.log("created:",this.form)
+      console.log(this.getCaptcha)
+    },
     mounted() {
     }
 
