@@ -1,6 +1,6 @@
 <template>
   <div class="itemDetail">
-    <!--<router-view></router-view>-->
+    <router-view></router-view>
     <header-bp class="itemDetail_header_bp"></header-bp>
 
     <el-container>

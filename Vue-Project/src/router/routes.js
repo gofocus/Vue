@@ -26,7 +26,7 @@ let routes = [
     },
     children:[
       {
-        path:'/layout',
+        path:'layout',
         component:layout
       }
     ]

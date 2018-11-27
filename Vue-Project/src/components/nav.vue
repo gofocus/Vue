@@ -65,9 +65,7 @@
   export default {
     data: function () {
       return {
-        initial: this.initial_vuex_currentUser(),
-        // test:this.$store.state.currentUser.username,
-        // test:this.currentUser.username,
+        // initial: this.initial_vuex_currentUser(),
         activeIndex: '1',
         activeIndex2: '1',
         // dialogFormVisibleParent: false,
@@ -111,16 +109,17 @@
         this.$axios.post("/api/logout").then(() => this.$refs.loginDialog.getCaptcha());
         this.$store.commit('userStatus', null);
       },
-      initial_vuex_currentUser() {
-        // 通过sessionStorage将currentUser重新赋值给vuex
-        /*        const currentUser_storage = sessionStorage.getItem("currentUser");
-                if (currentUser_storage) {
-                  this.$store.commit('userStatus', JSON.parse(currentUser_storage));
-                }*/
-        this.$axios.get(`/api/user/currentUser`).then(res => {
-          this.$store.commit('userStatus', res.data);
-        });
-      },
+      // initial_vuex_currentUser() {
+      //   // 通过sessionStorage将currentUser重新赋值给vuex
+      //   /*        const currentUser_storage = sessionStorage.getItem("currentUser");
+      //           if (currentUser_storage) {
+      //             this.$store.commit('userStatus', JSON.parse(currentUser_storage));
+      //           }*/
+      //   console.log("initial_vuex_currentUser")
+      //   this.$axios.get(`/api/user/currentUser`).then(res => {
+      //     this.$store.commit('userStatus', res.data);
+      //   });
+      // },
     },
     mounted: function () {
     },
