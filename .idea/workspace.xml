@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c3f59b57-54ee-45a1-bfc5-0f93cafb0a32" name="Default Changelist" comment="前端授权认证 全局方法">
+    <list default="true" id="c3f59b57-54ee-45a1-bfc5-0f93cafb0a32" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue-Project/src/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Vue-Project/src/components/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue-Project/src/components/itemDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Vue-Project/src/components/itemDetail.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue-Project/src/components/loginDialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Vue-Project/src/components/loginDialog.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue-Project/src/components/nav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Vue-Project/src/components/nav.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vue-Project/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Vue-Project/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue-Project/src/router/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/Vue-Project/src/router/routes.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -77,10 +72,10 @@
           <entry key="css" value="1600" />
           <entry key="html" value="7118" />
           <entry key="itemPhotos" value="58" />
-          <entry key="js" value="9853" />
+          <entry key="js" value="9854" />
           <entry key="json" value="6" />
           <entry key="scss" value="1350" />
-          <entry key="txt" value="524" />
+          <entry key="txt" value="544" />
           <entry key="vue" value="25564" />
         </counts>
       </usages-collector>
@@ -90,8 +85,8 @@
           <entry key="CSS" value="1600" />
           <entry key="HTML" value="7182" />
           <entry key="JSON" value="6" />
-          <entry key="JavaScript" value="9847" />
-          <entry key="PLAIN_TEXT" value="524" />
+          <entry key="JavaScript" value="9848" />
+          <entry key="PLAIN_TEXT" value="544" />
           <entry key="SCSS" value="1350" />
           <entry key="Vue.js" value="25564" />
         </counts>
@@ -105,11 +100,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Vue-Project/src/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+            <state relative-caret-position="324">
+              <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -147,26 +142,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Vue-Project/src/components/loginDialog.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
+            <state relative-caret-position="346">
               <caret line="102" column="15" lean-forward="true" selection-start-line="102" selection-start-column="15" selection-end-line="102" selection-end-column="15" />
               <folding>
                 <element signature="e#2710#2938#0" />
                 <element signature="e#4504#5047#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vue-Project/index.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Vue-Project/src/App.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -3408,7 +3389,7 @@
       <workItem from="1542334123058" duration="17185000" />
       <workItem from="1542593127065" duration="21208000" />
       <workItem from="1542853536574" duration="12809000" />
-      <workItem from="1543200200481" duration="31551000" />
+      <workItem from="1543200200481" duration="31899000" />
     </task>
     <task id="LOCAL-00001" summary="2018-9-26">
       <created>1537952241795</created>
@@ -3690,11 +3671,18 @@
       <option name="project" value="LOCAL" />
       <updated>1543215345683</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="使用全局路由守卫，拦截认证和授权">
+      <created>1543308989476</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1543308989476</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="542393000" />
+    <option name="totallyTimeSpent" value="542741000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -3709,7 +3697,7 @@
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2613185" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2613185" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -3720,7 +3708,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32890365" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49960285" weight="0.32724252" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49960285" weight="0.5299003" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.35714287" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50039715" side_tool="true" weight="0.32724252" />
       <window_info anchor="bottom" id="Messages" order="11" />
@@ -3800,7 +3788,6 @@
       <path value="$PROJECT_DIR$/vue-admin" />
       <path value="$PROJECT_DIR$/vue2-management-platform" />
     </ignored-roots>
-    <MESSAGE value="init" />
     <MESSAGE value="axios-mock-adpater" />
     <MESSAGE value="component" />
     <MESSAGE value="vue2-happyfri-master" />
@@ -3825,7 +3812,8 @@
     <MESSAGE value="前端实现授权、   session存入vuex而不是sessionStorage,刷新页面重新获取session" />
     <MESSAGE value="前端授权认证、   session存入vuex而不是sessionStorage,刷新页面重新获取session" />
     <MESSAGE value="前端授权认证 全局方法" />
-    <option name="LAST_COMMIT_MESSAGE" value="前端授权认证 全局方法" />
+    <MESSAGE value="使用全局路由守卫，拦截认证和授权" />
+    <option name="LAST_COMMIT_MESSAGE" value="使用全局路由守卫，拦截认证和授权" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Vue-Project/src/css/itemDetail.scss">
@@ -4161,13 +4149,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-Project/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Vue-Project/src/components/nav.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="514">
@@ -4182,9 +4163,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Vue-Project/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue-Project/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Vue-Project/src/components/loginDialog.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
+        <state relative-caret-position="346">
           <caret line="102" column="15" lean-forward="true" selection-start-line="102" selection-start-column="15" selection-end-line="102" selection-end-column="15" />
           <folding>
             <element signature="e#2710#2938#0" />
@@ -4193,13 +4184,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-Project/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-Project/src/App.vue">
+    <entry file="file://$PROJECT_DIR$/Vue-Project/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
+        <state relative-caret-position="324">
+          <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
         </state>
       </provider>
     </entry>

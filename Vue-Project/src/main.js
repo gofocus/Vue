@@ -39,15 +39,14 @@ const router = new VueRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  console.log("to:",to);
+  console.log("to:", to);
   //拦截需要认证的路由
   if (!store.state.currentUser) {
     if (to.matched.some(record => record.meta.requireAuth)) {
       console.log("需要认证，跳转到首页，弹出登录框");
       // next(false);
-            next({
-        // path: "/",
-        // path: to.fullPath,
+      next({
+        path: "/",
         query: {redirect: to.fullPath}
       })
     }
@@ -60,20 +59,20 @@ router.beforeEach((to, from, next) => {
   else {
     if (to.meta.requirePermission) {
       // if (to.matched.some(record => record.meta.requirePermission !== null)) {
-        if ((store.state.currentUser.permissionList.indexOf(to.matched[0].meta.requirePermission)) !== -1) {
-          console.log("授权成功，拥有权限：", to.matched[0].meta.requirePermission);
-          next();
-        }
-        else {
-          console.log("没有访问权限：",to.matched[0].meta.requirePermission);
-          next(false);
-        }
-      // }
-/*      else {
+      if ((store.state.currentUser.permissionList.indexOf(to.matched[0].meta.requirePermission)) !== -1) {
+        console.log("授权成功，拥有权限：", to.matched[0].meta.requirePermission);
         next();
-      }*/
+      }
+      else {
+        console.log("没有访问权限：", to.matched[0].meta.requirePermission);
+        next(false);
+      }
+      // }
+      /*      else {
+              next();
+            }*/
     }
-    else{
+    else {
       console.log("无需权限，直接访问");
       next();
     }
