@@ -40,8 +40,8 @@ const router = new VueRouter({
 
 function auth(to, from, next) {
   console.log("to:", to);
-  //拦截需要认证的路由
-  if (store.state.currentUser === null) {
+  //如果未登录，拦截需要认证的路由
+  if (!store.state.isLogin) {
     if (to.matched.some(record => record.meta.requireAuth)) {
       store.commit('mu_loginDialogVisible', true);
       console.log("committed");
@@ -59,7 +59,7 @@ function auth(to, from, next) {
     if (to.meta.requirePermission) {
       console.log("需要授权。。。");
       // if (to.matched.some(record => record.meta.requirePermission !== null)) {
-      if ((store.state.currentUser.permissionList.indexOf(to.matched[0].meta.requirePermission)) !== -1) {
+      if ((store.state.currentUser.permissionList.indexOf(to.matched[0].meta.requirePermission)) > -1) {
         console.log("授权成功，拥有权限：", to.matched[0].meta.requirePermission);
         next();
       }
@@ -80,8 +80,8 @@ function auth(to, from, next) {
 }
 
 router.beforeEach((to, from, next) => {
-    //初始化currentUser
-    if (store.state.currentUser === false) {
+    //刷新页面后初始化用户session
+    if (!store.state.sessionFetched) {
       axios.get(`/api/user/currentUser`).then(res => {
         if (res.data === "") {
           store.commit('userStatus', null);

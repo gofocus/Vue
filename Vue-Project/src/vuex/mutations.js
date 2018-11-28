@@ -1,4 +1,3 @@
-
 export const userStatus = (state, user) => {
   if (user) {
     state.isLogin = true;
@@ -9,13 +8,13 @@ export const userStatus = (state, user) => {
     // sessionStorage.removeItem('username');
     // sessionStorage.removeItem('userToken');
     // sessionStorage.removeItem('currentUser');
-
     state.currentUser = null;
     state.isLogin = false;
     state.token = "";
   }
-};
 
+  state.sessionFetched = true;
+};
 
 export const mu_authUrl = (state, authUrl) => {
   if (authUrl !== "") {
@@ -23,5 +22,8 @@ export const mu_authUrl = (state, authUrl) => {
   }
 };
 export const mu_loginDialogVisible = (state, loginDialogVisible) => {
-    state.loginDialogVisible = loginDialogVisible;
+  state.loginDialogVisible = loginDialogVisible;
+};
+export const mu_isLogin = (state, isLogin) => {
+  state.isLogin = isLogin;
 };

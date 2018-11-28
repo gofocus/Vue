@@ -22,7 +22,7 @@
             <span class="hd_login_span">{{ greeting }}</span>
             <!--<a href="javascript:" class="hd_login_link" target="_self" @click="dialogFormVisibleParent=true">登录2</a>-->
             <a href="javascript:" class="hd_login_link" target="_self" @click="change_loginDialogVisible">登录2</a>
-            <template v-if="currentUser">
+            <template v-if="isLogin">
               <a class="hd_login_currentUser"><span>{{ currentUser.username }}</span></a>
               <a href="javascript:" class="hd_login_logout" @click="logout">登出</a>
             </template>
@@ -96,7 +96,7 @@
         else return "晚上好,";
       },
       ...mapGetters(
-        ['currentUser']),
+        ['currentUser','isLogin']),
     },
     methods: {
       change_loginDialogVisible(){

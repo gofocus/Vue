@@ -9,11 +9,12 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
-    currentUser: false,
+    currentUser: null,
     isLogin: false,
     token: "",
-    authUrl:"",
+    authUrl: "",
     loginDialogVisible: false,
+    sessionFetched: false,
   },
   getters,
   mutations,
