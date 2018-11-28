@@ -38,55 +38,63 @@ const router = new VueRouter({
   routes
 });
 
-router.beforeEach((to, from, next) => {
-  //初始化currentUser
-  axios.get(`/api/user/currentUser`).then(res => {
-    store.commit('userStatus', res.data);
-
-    console.log("to:", to);
-    //拦截需要认证的路由
-    if (store.state.currentUser === null) {
-      if (to.matched.some(record => record.meta.requireAuth)) {
-        store.commit('mu_loginDialogVisible', true);
-        console.log("committed")
-        console.log("需要认证，跳转到首页，弹出登录框");
-        store.commit('mu_authUrl', to.fullPath);
-        next(false);
-        /*     next({
-               path: "/",
-               query: {redirect: to.fullPath}
-             })*/
-      }
-      else {
-        console.log("无需认证，直接访问");
-        next();
-      }
+function auth(to, from, next) {
+  console.log("to:", to);
+  //拦截需要认证的路由
+  if (store.state.currentUser === null) {
+    if (to.matched.some(record => record.meta.requireAuth)) {
+      store.commit('mu_loginDialogVisible', true);
+      console.log("committed");
+      console.log("需要认证，跳转到首页，弹出登录框");
+      store.commit('mu_authUrl', to.fullPath);
+      next(false);
     }
-    //拦截需要权限的路由
     else {
-      if (to.meta.requirePermission) {
-        console.log("需要授权。。。");
-        // if (to.matched.some(record => record.meta.requirePermission !== null)) {
-        if ((store.state.currentUser.permissionList.indexOf(to.matched[0].meta.requirePermission)) !== -1) {
-          console.log("授权成功，拥有权限：", to.matched[0].meta.requirePermission);
-          next();
-        }
-        else {
-          console.log("没有访问权限：", to.matched[0].meta.requirePermission);
-          next(false);
-        }
-        // }
-        /*      else {
-                next();
-              }*/
-      }
-      else {
-        console.log("无需权限，直接访问");
+      console.log("无需认证，直接访问");
+      next();
+    }
+  }
+  //拦截需要权限的路由
+  else {
+    if (to.meta.requirePermission) {
+      console.log("需要授权。。。");
+      // if (to.matched.some(record => record.meta.requirePermission !== null)) {
+      if ((store.state.currentUser.permissionList.indexOf(to.matched[0].meta.requirePermission)) !== -1) {
+        console.log("授权成功，拥有权限：", to.matched[0].meta.requirePermission);
         next();
       }
+      else {
+        console.log("没有访问权限：", to.matched[0].meta.requirePermission);
+        next(false);
+      }
+      // }
+      /*      else {
+              next();
+            }*/
     }
-  });
-});
+    else {
+      console.log("无需权限，直接访问");
+      next();
+    }
+  }
+}
+
+router.beforeEach((to, from, next) => {
+    //初始化currentUser
+    if (store.state.currentUser === false) {
+      axios.get(`/api/user/currentUser`).then(res => {
+        if (res.data === "") {
+          store.commit('userStatus', null);
+        }
+        else store.commit('userStatus', res.data);
+        auth(to, from, next);
+      })
+    } else {
+      auth(to, from, next);
+    }
+  }
+);
+
 
 new Vue({
   el: '#app',

@@ -9,7 +9,7 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
-    currentUser: null,
+    currentUser: false,
     isLogin: false,
     token: "",
     authUrl:"",
