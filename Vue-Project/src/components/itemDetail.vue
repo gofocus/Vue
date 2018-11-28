@@ -123,6 +123,9 @@
 //         }*/
 //       })
 //     }
+    mounted:function () {
+      console.log("mounted");
+    }
   }
 
 </script>

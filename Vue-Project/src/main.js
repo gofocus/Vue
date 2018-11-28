@@ -6,7 +6,7 @@ import store from './vuex/store.js'
 import Vuex from 'vuex'
 import VueRouter from 'vue-router'
 import routes from './router/routes'
-import axios from 'axios';
+import axios from 'axios'
 import ElementUI from "element-ui";
 import 'element-ui/lib/theme-chalk/index.css';
 // import 'element-ui/lib/theme-chalk/reset.css';
@@ -15,8 +15,7 @@ import 'font-awesome/css/font-awesome.min.css';
 import FontIcon from './components/font-icon.vue';
 import './assets/icon/iconfont.css';
 import './assets/icon/iconfont.js';
-import Qs from 'qs';
-import global from './diy/global'
+import global from './global';
 
 // Vue.component('SvgIcon', SvgIcon);
 Vue.component('FontIcon', FontIcon);
@@ -28,9 +27,8 @@ Vue.component('FontIcon', FontIcon);
 Vue.use(Vuex);
 Vue.use(VueRouter);
 Vue.use(ElementUI);
-Vue.prototype.$axios = axios;
-Vue.prototype.$itemPicUrl = "http://localhost:8080/pic/";
-Vue.prototype.$qs = Qs;
+Vue.use(global);
+
 // axios.defaults.withCredentials=true;
 
 
@@ -39,7 +37,7 @@ const router = new VueRouter({
 });
 
 function auth(to, from, next) {
-  console.log("to:", to);
+  console.log("auth() to:", to);
   //如果未登录，拦截需要认证的路由
   if (!store.state.isLogin) {
     if (to.matched.some(record => record.meta.requireAuth)) {
@@ -58,7 +56,7 @@ function auth(to, from, next) {
   else {
     if (to.meta.requirePermission) {
       console.log("需要授权。。。");
-      if ((store.state.currentUser.permissionList.indexOf(to.matched[0].meta.requirePermission)) > -1) {
+      if (store.state.currentUser.permissionList.includes(to.matched[0].meta.requirePermission)) {
         console.log("授权成功，拥有权限：", to.matched[0].meta.requirePermission);
         next();
       }
@@ -75,15 +73,19 @@ function auth(to, from, next) {
 }
 
 router.beforeEach((to, from, next) => {
+    console.log("beforeEach");
     //刷新页面后初始化用户session,再拦截认证和授权
     if (!store.state.sessionFetched) {
       axios.get(`/api/user/currentUser`).then(res => {
-        if (res.data === "") {
-          store.commit('userStatus', null);
+          console.log("then")
+          if (res.data === "") {
+            store.commit('userStatus', null);
+          }
+          else store.commit('userStatus', res.data);
+          auth(to, from, next);
         }
-        else store.commit('userStatus', res.data);
-        auth(to, from, next);
-      })
+      );
+      console.log("after axios");
     } else {
       auth(to, from, next);
     }

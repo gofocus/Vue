@@ -19,6 +19,7 @@
       </el-form-item>
       <el-form-item>
         <a v-if="this.$hasPermission('captcha')" href="javascript:" @click="turn_captcha">{{form.requireCaptcha?"关闭":"开启"}}验证码 </a>
+        <!--<a v-if="hasPermissionQ('captcha')" href="javascript:" @click="turn_captcha">{{form.requireCaptcha?"关闭":"开启"}}验证码 </a>-->
         <el-checkbox v-model="checked" checked class="remember">Stay signed in</el-checkbox>
       </el-form-item>
 
@@ -33,6 +34,7 @@
 
 <script>
   import {mapGetters} from 'vuex'
+  import Vue from 'vue'
 
   export default {
     // props: ['dialogFormVisibleParent'],
@@ -47,7 +49,6 @@
       };
       return {
         loginDialogVisible_: this.$store.state.loginDialogVisible,
-        test1: this.test(),
         captchaBit: this.getCaptcha(),
         // dialogFormVisibleChild: this.dialogFormVisibleParent,
         form: {
@@ -78,26 +79,24 @@
       ...mapGetters(['loginDialogVisible']),
     },
     watch: {
-/*      dialogFormVisibleParent: function (v) {
-        if (v) this.dialogFormVisibleChild = v
-      },
-      dialogFormVisibleChild: function (v) {
-        if (!v) this.$emit('update:dialogFormVisibleParent', v);
-      },*/
-      loginDialogVisible_:function (v) {
+      /*      dialogFormVisibleParent: function (v) {
+              if (v) this.dialogFormVisibleChild = v
+            },
+            dialogFormVisibleChild: function (v) {
+              if (!v) this.$emit('update:dialogFormVisibleParent', v);
+            },*/
+      loginDialogVisible_: function (v) {
         if (!v) {
           this.$store.commit('mu_loginDialogVisible', v);
         }
       },
-      loginDialogVisible:function (v) {
+      loginDialogVisible: function (v) {
         if (v) {
           this.loginDialogVisible_ = v;
         }
       }
     },
     methods: {
-      test(){
-        console.log("Test")},
       handleSubmit() {
         this.$refs.form.validate((valid) => {
           if (valid) {
@@ -129,7 +128,7 @@
                   // this.dialogFormVisibleChild = false;
                   this.loginDialogVisible_ = false;
                   // console.log("认证成功，跳转到：",this.$route.query.redirect);
-                  console.log("认证成功，跳转到：",this.$store.state.authUrl);
+                  console.log("认证成功，跳转到：", this.$store.state.authUrl);
                   // this.$router.push(this.$route.query.redirect)
                   this.$router.push(this.$store.state.authUrl)
                 });
@@ -169,13 +168,13 @@
         this.form.requireCaptcha = !this.form.requireCaptcha;
       },
     },
-    beforeCreate(){
-      console.log(this.form)
-    },    created(){
-      console.log("created:", this.form);
-      console.log(this.getCaptcha)
+    beforeCreate() {
+    },
+    created() {
     },
     mounted() {
+      console.log(Vue.TestData);
+      console.log("hasPermissionQ",Vue.hasPermissionQ('captcha'));
     }
 
   }

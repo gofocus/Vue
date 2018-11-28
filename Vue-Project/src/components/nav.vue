@@ -23,7 +23,7 @@
             <!--<a href="javascript:" class="hd_login_link" target="_self" @click="dialogFormVisibleParent=true">登录2</a>-->
             <a href="javascript:" class="hd_login_link" target="_self" @click="change_loginDialogVisible">登录2</a>
             <template v-if="isLogin">
-              <a class="hd_login_currentUser"><span>{{ currentUser.username }}</span></a>
+              <a class="hd_login_currentUser"><span>{{ currentUser.username }} {{ this.$test }}</span></a>
               <a href="javascript:" class="hd_login_logout" @click="logout">登出</a>
             </template>
             <template v-else>
