@@ -58,7 +58,6 @@ function auth(to, from, next) {
   else {
     if (to.meta.requirePermission) {
       console.log("需要授权。。。");
-      // if (to.matched.some(record => record.meta.requirePermission !== null)) {
       if ((store.state.currentUser.permissionList.indexOf(to.matched[0].meta.requirePermission)) > -1) {
         console.log("授权成功，拥有权限：", to.matched[0].meta.requirePermission);
         next();
@@ -67,10 +66,6 @@ function auth(to, from, next) {
         console.log("没有访问权限：", to.matched[0].meta.requirePermission);
         next(false);
       }
-      // }
-      /*      else {
-              next();
-            }*/
     }
     else {
       console.log("无需权限，直接访问");
@@ -80,7 +75,7 @@ function auth(to, from, next) {
 }
 
 router.beforeEach((to, from, next) => {
-    //刷新页面后初始化用户session
+    //刷新页面后初始化用户session,再拦截认证和授权
     if (!store.state.sessionFetched) {
       axios.get(`/api/user/currentUser`).then(res => {
         if (res.data === "") {

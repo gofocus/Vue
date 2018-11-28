@@ -20,6 +20,7 @@ let routes = [
     path: '/item/:itemId',
     name: 'itemDetail',
     component: itemDetail,
+    props:true,
     meta: {
       requireAuth: true,
       requirePermission: "itemDetail"

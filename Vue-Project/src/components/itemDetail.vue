@@ -83,9 +83,10 @@
       'header-bp': header_bp,
       inputNumber: inputNumber
     },
+    props: ['itemId'],
     data: function () {
       return {
-        itemId: this.$route.params.itemId,
+        // itemId: this.$route.params.itemId,
         item: null,
         collectIcon: false,
       }
