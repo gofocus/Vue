@@ -1,13 +1,17 @@
 <template>
   <!--<el-dialog :visible.sync="dialogFormVisibleChild" class="login-container" width="30%" :modal="true">-->
-  <el-dialog :visible.sync="loginDialogVisible_" class="login-container" width="30%" :modal="true">
+  <!--<el-dialog :visible.sync="loginDialogVisible_" class="login-container" width="30%" :modal="true" @keyup.enter.native.prevent="getFocus" @close="closeDialog">-->
+  <el-dialog :visible.sync="loginDialogVisible_" class="login-container" width="30%" :modal="true" @close="closeDialog">
     <el-form :model="form" :rules="rules" ref="form">
       <h3 class="title">Sign In</h3>
       <el-form-item prop="username">
-        <el-input type="email" v-model="form.username" auto-complete="off" placeholder="Email"></el-input>
+        <!--<el-input type="email" v-model="form.username" auto-complete="off" placeholder="Email" @keyup.enter.native.prevent="getFocus" ref="username" autofocus></el-input>-->
+        <el-input type="email" v-model="form.username" auto-complete="off" placeholder="Email" ref="username" autofocus></el-input>
+        <el-input type="email" v-model="form.username" auto-complete="off" placeholder="Email" ref="username" autofocus></el-input>
       </el-form-item>
       <el-form-item prop="password">
-        <el-input type="password" v-model="form.password" placeholder="Password"></el-input>
+        <!--<el-input type="password" v-model="form.password" placeholder="Password" @keyup.enter.native.prevent="handleSubmit" ref="password"></el-input>-->
+        <el-input type="password" v-model="form.password" placeholder="Password" ref="password"></el-input>
       </el-form-item>
       <el-form-item prop="captcha" v-if="form.requireCaptcha" class="captcha">
         <el-input type="text" v-model="form.captcha" placeholder="验证码"></el-input>
@@ -15,6 +19,7 @@
           <img :src="captchaBit" alt="" @click="getCaptcha">
           <!--<img  src="" alt="" ref="captcha" @click="getCaptcha">-->
           <a href="javascript:" @click="getCaptcha">看不清?</a>
+          <a href="javascript:" @click="getFocus">tttt</a>
         </div>
       </el-form-item>
       <el-form-item>
@@ -34,6 +39,7 @@
 
 <script>
   import {mapGetters} from 'vuex'
+  import {mapMutations} from 'vuex'
   import Vue from 'vue'
 
   export default {
@@ -78,25 +84,18 @@
     computed: {
       ...mapGetters(['loginDialogVisible']),
     },
-    watch: {
-      /*      dialogFormVisibleParent: function (v) {
-              if (v) this.dialogFormVisibleChild = v
-            },
-            dialogFormVisibleChild: function (v) {
-              if (!v) this.$emit('update:dialogFormVisibleParent', v);
-            },*/
-      loginDialogVisible_: function (v) {
-        if (!v) {
-          this.$store.commit('mu_loginDialogVisible', v);
-        }
-      },
-      loginDialogVisible: function (v) {
-        if (v) {
-          this.loginDialogVisible_ = v;
-        }
-      }
-    },
     methods: {
+      ...mapMutations(['mu_loginDialogVisible', 'userStatus']),
+      closeDialog() {
+        this.form.username = "";
+        this.form.password = "";
+        this.form.captcha = "";
+      },
+      getFocus() {
+        console.log("getfocus");
+        console.log(this.$refs.password.$el.getElementsByTagName('input')[0]);
+        this.$refs.password.$el.getElementsByTagName('input')[0].focus();
+      },
       handleSubmit() {
         this.$refs.form.validate((valid) => {
           if (valid) {
@@ -120,7 +119,7 @@
               }
               else if (res.data === "") {
                 this.$axios.post("/api/user/currentUser").then(res => {
-                  this.$store.commit('userStatus', res.data);
+                  this.userStatus(res.data);
                   this.$message({
                     message: '登陆成功',
                     type: 'success'
@@ -168,13 +167,33 @@
         this.form.requireCaptcha = !this.form.requireCaptcha;
       },
     },
+    watch: {
+      /*      dialogFormVisibleParent: function (v) {
+              if (v) this.dialogFormVisibleChild = v
+            },
+            dialogFormVisibleChild: function (v) {
+              if (!v) this.$emit('update:dialogFormVisibleParent', v);
+            },*/
+      loginDialogVisible_: function (v) {
+        if (!v) {
+          this.mu_loginDialogVisible(v);
+        }
+      },
+      loginDialogVisible: function (v) {
+        if (v) {
+          this.loginDialogVisible_ = v;
+        }
+      }
+    },
+
     beforeCreate() {
     },
     created() {
     },
     mounted() {
       console.log(Vue.TestData);
-      console.log("hasPermissionQ",Vue.hasPermissionQ('captcha'));
+      console.log("hasPermissionQ", Vue.hasPermissionQ('captcha'));
+      // this.$refs.username_input.focus();
     }
 
   }
