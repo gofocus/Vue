@@ -1,27 +1,31 @@
 <template>
   <!--<el-dialog :visible.sync="dialogFormVisibleChild" class="login-container" width="30%" :modal="true">-->
-  <!--<el-dialog :visible.sync="loginDialogVisible_" class="login-container" width="30%" :modal="true" @keyup.enter.native.prevent="getFocus" @close="closeDialog">-->
-  <el-dialog :visible.sync="loginDialogVisible_" class="login-container" width="30%" :modal="true" @close="closeDialog">
+  <!--<el-dialog :visible.sync="loginDialogVisible_" class="login-container"  width="30%" :modal="true" @close="closeDialog" :close-on-click-modal="false">-->
+  <el-dialog :visible.sync="loginDialogVisible_" class="login-container" width="30%" :modal="true"
+             @open="focusInput('username')" @close="closeDialog" @keydown.enter.native="test">
     <el-form :model="form" :rules="rules" ref="form">
       <h3 class="title">Sign In</h3>
+
       <el-form-item prop="username">
-        <!--<el-input type="email" v-model="form.username" auto-complete="off" placeholder="Email" @keyup.enter.native.prevent="getFocus" ref="username" autofocus></el-input>-->
-        <el-input type="email" v-model="form.username" auto-complete="off" placeholder="Email" ref="username" autofocus></el-input>
-        <el-input type="email" v-model="form.username" auto-complete="off" placeholder="Email" ref="username" autofocus></el-input>
+        <el-input type="email" v-model="form.username" auto-complete="off" placeholder="Email"
+                  @keyup.enter.native="focusInput('password')" ref="username"></el-input>
       </el-form-item>
+
       <el-form-item prop="password">
-        <!--<el-input type="password" v-model="form.password" placeholder="Password" @keyup.enter.native.prevent="handleSubmit" ref="password"></el-input>-->
-        <el-input type="password" v-model="form.password" placeholder="Password" ref="password"></el-input>
+        <el-input type="password" v-model="form.password" placeholder="Password" @keyup.enter.native="handleSubmit"
+                  ref="password"></el-input>
       </el-form-item>
+
       <el-form-item prop="captcha" v-if="form.requireCaptcha" class="captcha">
         <el-input type="text" v-model="form.captcha" placeholder="验证码"></el-input>
         <div id="captcha">
           <img :src="captchaBit" alt="" @click="getCaptcha">
           <!--<img  src="" alt="" ref="captcha" @click="getCaptcha">-->
-          <a href="javascript:" @click="getCaptcha">看不清?</a>
-          <a href="javascript:" @click="getFocus">tttt</a>
+          <span>看不清？</span>
+          <a href="javascript:" @click="getCaptcha">换一个</a>
         </div>
       </el-form-item>
+
       <el-form-item>
         <a v-if="this.$hasPermission('captcha')" href="javascript:" @click="turn_captcha">{{form.requireCaptcha?"关闭":"开启"}}验证码 </a>
         <!--<a v-if="hasPermissionQ('captcha')" href="javascript:" @click="turn_captcha">{{form.requireCaptcha?"关闭":"开启"}}验证码 </a>-->
@@ -82,19 +86,20 @@
       }
     },
     computed: {
-      ...mapGetters(['loginDialogVisible']),
+      ...mapGetters(['loginDialogVisible', 'authUrl']),
     },
     methods: {
+      test() {
+        // console.log(123);
+      },
       ...mapMutations(['mu_loginDialogVisible', 'userStatus']),
       closeDialog() {
-        this.form.username = "";
-        this.form.password = "";
-        this.form.captcha = "";
+        this.$refs.form.resetFields();
       },
-      getFocus() {
-        console.log("getfocus");
-        console.log(this.$refs.password.$el.getElementsByTagName('input')[0]);
-        this.$refs.password.$el.getElementsByTagName('input')[0].focus();
+      focusInput(refName) {
+        this.$nextTick(() => {
+          this.$refs[refName].$el.getElementsByTagName('input')[0].focus();
+        })
       },
       handleSubmit() {
         this.$refs.form.validate((valid) => {
@@ -124,12 +129,9 @@
                     message: '登陆成功',
                     type: 'success'
                   });
-                  // this.dialogFormVisibleChild = false;
                   this.loginDialogVisible_ = false;
-                  // console.log("认证成功，跳转到：",this.$route.query.redirect);
-                  console.log("认证成功，跳转到：", this.$store.state.authUrl);
-                  // this.$router.push(this.$route.query.redirect)
-                  this.$router.push(this.$store.state.authUrl)
+                  // console.log("认证成功，跳转到：", this.authUrl);
+                  this.$router.push(this.authUrl)
                 });
               }
               else {
@@ -193,7 +195,6 @@
     mounted() {
       console.log(Vue.TestData);
       console.log("hasPermissionQ", Vue.hasPermissionQ('captcha'));
-      // this.$refs.username_input.focus();
     }
 
   }
@@ -226,6 +227,9 @@
       padding-top: 10px;
       img {
         float: left;
+      }
+      a {
+        color: blue;
       }
     }
 

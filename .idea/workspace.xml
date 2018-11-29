@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3f59b57-54ee-45a1-bfc5-0f93cafb0a32" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/element.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue-Project/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Vue-Project/config/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue-Project/src/components/itemDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Vue-Project/src/components/itemDetail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue-Project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Vue-Project/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue-Project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Vue-Project/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vue-Project/src/components/loginDialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Vue-Project/src/components/loginDialog.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vue-Project/src/components/nav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Vue-Project/src/components/nav.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue-Project/src/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/Vue-Project/src/global.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/element/packages/button/src/button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/element/packages/button/src/button.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/element/packages/dialog/src/component.vue" beforeDir="false" afterPath="$PROJECT_DIR$/element/packages/dialog/src/component.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/element/packages/theme-chalk/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/element/packages/theme-chalk/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/element/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/element/src/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,15 +28,16 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="46" />
-          <entry key="project.open.time.0" value="6" />
-          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.0" value="5" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.4" value="7" />
           <entry key="project.open.time.5" value="15" />
           <entry key="project.open.time.6" value="16" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.8" value="1" />
+          <entry key="project.open.time.9" value="1" />
           <entry key="project.opened" value="50" />
         </counts>
       </usages-collector>
@@ -44,15 +49,15 @@
           <entry key="itemPhotos" value="2" />
           <entry key="java" value="3" />
           <entry key="jpg" value="1" />
-          <entry key="js" value="355" />
+          <entry key="js" value="345" />
           <entry key="jshintrc" value="3" />
-          <entry key="json" value="7" />
+          <entry key="json" value="10" />
           <entry key="map" value="1" />
           <entry key="png" value="3" />
           <entry key="scss" value="11" />
           <entry key="svg" value="1" />
-          <entry key="ts" value="47" />
-          <entry key="vue" value="266" />
+          <entry key="ts" value="49" />
+          <entry key="vue" value="271" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
@@ -62,14 +67,14 @@
           <entry key="HTML" value="58" />
           <entry key="Image" value="4" />
           <entry key="JSHint" value="3" />
-          <entry key="JSON" value="8" />
-          <entry key="JavaScript" value="357" />
+          <entry key="JSON" value="11" />
+          <entry key="JavaScript" value="347" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="SCSS" value="11" />
           <entry key="SVG" value="1" />
           <entry key="SourceMap" value="1" />
-          <entry key="TypeScript" value="47" />
-          <entry key="Vue.js" value="266" />
+          <entry key="TypeScript" value="49" />
+          <entry key="Vue.js" value="271" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
@@ -78,11 +83,11 @@
           <entry key="css" value="1600" />
           <entry key="html" value="7118" />
           <entry key="itemPhotos" value="58" />
-          <entry key="js" value="10714" />
+          <entry key="js" value="9996" />
           <entry key="json" value="6" />
           <entry key="scss" value="1350" />
-          <entry key="txt" value="771" />
-          <entry key="vue" value="26849" />
+          <entry key="txt" value="648" />
+          <entry key="vue" value="26775" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -91,15 +96,15 @@
           <entry key="CSS" value="1600" />
           <entry key="HTML" value="7182" />
           <entry key="JSON" value="6" />
-          <entry key="JavaScript" value="10708" />
-          <entry key="PLAIN_TEXT" value="771" />
+          <entry key="JavaScript" value="9990" />
+          <entry key="PLAIN_TEXT" value="648" />
           <entry key="SCSS" value="1350" />
-          <entry key="Vue.js" value="26849" />
+          <entry key="Vue.js" value="26775" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="TypeScriptServerServiceImpl" value="16" />
+          <entry key="TypeScriptServerServiceImpl" value="17" />
         </counts>
       </usages-collector>
     </session>
@@ -107,85 +112,63 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vue-Project/src/global.js">
+        <entry file="file://$PROJECT_DIR$/Vue-Project/src/components/nav.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="33" column="21" lean-forward="true" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+            <state relative-caret-position="620">
+              <caret line="104" column="8" lean-forward="true" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vue-Project/src/components/loginDialog.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
               <folding>
-                <element signature="e#0#22#0" expanded="true" />
+                <element signature="n#style#0;n#el-form-item#4;n#el-form#0;n#el-dialog#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#el-button#0;n#el-form-item#4;n#el-form#0;n#el-dialog#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#2092#2123#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vue-Project/src/main.js">
+        <entry file="file://$PROJECT_DIR$/element/lib/element-ui.common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="87" column="33" selection-start-line="87" selection-start-column="33" selection-end-line="87" selection-end-column="33" />
-              <folding>
-                <element signature="e#140#163#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vue-Project/config/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vue-Project/src/components/itemDetail.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2052">
-              <caret line="128" column="17" selection-start-line="128" selection-start-column="17" selection-end-line="128" selection-end-column="17" />
-              <folding>
-                <element signature="n#style#0;n#el-header#0;n#el-container#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="e#2429#2476#0" expanded="true" />
-                <element signature="e#3144#3185#0" />
-              </folding>
+            <state relative-caret-position="620">
+              <caret line="21638" selection-start-line="21638" selection-end-line="21638" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Vue-Project/src/components/loginDialog.vue">
+        <entry file="file://$PROJECT_DIR$/element/packages/dialog/src/component.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="9" column="113" selection-start-line="9" selection-start-column="113" selection-end-line="9" selection-end-column="113" />
+            <state relative-caret-position="550">
+              <caret line="170" column="9" lean-forward="true" selection-start-line="170" selection-start-column="9" selection-end-line="170" selection-end-column="9" />
               <folding>
-                <element signature="n#style#0;n#el-form-item#4;n#el-form#0;n#el-dialog#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#el-button#0;n#el-form-item#4;n#el-form#0;n#el-dialog#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="e#1713#1744#0" expanded="true" />
-                <element signature="e#1909#2159#0" />
-                <element signature="e#2174#3046#0" />
-                <element signature="e#3761#5535#0" />
-                <element signature="e#5664#6123#0" />
-                <element signature="e#6146#6217#0" />
+                <element signature="e#1399#2307#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vue-Project/src/vuex/mutations.js">
+        <entry file="file://$PROJECT_DIR$/element.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="28" column="2" lean-forward="true" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
+            <state relative-caret-position="499">
+              <caret line="75" column="7" selection-start-line="75" selection-start-column="7" selection-end-line="75" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vue-Project/src/components/nav.vue">
+        <entry file="file://$PROJECT_DIR$/element/packages/button/src/button.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="25" column="78" selection-start-line="25" selection-start-column="78" selection-end-line="25" selection-end-column="78" />
+            <state relative-caret-position="543">
+              <caret line="25" selection-start-line="23" selection-end-line="25" />
             </state>
           </provider>
         </entry>
@@ -226,14 +209,14 @@
       <find>test</find>
       <find>initial</find>
       <find>children</find>
-      <find>currentUser</find>
-      <find>mapGetters</find>
-      <find>axios</find>
-      <find>commit</find>
-      <find>update:vis</find>
-      <find>enter</find>
-      <find>update:visible</find>
+      <find>update</find>
+      <find>hide</find>
       <find>blur</find>
+      <find>LOG</find>
+      <find>handleWrapperClick</find>
+      <find>beforeClose</find>
+      <find>common.js</find>
+      <find>enter</find>
     </findStrings>
     <replaceStrings>
       <replace>Tom</replace>
@@ -251,13 +234,11 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/element" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Vue-Project/src/home.json" />
-        <option value="$PROJECT_DIR$/vue-admin/src/views/Login.vue" />
         <option value="$PROJECT_DIR$/vue-admin/config/index.js" />
         <option value="$PROJECT_DIR$/vue-admin/src/App.vue" />
         <option value="$PROJECT_DIR$/Vue-Project/src/components/layout.vue" />
@@ -279,6 +260,7 @@
         <option value="$PROJECT_DIR$/Vue-Project/build/webpack.base.conf.js" />
         <option value="$PROJECT_DIR$/Vue-Project/src/css/home.css" />
         <option value="$PROJECT_DIR$/Vue-Project/src/css/itemDetail.css" />
+        <option value="$PROJECT_DIR$/Vue-Project/config/index.js" />
         <option value="$PROJECT_DIR$/Vue-Project/src/axios/api.js" />
         <option value="$PROJECT_DIR$/Vue-Project/src/components/login.vue" />
         <option value="$PROJECT_DIR$/vue2-happyfri-master/src/components/itemcontainer.vue" />
@@ -292,21 +274,22 @@
         <option value="$PROJECT_DIR$/Vue-Project/src/vuex/actions.js" />
         <option value="$PROJECT_DIR$/Vue-Project/src/components/carousel.vue" />
         <option value="$PROJECT_DIR$/Vue-Project/src/css/nav.scss" />
-        <option value="$PROJECT_DIR$/Vue-Project/src/components/Home.vue" />
-        <option value="$PROJECT_DIR$/Vue-Project/src/App.vue" />
         <option value="$PROJECT_DIR$/Vue-Project/src/diy/global.js" />
+        <option value="$PROJECT_DIR$/Vue-Project/src/components/Home.vue" />
+        <option value="$PROJECT_DIR$/Vue-Project/src/vuex/store.js" />
         <option value="$PROJECT_DIR$/Vue-Project/src/vuex/getters.js" />
         <option value="$PROJECT_DIR$/Vue-Project/src/vuex/mutations.js" />
-        <option value="$PROJECT_DIR$/Vue-Project/src/vuex/store.js" />
+        <option value="$PROJECT_DIR$/Vue-Project/src/components/itemDetail.vue" />
         <option value="$PROJECT_DIR$/Vue-Project/src/router/routes.js" />
         <option value="$PROJECT_DIR$/Vue-Project/src/main.js" />
-        <option value="$PROJECT_DIR$/Vue-Project/config/index.js" />
+        <option value="$PROJECT_DIR$/Vue-Project/src/App.vue" />
+        <option value="$PROJECT_DIR$/Vue-Project/node_modules/element-ui/packages/dialog/src/component.vue" />
+        <option value="$PROJECT_DIR$/Vue-Project/node_modules/element-ui/packages/button/src/button.vue" />
+        <option value="$PROJECT_DIR$/Vue-Project/element/packages/button/src/button.vue" />
+        <option value="$PROJECT_DIR$/element/packages/button/src/button.vue" />
         <option value="$PROJECT_DIR$/Vue-Project/src/components/nav.vue" />
-        <option value="$PROJECT_DIR$/Vue-Project/src/global.js" />
-        <option value="$PROJECT_DIR$/zhcc-server-master/zhcc-web/src/main/webapp/static/js/vendor.9585d0402147dbec02e5.js" />
-        <option value="$PROJECT_DIR$/vue2-management-platform/node_modules/element-ui/packages/dialog/src/component.vue" />
-        <option value="$PROJECT_DIR$/Vue-Project/src/components/itemDetail.vue" />
         <option value="$PROJECT_DIR$/Vue-Project/src/components/loginDialog.vue" />
+        <option value="$PROJECT_DIR$/element/packages/dialog/src/component.vue" />
       </list>
     </option>
   </component>
@@ -324,994 +307,19 @@
   </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/Vue-Project/node_modules" />
-    <handled-path value="$PROJECT_DIR$/router-demo_wisewrong/node_modules" />
-    <handled-path value="$PROJECT_DIR$/vue-admin/node_modules" />
-    <handled-path value="$PROJECT_DIR$/vue2-elm/node_modules" />
-    <handled-path value="$PROJECT_DIR$/vue2-management-platform/node_modules" />
+    <handled-path value="$PROJECT_DIR$/element/node_modules" />
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
       <path value="$PROJECT_DIR$/Vue-Project/package.json" />
       <path value="$PROJECT_DIR$/bootstrap-3.3.7/package.json" />
+      <path value="$PROJECT_DIR$/element/package.json" />
+      <path value="$PROJECT_DIR$/element/packages/theme-chalk/package.json" />
       <path value="$PROJECT_DIR$/node_modules/vue-router/package.json" />
       <path value="$PROJECT_DIR$/router-demo_wisewrong/package.json" />
       <path value="$PROJECT_DIR$/vue-admin/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/@types/node/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/@types/semver/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/abbrev/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/accepts/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/acorn/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/ajv/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/align-text/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/alphanum-sort/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/amdefine/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/ansi-html/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/ansi-regex/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/ansi-styles/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/anymatch/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/aproba/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/are-we-there-yet/node_modules/isarray/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/are-we-there-yet/node_modules/readable-stream/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/are-we-there-yet/node_modules/string_decoder/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/are-we-there-yet/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/argparse/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/arr-diff/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/arr-flatten/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/arr-union/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/array-find-index/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/array-flatten/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/array-unique/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/asap/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/asn1/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/assert-plus/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/assert/node_modules/inherits/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/assert/node_modules/util/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/assert/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/assign-symbols/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/async-each/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/async-foreach/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/async/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/asynckit/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/atob/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/autoprefixer-loader/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/autoprefixer/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/aws-sign2/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/aws4/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-code-frame/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-core/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-generator/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-helper-bindify-decorators/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-helper-builder-binary-assignment-operator-visitor/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-helper-call-delegate/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-helper-define-map/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-helper-explode-assignable-expression/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-helper-explode-class/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-helper-function-name/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-helper-get-function-arity/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-helper-hoist-variables/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-helper-optimise-call-expression/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-helper-regex/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-helper-remap-async-to-generator/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-helper-replace-supers/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-helpers/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-loader/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-messages/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-check-es2015-constants/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-syntax-async-functions/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-syntax-async-generators/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-syntax-class-properties/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-syntax-decorators/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-syntax-dynamic-import/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-syntax-exponentiation-operator/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-syntax-object-rest-spread/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-syntax-trailing-function-commas/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-transform-async-generator-functions/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-transform-async-to-generator/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-transform-class-properties/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-transform-decorators/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-transform-es2015-arrow-functions/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-transform-es2015-block-scoped-functions/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-transform-es2015-block-scoping/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-transform-es2015-classes/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-transform-es2015-computed-properties/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-transform-es2015-destructuring/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-transform-es2015-duplicate-keys/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-transform-es2015-for-of/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-transform-es2015-function-name/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-transform-es2015-literals/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-transform-es2015-modules-amd/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-transform-es2015-modules-commonjs/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-transform-es2015-modules-systemjs/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-transform-es2015-modules-umd/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-transform-es2015-object-super/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-transform-es2015-parameters/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-transform-es2015-shorthand-properties/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-transform-es2015-spread/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-transform-es2015-sticky-regex/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-transform-es2015-template-literals/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-transform-es2015-typeof-symbol/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-transform-es2015-unicode-regex/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-transform-exponentiation-operator/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-transform-object-rest-spread/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-transform-regenerator/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-transform-runtime/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-plugin-transform-strict-mode/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-preset-es2015/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-preset-stage-2/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-preset-stage-3/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-register/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-runtime/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-template/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-traverse/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babel-types/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/babylon/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/balanced-match/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/base/node_modules/define-property/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/base/node_modules/is-accessor-descriptor/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/base/node_modules/is-data-descriptor/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/base/node_modules/is-descriptor/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/base/node_modules/isobject/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/base/node_modules/kind-of/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/base/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/base64-js/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/batch/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/bcrypt-pbkdf/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/better-scroll/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/big.js/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/binary-extensions/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/block-stream/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/bluebird/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/body-parser/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/boolbase/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/boom/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/brace-expansion/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/braces/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/browserify-aes/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/browserify-zlib/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/browserify-zlib/test/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/browserslist/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/buffer/node_modules/isarray/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/buffer/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/builtin-modules/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/builtin-status-codes/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/bytes/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/cache-base/node_modules/isobject/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/cache-base/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/camel-case/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/camelcase-keys/node_modules/camelcase/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/camelcase-keys/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/camelcase/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/caniuse-api/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/caniuse-db/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/caseless/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/center-align/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/chalk/node_modules/ansi-regex/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/chalk/node_modules/strip-ansi/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/chalk/node_modules/supports-color/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/chalk/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/chokidar/node_modules/is-extglob/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/chokidar/node_modules/is-glob/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/chokidar/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/clap/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/class-utils/node_modules/define-property/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/class-utils/node_modules/isobject/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/class-utils/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/clean-css/node_modules/source-map/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/clean-css/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/cli-cursor/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/cli-spinners/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/cliui/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/clone/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/co/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/coa/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/code-point-at/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/collection-visit/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/color-convert/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/color-name/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/color-string/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/color/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/colormin/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/colors/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/combined-stream/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/commander/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/commondir/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/component-emitter/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/compressible/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/compression/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/concat-map/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/config-chain/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/connect-history-api-fallback/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/console-browserify/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/console-control-strings/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/consolidate/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/constants-browserify/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/content-disposition/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/content-type/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/convert-source-map/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/cookie-signature/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/cookie/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/copy-descriptor/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/core-js/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/core-util-is/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/cross-env/node_modules/cross-spawn/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/cross-env/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/cross-spawn/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/cryptiles/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/crypto-browserify/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/css-color-names/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/css-loader/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/css-select/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/css-selector-tokenizer/node_modules/regexpu-core/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/css-selector-tokenizer/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/css-what/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/cssesc/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/cssnano/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/csso/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/currently-unhandled/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/dashdash/node_modules/assert-plus/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/dashdash/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/date-now/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/de-indent/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/debug/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/decamelize/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/decode-uri-component/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/define-property/node_modules/is-accessor-descriptor/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/define-property/node_modules/is-data-descriptor/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/define-property/node_modules/is-descriptor/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/define-property/node_modules/isobject/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/define-property/node_modules/kind-of/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/define-property/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/defined/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/delayed-stream/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/delegates/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/depd/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/destroy/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/detect-indent/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/dom-converter/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/dom-serializer/node_modules/domelementtype/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/dom-serializer/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/domain-browser/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/domelementtype/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/domhandler/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/domutils/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/ecc-jsbn/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/editorconfig/node_modules/commander/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/editorconfig/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/ee-first/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/electron-to-chromium/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/emojis-list/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/encodeurl/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/enhanced-resolve/node_modules/memory-fs/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/enhanced-resolve/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/entities/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/errno/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/error-ex/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/escape-html/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/escape-string-regexp/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/esprima/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/esutils/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/etag/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/eventemitter3/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/events/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/eventsource-polyfill/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/eventsource/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/execa/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/exit-hook/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/expand-brackets/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/expand-range/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/express/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/extend-shallow/node_modules/is-extendable/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/extend-shallow/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/extend/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/extglob/node_modules/is-extglob/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/extglob/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/extract-text-webpack-plugin/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/extsprintf/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/fast-deep-equal/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/fast-json-stable-stringify/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/fastclick/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/fastparse/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/faye-websocket/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/file-loader/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/filename-regex/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/fill-range/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/finalhandler/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/find-cache-dir/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/find-up/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/flatten/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/follow-redirects/node_modules/debug/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/follow-redirects/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/for-in/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/for-own/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/forever-agent/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/form-data/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/forwarded/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/fragment-cache/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/fresh/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/fs.realpath/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/fstream/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/function-bind/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/gauge/node_modules/ansi-regex/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/gauge/node_modules/is-fullwidth-code-point/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/gauge/node_modules/string-width/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/gauge/node_modules/strip-ansi/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/gauge/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/gaze/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/get-caller-file/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/get-stdin/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/get-stream/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/get-value/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/getpass/node_modules/assert-plus/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/getpass/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/glob-base/node_modules/is-extglob/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/glob-base/node_modules/is-glob/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/glob-base/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/glob-parent/node_modules/is-extglob/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/glob-parent/node_modules/is-glob/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/glob-parent/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/glob/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/globals/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/globule/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/graceful-fs/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/har-schema/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/har-validator/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/has-ansi/node_modules/ansi-regex/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/has-ansi/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/has-flag/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/has-unicode/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/has-value/node_modules/isobject/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/has-value/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/has-values/node_modules/is-number/node_modules/kind-of/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/has-values/node_modules/is-number/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/has-values/node_modules/kind-of/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/has-values/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/has/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/hash-sum/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/hawk/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/he/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/hoek/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/home-or-tmp/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/hosted-git-info/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/html-comment-regex/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/html-entities/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/html-minifier/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/html-webpack-plugin/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/htmlparser2/node_modules/domutils/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/htmlparser2/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/http-errors/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/http-parser-js/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/http-proxy-middleware/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/http-proxy/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/http-signature/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/https-browserify/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/iconv-lite/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/icss-replace-symbols/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/ieee754/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/image-size/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/in-publish/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/in-publish/test/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/indent-string/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/indexes-of/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/indexof/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/inflight/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/inherits/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/ini/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/interpret/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/invariant/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/invert-kv/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/ipaddr.js/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/is-absolute-url/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/is-accessor-descriptor/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/is-arrayish/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/is-binary-path/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/is-buffer/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/is-builtin-module/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/is-data-descriptor/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/is-descriptor/node_modules/kind-of/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/is-descriptor/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/is-dotfile/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/is-equal-shallow/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/is-extendable/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/is-extglob/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/is-finite/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/is-fullwidth-code-point/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/is-glob/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/is-number/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/is-plain-obj/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/is-plain-object/node_modules/isobject/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/is-plain-object/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/is-posix-bracket/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/is-primitive/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/is-stream/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/is-svg/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/is-typedarray/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/is-utf8/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/is-windows/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/isarray/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/iscroll/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/isexe/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/isobject/node_modules/isarray/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/isobject/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/isstream/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/js-base64/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/js-beautify/node_modules/nopt/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/js-beautify/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/js-tokens/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/js-yaml/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/jsbn/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/jsesc/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/json-loader/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/json-schema-traverse/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/json-schema/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/json-stable-stringify/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/json-stringify-safe/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/json3/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/json5/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/jsonify/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/jsprim/node_modules/assert-plus/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/jsprim/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/kind-of/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lazy-cache/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lcid/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/less-loader/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/less/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/load-json-file/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/loader-utils/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/locate-path/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash._arraycopy/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash._arrayeach/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash._basecallback/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash._basecopy/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash._baseeach/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash._basefind/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash._basefindindex/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash._basefor/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash._baseisequal/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash._bindcallback/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash._createassigner/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash._createcompounder/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash._getnative/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash._isiterateecall/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash._root/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash.assign/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash.camelcase/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash.clonedeep/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash.deburr/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash.find/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash.isarguments/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash.isarray/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash.isequal/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash.isplainobject/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash.istypedarray/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash.keys/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash.keysin/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash.memoize/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash.merge/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash.mergewith/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash.pairs/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash.restparam/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash.toplainobject/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash.uniq/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash.words/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lodash/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/log-symbols/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/longest/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/loose-envify/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/loud-rejection/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lower-case/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/lru-cache/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/map-cache/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/map-obj/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/map-visit/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/math-expression-evaluator/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/math-random/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/media-typer/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/mem/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/memory-fs/node_modules/isarray/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/memory-fs/node_modules/readable-stream/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/memory-fs/node_modules/string_decoder/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/memory-fs/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/meow/node_modules/minimist/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/meow/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/merge-descriptors/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/methods/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/micromatch/node_modules/is-extglob/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/micromatch/node_modules/is-glob/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/micromatch/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/mime-db/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/mime-types/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/mime/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/mimic-fn/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/minimatch/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/minimist/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/mixin-deep/node_modules/is-extendable/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/mixin-deep/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/mkdirp/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/ms/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/nan/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/nan/tools/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/nanomatch/node_modules/arr-diff/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/nanomatch/node_modules/array-unique/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/nanomatch/node_modules/kind-of/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/nanomatch/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/negotiator/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/nice-try/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/no-case/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/node-gyp/node_modules/ajv/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/node-gyp/node_modules/assert-plus/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/node-gyp/node_modules/aws-sign2/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/node-gyp/node_modules/form-data/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/node-gyp/node_modules/har-schema/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/node-gyp/node_modules/har-validator/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/node-gyp/node_modules/http-signature/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/node-gyp/node_modules/oauth-sign/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/node-gyp/node_modules/performance-now/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/node-gyp/node_modules/request/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/node-gyp/node_modules/semver/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/node-gyp/node_modules/tough-cookie/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/node-gyp/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/node-libs-browser/node_modules/isarray/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/node-libs-browser/node_modules/readable-stream/node_modules/string_decoder/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/node-libs-browser/node_modules/readable-stream/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/node-libs-browser/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/node-sass/node_modules/ajv/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/node-sass/node_modules/assert-plus/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/node-sass/node_modules/aws-sign2/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/node-sass/node_modules/cross-spawn/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/node-sass/node_modules/form-data/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/node-sass/node_modules/har-schema/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/node-sass/node_modules/har-validator/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/node-sass/node_modules/http-signature/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/node-sass/node_modules/oauth-sign/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/node-sass/node_modules/performance-now/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/node-sass/node_modules/request/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/node-sass/node_modules/tough-cookie/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/node-sass/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/nopt/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/normalize-package-data/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/normalize-path/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/normalize-range/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/normalize-url/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/npm-run-path/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/npmlog/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/nth-check/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/num2fraction/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/number-is-nan/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/oauth-sign/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/object-assign/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/object-copy/node_modules/define-property/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/object-copy/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/object-visit/node_modules/isobject/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/object-visit/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/object.omit/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/object.pick/node_modules/isobject/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/object.pick/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/ometa/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/on-finished/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/on-headers/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/once/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/onetime/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/open/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/opn/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/optimist/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/ora/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/original/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/os-browserify/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/os-homedir/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/os-locale/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/os-tmpdir/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/osenv/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/p-finally/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/p-limit/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/p-locate/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/p-try/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/pako/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/param-case/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/parse-glob/node_modules/is-extglob/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/parse-glob/node_modules/is-glob/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/parse-glob/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/parse-json/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/parseurl/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/pascalcase/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/path-browserify/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/path-exists/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/path-is-absolute/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/path-key/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/path-parse/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/path-to-regexp/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/path-type/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/pbkdf2-compat/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/performance-now/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/pify/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/pinkie-promise/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/pinkie/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/pkg-dir/node_modules/find-up/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/pkg-dir/node_modules/path-exists/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/pkg-dir/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/posix-character-classes/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-calc/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-colormin/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-convert-values/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-discard-comments/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-discard-duplicates/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-discard-empty/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-discard-overridden/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-discard-unused/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-filter-plugins/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-merge-idents/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-merge-longhand/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-merge-rules/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-message-helpers/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-minify-font-values/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-minify-gradients/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-minify-params/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-minify-selectors/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-extract-imports/node_modules/ansi-styles/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-extract-imports/node_modules/chalk/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-extract-imports/node_modules/has-flag/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-extract-imports/node_modules/postcss/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-extract-imports/node_modules/source-map/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-extract-imports/node_modules/supports-color/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-extract-imports/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-local-by-default/node_modules/ansi-styles/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-local-by-default/node_modules/chalk/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-local-by-default/node_modules/css-selector-tokenizer/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-local-by-default/node_modules/has-flag/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-local-by-default/node_modules/postcss/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-local-by-default/node_modules/regexpu-core/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-local-by-default/node_modules/source-map/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-local-by-default/node_modules/supports-color/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-local-by-default/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-scope/node_modules/ansi-styles/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-scope/node_modules/chalk/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-scope/node_modules/css-selector-tokenizer/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-scope/node_modules/has-flag/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-scope/node_modules/postcss/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-scope/node_modules/regexpu-core/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-scope/node_modules/source-map/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-scope/node_modules/supports-color/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-scope/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-values/node_modules/ansi-styles/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-values/node_modules/chalk/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-values/node_modules/has-flag/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-values/node_modules/postcss/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-values/node_modules/source-map/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-values/node_modules/supports-color/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-modules-values/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-normalize-charset/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-normalize-url/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-ordered-values/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-reduce-idents/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-reduce-initial/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-reduce-transforms/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-safe-parser/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-selector-parser/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-svgo/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-unique-selectors/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-value-parser/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss-zindex/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/postcss/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/prepend-http/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/preserve/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/pretty-error/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/private/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/process-nextick-args/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/process/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/promise/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/proto-list/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/proxy-addr/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/prr/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/pseudomap/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/psl/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/punycode/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/q/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/qs/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/query-string/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/querystring-es3/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/querystring/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/querystringify/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/randomatic/node_modules/is-number/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/randomatic/node_modules/kind-of/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/randomatic/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/range-parser/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/raw-body/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/read-pkg-up/node_modules/find-up/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/read-pkg-up/node_modules/path-exists/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/read-pkg-up/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/read-pkg/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/readable-stream/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/readdirp/node_modules/arr-diff/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/readdirp/node_modules/array-unique/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/readdirp/node_modules/braces/node_modules/extend-shallow/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/readdirp/node_modules/braces/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/readdirp/node_modules/expand-brackets/node_modules/define-property/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/readdirp/node_modules/expand-brackets/node_modules/extend-shallow/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/readdirp/node_modules/expand-brackets/node_modules/is-accessor-descriptor/node_modules/kind-of/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/readdirp/node_modules/expand-brackets/node_modules/is-accessor-descriptor/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/readdirp/node_modules/expand-brackets/node_modules/is-data-descriptor/node_modules/kind-of/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/readdirp/node_modules/expand-brackets/node_modules/is-data-descriptor/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/readdirp/node_modules/expand-brackets/node_modules/is-descriptor/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/readdirp/node_modules/expand-brackets/node_modules/kind-of/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/readdirp/node_modules/expand-brackets/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/readdirp/node_modules/extglob/node_modules/define-property/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/readdirp/node_modules/extglob/node_modules/extend-shallow/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/readdirp/node_modules/extglob/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/readdirp/node_modules/fill-range/node_modules/extend-shallow/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/readdirp/node_modules/fill-range/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/readdirp/node_modules/is-accessor-descriptor/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/readdirp/node_modules/is-data-descriptor/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/readdirp/node_modules/is-descriptor/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/readdirp/node_modules/is-number/node_modules/kind-of/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/readdirp/node_modules/is-number/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/readdirp/node_modules/isarray/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/readdirp/node_modules/isobject/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/readdirp/node_modules/kind-of/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/readdirp/node_modules/micromatch/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/readdirp/node_modules/readable-stream/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/readdirp/node_modules/string_decoder/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/readdirp/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/rechoir/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/redent/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/reduce-css-calc/node_modules/balanced-match/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/reduce-css-calc/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/reduce-function-call/node_modules/balanced-match/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/reduce-function-call/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/regenerate/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/regenerator-runtime/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/regenerator-transform/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/regex-cache/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/regex-not/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/regexpu-core/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/regjsgen/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/regjsparser/node_modules/jsesc/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/regjsparser/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/relateurl/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/remove-trailing-separator/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/renderkid/node_modules/ansi-regex/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/renderkid/node_modules/strip-ansi/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/renderkid/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/repeat-element/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/repeat-string/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/repeating/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/request/node_modules/qs/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/request/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/require-directory/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/require-main-filename/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/requires-port/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/resolve-url/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/resolve/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/resolve/test/module_dir/zmodules/bbb/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/resolve/test/resolver/baz/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/resolve/test/resolver/browser_field/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/resolve/test/resolver/dot_main/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/resolve/test/resolver/dot_slash_main/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/resolve/test/resolver/incorrect_main/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/restore-cursor/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/ret/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/right-align/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/rimraf/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/ripemd160/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/safe-buffer/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/safe-regex/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/safer-buffer/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sass-graph/node_modules/ansi-regex/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sass-graph/node_modules/camelcase/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sass-graph/node_modules/cliui/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sass-graph/node_modules/is-fullwidth-code-point/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sass-graph/node_modules/os-locale/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sass-graph/node_modules/string-width/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sass-graph/node_modules/strip-ansi/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sass-graph/node_modules/which-module/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sass-graph/node_modules/yargs-parser/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sass-graph/node_modules/yargs/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sass-graph/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sass-loader/node_modules/async/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sass-loader/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sass/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sax/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/scss-loader/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/scss-tokenizer/node_modules/source-map/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/scss-tokenizer/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/scss/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/semver/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/send/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/serve-index/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/serve-static/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/set-blocking/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/set-value/node_modules/extend-shallow/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/set-value/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/setimmediate/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/setprototypeof/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sha.js/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/shebang-command/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/shebang-regex/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/shelljs/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/showdown/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sigmund/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/signal-exit/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/slash/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/snapdragon-node/node_modules/define-property/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/snapdragon-node/node_modules/is-accessor-descriptor/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/snapdragon-node/node_modules/is-data-descriptor/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/snapdragon-node/node_modules/is-descriptor/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/snapdragon-node/node_modules/isobject/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/snapdragon-node/node_modules/kind-of/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/snapdragon-node/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/snapdragon-util/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/snapdragon/node_modules/define-property/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/snapdragon/node_modules/extend-shallow/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/snapdragon/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sntp/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sockjs-client/node_modules/debug/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sockjs-client/node_modules/faye-websocket/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sockjs-client/node_modules/ms/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sockjs-client/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sockjs/examples/echo/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sockjs/examples/express-3.x/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sockjs/examples/express/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sockjs/examples/hapi/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sockjs/examples/koa/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sockjs/examples/multiplex/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sockjs/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sort-keys/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/source-list-map/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/source-map-resolve/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/source-map-support/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/source-map-url/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/source-map/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/spdx-correct/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/spdx-exceptions/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/spdx-expression-parse/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/spdx-license-ids/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/split-string/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sprintf-js/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sshpk/node_modules/assert-plus/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/sshpk/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/static-extend/node_modules/define-property/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/static-extend/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/statuses/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/stdout-stream/node_modules/isarray/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/stdout-stream/node_modules/readable-stream/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/stdout-stream/node_modules/string_decoder/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/stdout-stream/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/stream-browserify/node_modules/isarray/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/stream-browserify/node_modules/readable-stream/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/stream-browserify/node_modules/string_decoder/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/stream-browserify/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/stream-cache/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/stream-http/node_modules/isarray/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/stream-http/node_modules/readable-stream/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/stream-http/node_modules/string_decoder/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/stream-http/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/stream-http/test/browser/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/strict-uri-encode/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/string-width/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/string_decoder/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/stringstream/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/strip-ansi/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/strip-bom/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/strip-eof/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/strip-indent/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/style-loader/node_modules/loader-utils/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/style-loader/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/supports-color/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/svgo/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/tapable/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/tar/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/time-stamp/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/timers-browserify/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/to-arraybuffer/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/to-fast-properties/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/to-object-path/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/to-regex-range/node_modules/is-number/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/to-regex-range/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/to-regex/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/toposort/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/tough-cookie/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/trim-newlines/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/trim-right/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/true-case-path/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/tty-browserify/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/tunnel-agent/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/tweetnacl/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/type-is/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/uglify-js/node_modules/source-map/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/uglify-js/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/uglify-to-browserify/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/union-value/node_modules/extend-shallow/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/union-value/node_modules/set-value/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/union-value/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/uniq/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/uniqs/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/unpipe/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/unset-value/node_modules/has-value/node_modules/isobject/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/unset-value/node_modules/has-value/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/unset-value/node_modules/has-values/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/unset-value/node_modules/isarray/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/unset-value/node_modules/isobject/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/unset-value/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/upper-case/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/uri-js/node_modules/punycode/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/uri-js/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/urix/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/url-loader/node_modules/loader-utils/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/url-loader/node_modules/mime/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/url-loader/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/url-parse/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/url/node_modules/punycode/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/url/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/use/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/util-deprecate/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/util/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/utila/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/utils-merge/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/uuid/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/validate-npm-package-license/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/vary/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/vendors/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/verror/node_modules/assert-plus/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/verror/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/vm-browserify/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/vue-hot-reload-api/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/vue-loader/node_modules/vue-style-loader/node_modules/loader-utils/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/vue-loader/node_modules/vue-style-loader/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/vue-loader/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/vue-router/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/vue-style-loader/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/vue-template-compiler/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/vue-template-es2015-compiler/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/vue/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/vuex/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/watchpack/node_modules/async/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/watchpack/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/webpack-core/node_modules/source-map/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/webpack-core/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/webpack-dev-middleware/node_modules/isarray/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/webpack-dev-middleware/node_modules/memory-fs/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/webpack-dev-middleware/node_modules/mime/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/webpack-dev-middleware/node_modules/readable-stream/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/webpack-dev-middleware/node_modules/string_decoder/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/webpack-dev-middleware/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/webpack-dev-server/node_modules/ansi-regex/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/webpack-dev-server/node_modules/strip-ansi/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/webpack-dev-server/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/webpack-hot-middleware/node_modules/ansi-regex/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/webpack-hot-middleware/node_modules/strip-ansi/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/webpack-hot-middleware/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/webpack-merge/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/webpack-sources/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/webpack/node_modules/camelcase/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/webpack/node_modules/cliui/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/webpack/node_modules/interpret/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/webpack/node_modules/uglify-js/node_modules/async/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/webpack/node_modules/uglify-js/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/webpack/node_modules/wordwrap/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/webpack/node_modules/yargs/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/webpack/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/websocket-driver/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/websocket-extensions/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/whet.extend/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/which-module/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/which/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/wide-align/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/window-size/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/wordwrap/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/wrap-ansi/node_modules/ansi-regex/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/wrap-ansi/node_modules/is-fullwidth-code-point/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/wrap-ansi/node_modules/string-width/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/wrap-ansi/node_modules/strip-ansi/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/wrap-ansi/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/wrappy/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/xtend/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/y18n/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/yallist/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/yargs-parser/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/node_modules/yargs/package.json" />
-      <path value="$PROJECT_DIR$/vue2-elm/package.json" />
       <path value="$PROJECT_DIR$/vue2-happyfri-master/package.json" />
-      <path value="$PROJECT_DIR$/vue2-management-platform/package.json" />
       <path value="$PROJECT_DIR$/vue2.0-shoppingCart/package.json" />
-      <path value="$PROJECT_DIR$/zhcc-view-source-master/package.json" />
     </packageJsonPaths>
   </component>
   <component name="PackageJsonUpdateNotifier">
@@ -1334,7 +342,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1345,92 +352,13 @@
             <path>
               <item name="Vue" type="b2602c69:ProjectViewProjectNode" />
               <item name="Vue" type="462c0819:PsiDirectoryNode" />
-              <item name="vue2-management-platform" type="462c0819:PsiDirectoryNode" />
+              <item name="element" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Vue" type="b2602c69:ProjectViewProjectNode" />
               <item name="Vue" type="462c0819:PsiDirectoryNode" />
-              <item name="vue2-management-platform" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vue" type="462c0819:PsiDirectoryNode" />
-              <item name="vue2-management-platform" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="element-ui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vue" type="462c0819:PsiDirectoryNode" />
-              <item name="vue2-management-platform" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="element-ui" type="462c0819:PsiDirectoryNode" />
-              <item name="packages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vue" type="462c0819:PsiDirectoryNode" />
-              <item name="vue2-management-platform" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="element-ui" type="462c0819:PsiDirectoryNode" />
-              <item name="packages" type="462c0819:PsiDirectoryNode" />
-              <item name="dialog" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vue" type="462c0819:PsiDirectoryNode" />
-              <item name="vue2-management-platform" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="element-ui" type="462c0819:PsiDirectoryNode" />
-              <item name="packages" type="462c0819:PsiDirectoryNode" />
-              <item name="dialog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vue" type="462c0819:PsiDirectoryNode" />
-              <item name="vue-admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vue" type="462c0819:PsiDirectoryNode" />
-              <item name="vue-admin" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vue" type="462c0819:PsiDirectoryNode" />
-              <item name="vue-admin" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="element-ui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vue" type="462c0819:PsiDirectoryNode" />
-              <item name="vue-admin" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="element-ui" type="462c0819:PsiDirectoryNode" />
-              <item name="packages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vue" type="462c0819:PsiDirectoryNode" />
-              <item name="vue-admin" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="element-ui" type="462c0819:PsiDirectoryNode" />
-              <item name="packages" type="462c0819:PsiDirectoryNode" />
-              <item name="input" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vue" type="462c0819:PsiDirectoryNode" />
-              <item name="vue-admin" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="element-ui" type="462c0819:PsiDirectoryNode" />
-              <item name="packages" type="462c0819:PsiDirectoryNode" />
-              <item name="input" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="element" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Vue" type="b2602c69:ProjectViewProjectNode" />
@@ -1441,140 +369,180 @@
               <item name="Vue" type="b2602c69:ProjectViewProjectNode" />
               <item name="Vue" type="462c0819:PsiDirectoryNode" />
               <item name="Vue-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Vue" type="b2602c69:ProjectViewProjectNode" />
               <item name="Vue" type="462c0819:PsiDirectoryNode" />
               <item name="Vue-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="element-ui" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Vue" type="b2602c69:ProjectViewProjectNode" />
               <item name="Vue" type="462c0819:PsiDirectoryNode" />
               <item name="Vue-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vue" type="462c0819:PsiDirectoryNode" />
-              <item name="Vue-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="vuex" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vue" type="462c0819:PsiDirectoryNode" />
-              <item name="zhcc-server-master" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vue" type="462c0819:PsiDirectoryNode" />
-              <item name="zhcc-server-master" type="462c0819:PsiDirectoryNode" />
-              <item name="zhcc-web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vue" type="462c0819:PsiDirectoryNode" />
-              <item name="zhcc-server-master" type="462c0819:PsiDirectoryNode" />
-              <item name="zhcc-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vue" type="462c0819:PsiDirectoryNode" />
-              <item name="zhcc-server-master" type="462c0819:PsiDirectoryNode" />
-              <item name="zhcc-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vue" type="462c0819:PsiDirectoryNode" />
-              <item name="zhcc-server-master" type="462c0819:PsiDirectoryNode" />
-              <item name="zhcc-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vue" type="462c0819:PsiDirectoryNode" />
-              <item name="zhcc-server-master" type="462c0819:PsiDirectoryNode" />
-              <item name="zhcc-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vue" type="462c0819:PsiDirectoryNode" />
-              <item name="zhcc-server-master" type="462c0819:PsiDirectoryNode" />
-              <item name="zhcc-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vue" type="462c0819:PsiDirectoryNode" />
-              <item name="zhcc-server-master" type="462c0819:PsiDirectoryNode" />
-              <item name="zhcc-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="1.d291e6bff81b0d67d3f3.js" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="Vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vue" type="462c0819:PsiDirectoryNode" />
-              <item name="zhcc-server-master" type="462c0819:PsiDirectoryNode" />
-              <item name="zhcc-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor.9585d0402147dbec02e5.js" type="620a8d5e:NestingTreeNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="element-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Vue-Project/src" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2018.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2018.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/Vue-Project/src/components/carousel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Git\Vue\Vue-Project\src" />
+      <recent name="D:\Git\Vue" />
       <recent name="D:\Git\Vue\Css\dj" />
       <recent name="D:\Git\Vue\Css\dj\img" />
       <recent name="D:\Git\Vue\Css" />
       <recent name="D:\Git\Vue\Vue-Project\static" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Git\Vue\Vue-Project\node_modules\element-ui" />
       <recent name="D:\Git\Vue\Vue-Project\src\assets\icon" />
       <recent name="D:\Git\Vue\Css\img\dj" />
       <recent name="D:\Git\Vue\Vue-Project\src\axios" />
       <recent name="D:\Git\Vue\OR" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/vcs.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Vue-Project/config/index.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Vue-Project/src/components/itemDetail.vue</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Vue-Project/src/components/loginDialog.vue</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Vue-Project/src/components/nav.vue</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Vue-Project/src/main.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Vue-Project/src/router/routes.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Vue-Project/src/vuex/getters.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Vue-Project/src/vuex/mutations.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Vue-Project/src/vuex/store.js</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Vue-Project/src/global.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vue2-elm</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Vue-Project/src/diy/global.js</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -1658,8 +626,8 @@
       <workItem from="1542593127065" duration="21208000" />
       <workItem from="1542853536574" duration="12809000" />
       <workItem from="1543200200481" duration="31899000" />
-      <workItem from="1543459812949" duration="746000" />
-      <workItem from="1543461015214" duration="13192000" />
+      <workItem from="1543403996576" duration="599000" />
+      <workItem from="1543492941007" duration="13992000" />
     </task>
     <task id="LOCAL-00001" summary="2018-9-26">
       <created>1537952241795</created>
@@ -1976,39 +944,25 @@
       <option name="project" value="LOCAL" />
       <updated>1543323455281</updated>
     </task>
-    <task id="LOCAL-00046" summary="刷新页面才获取用户session，正常导航不重复读取用户session">
-      <created>1543374328456</created>
+    <task id="LOCAL-00046" summary="2018-11-27">
+      <created>1543326623889</created>
       <option name="number" value="00046" />
       <option name="presentableId" value="LOCAL-00046" />
       <option name="project" value="LOCAL" />
-      <updated>1543374328456</updated>
+      <updated>1543326623889</updated>
     </task>
-    <task id="LOCAL-00047" summary="vuex  添加isLogin字段，语义更清晰；添加sessionFetched字段，判断页面是否刷新，避免重复读取session">
-      <created>1543375903521</created>
+    <task id="LOCAL-00047" summary="生命周期 test">
+      <created>1543331181152</created>
       <option name="number" value="00047" />
       <option name="presentableId" value="LOCAL-00047" />
       <option name="project" value="LOCAL" />
-      <updated>1543375903521</updated>
+      <updated>1543331181152</updated>
     </task>
-    <task id="LOCAL-00048" summary="动态路由传参，通过props解耦">
-      <created>1543383544958</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1543383544958</updated>
-    </task>
-    <task id="LOCAL-00049" summary="test">
-      <created>1543398150674</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1543398150674</updated>
-    </task>
-    <option name="localTasksCounter" value="50" />
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="580759000" />
+    <option name="totallyTimeSpent" value="567366000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2020,22 +974,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2613185" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26238146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32890365" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3156146" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2529859" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32890365" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49960285" weight="0.5282392" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.29401994" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49960285" weight="0.5298588" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.35613462" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50039715" side_tool="true" weight="0.32724252" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="bottom" id="TypeScript" order="12" weight="0.32890365" />
@@ -2069,12 +1023,6 @@
               <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
                 <collection />
               </option>
-              <option name="COLUMN_WIDTH">
-                <map>
-                  <entry key="2" value="68" />
-                  <entry key="3" value="113" />
-                </map>
-              </option>
               <option name="COLUMN_ORDER">
                 <list>
                   <option value="0" />
@@ -2098,7 +1046,11 @@
       <path value="$PROJECT_DIR$/vue2.0-shoppingCart" />
       <path value="$PROJECT_DIR$/vue-admin" />
       <path value="$PROJECT_DIR$/vue2-management-platform" />
+      <path value="$PROJECT_DIR$/Vue-Project/element" />
+      <path value="$PROJECT_DIR$/vue2-elm" />
     </ignored-roots>
+    <MESSAGE value="carousel" />
+    <MESSAGE value="css layout" />
     <MESSAGE value="css" />
     <MESSAGE value="element layout 初步" />
     <MESSAGE value="css  relative absolute  transform" />
@@ -2120,64 +1072,11 @@
     <MESSAGE value="拦截认证自动弹出登录框" />
     <MESSAGE value="全局导航守卫—初始化用户session" />
     <MESSAGE value="transition初步" />
-    <MESSAGE value="刷新页面才获取用户session，正常导航不重复读取用户session" />
-    <MESSAGE value="vuex  添加isLogin字段，语义更清晰；添加sessionFetched字段，判断页面是否刷新，避免重复读取session" />
-    <MESSAGE value="动态路由传参，通过props解耦" />
-    <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="2018-11-27" />
+    <MESSAGE value="生命周期 test" />
+    <option name="LAST_COMMIT_MESSAGE" value="生命周期 test" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Vue-Project/node_modules/axios/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="105" column="2" selection-start-line="105" selection-start-column="2" selection-end-line="105" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-Project/src/css/nav.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-Project/node_modules/vue/types/vue.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2965">
-          <caret line="331" column="48" lean-forward="true" selection-start-line="331" selection-start-column="48" selection-end-line="331" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue2-management-platform/node_modules/axios/index.d.ts" />
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-226">
-          <caret line="1334" column="7" lean-forward="true" selection-start-line="1334" selection-start-column="7" selection-end-line="1334" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-Project/node_modules/nightwatch/lib/api/expect/_baseAssertion.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="290" column="4" selection-start-line="290" selection-start-column="4" selection-end-line="290" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="17110" column="17" selection-start-line="17110" selection-start-column="17" selection-end-line="17110" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-Project/src/components/HelloWorld.vue" />
     <entry file="file://$PROJECT_DIR$/vue2-management-platform/src/views/form/form.vue" />
     <entry file="file://$PROJECT_DIR$/vue2-management-platform/src/main.js" />
     <entry file="file://$PROJECT_DIR$/zhcc-view-source-master/src/views/login/index.vue" />
@@ -2203,109 +1102,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-Project/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-Project/src/App.vue">
+    <entry file="file://$PROJECT_DIR$/node_modules/vue-router/types/router.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-185">
-          <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+        <state relative-caret-position="192">
+          <caret line="77" column="2" selection-start-line="77" selection-start-column="2" selection-end-line="77" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-Project/src/vuex/actions.js">
+    <entry file="file://$PROJECT_DIR$/Vue-Project/src/diy/global.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-Project/src/vuex/getters.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="46" lean-forward="true" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-Project/src/components/carousel.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Vue-Project/src/components/Home.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="220" selection-start-line="220" selection-end-line="220" />
+        <state relative-caret-position="608">
+          <caret line="220" lean-forward="true" selection-start-line="220" selection-end-line="220" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-Project/src/components/inputNumber.vue">
+    <entry file="file://$PROJECT_DIR$/Vue-Project/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-Project/node_modules/vue/src/core/instance/index.js">
+    <entry file="file://$PROJECT_DIR$/Vue-Project/src/vuex/actions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
+        <state relative-caret-position="132">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-Project/node_modules/vue/src/core/instance/render.js">
+    <entry file="file://$PROJECT_DIR$/Vue-Project/src/vuex/mutations.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+        <state relative-caret-position="506">
+          <caret line="23" column="2" lean-forward="true" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-Project/node_modules/vue/src/core/instance/events.js">
+    <entry file="file://$PROJECT_DIR$/Vue-Project/src/components/itemDetail.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
+        <state relative-caret-position="66">
+          <caret line="3" column="56" lean-forward="true" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-Project/node_modules/vue/src/core/instance/init.js">
+    <entry file="file://$PROJECT_DIR$/Vue-Project/src/router/routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="56" column="8" lean-forward="true" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
+        <state relative-caret-position="572">
+          <caret line="28" column="14" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-Project/node_modules/vue/src/core/instance/state.js">
+    <entry file="file://$PROJECT_DIR$/Vue-Project/node_modules/element-ui/packages/menu/src/menu.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+        <state relative-caret-position="298">
+          <caret line="104" column="6" selection-start-line="104" selection-start-column="6" selection-end-line="104" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-Project/src/axios/api.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-Project/node_modules/vuex/dist/vuex.js">
+    <entry file="file://$PROJECT_DIR$/Vue-Project/node_modules/vue/types/options.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+        <state relative-caret-position="290">
+          <caret line="145" column="27" lean-forward="true" selection-start-line="145" selection-start-column="27" selection-end-line="145" selection-end-column="27" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-Project/node_modules/vue/types/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/vue-router/types/router.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="72" lean-forward="true" selection-start-column="72" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/vue-router/types/vue.d.ts">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Vue-Project/src/vuex/store.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        <state>
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
             <element signature="e#138#179#0" expanded="true" />
@@ -2313,142 +1179,224 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-Project/src/router/routes.js">
+    <entry file="file://$PROJECT_DIR$/Vue-Project/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+        <state>
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-Project/src/main.js">
+    <entry file="file://$PROJECT_DIR$/vue2-happyfri-master/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue2-happyfri-master/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="87" column="33" selection-start-line="87" selection-start-column="33" selection-end-line="87" selection-end-column="33" />
+        <state>
           <folding>
-            <element signature="e#140#163#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-Project/config/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/vue-admin/src/views/404.vue">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-Project/node_modules/vue/types/options.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="88" column="17" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-Project/src/components/nav.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="25" column="78" selection-start-line="25" selection-start-column="78" selection-end-line="25" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-Project/node_modules/element-ui/types/input.d.ts">
+    <entry file="file://$PROJECT_DIR$/vue-admin/src/views/Home.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="72" lean-forward="true" selection-start-column="72" selection-end-line="83" selection-end-column="2" />
+          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue-Project/node_modules/element-ui/packages/form/src/form-item.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue-Project/node_modules/element-ui/packages/dialog/src/component.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="165" selection-start-line="165" selection-end-line="165" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue-Project/node_modules/element-ui/packages/button/src/button.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue-Project/node_modules/element-ui/lib/button.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue-Project/node_modules/element-ui/packages/input/src/input.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-722">
+          <caret line="242" column="51" selection-start-line="242" selection-start-column="47" selection-end-line="242" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue-Project/element/packages/button/src/button.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/element.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="75" column="7" selection-start-line="75" selection-start-column="7" selection-end-line="75" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/element/lib/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1452" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue-Project/node_modules/element-ui/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-792" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue-Project/node_modules/element-ui/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1914">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/element/packages/button/src/button.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="25" selection-start-line="23" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue-Project/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/element/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue-Project/node_modules/element-ui/lib/dialog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="415" column="19" selection-start-line="415" selection-start-column="16" selection-end-line="415" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue-Project/node_modules/vue/types/vue.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue-Project/node_modules/element-ui/types/form.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="653">
+          <caret line="77" column="2" selection-start-line="77" selection-start-column="2" selection-end-line="77" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue-Project/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-726" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue-Project/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <element signature="e#577#627#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="315" column="14" selection-start-line="315" selection-start-column="14" selection-end-line="315" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Vue-Project/src/global.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue2.0-shoppingCart/js/lib/vue-resource.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="741" column="8" selection-start-line="741" selection-start-column="8" selection-end-line="741" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue-Project/node_modules/element-ui/lib/umd/locale/ar.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue-Project/src/components/nav.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="104" column="8" lean-forward="true" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/element/build/webpack.common.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
-          <caret line="33" column="21" lean-forward="true" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
+          <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue-admin/node_modules/element-ui/packages/input/src/input.vue">
+    <entry file="file://$PROJECT_DIR$/Vue-Project/src/vuex/getters.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="82" column="6" selection-start-line="82" selection-start-column="6" selection-end-line="82" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-Project/src/vuex/mutations.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="28" column="2" lean-forward="true" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="933">
-          <caret line="347" column="9" selection-start-line="347" selection-start-column="9" selection-end-line="347" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue2-elm/node_modules/@types/node/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="119" column="4" selection-start-line="119" selection-start-column="4" selection-end-line="119" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhcc-server-master/zhcc-web/src/main/webapp/static/js/vendor.9585d0402147dbec02e5.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="12375" column="49" selection-start-line="12375" selection-start-column="49" selection-end-line="12375" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhcc-server-master/zhcc-web/src/main/webapp/static/js/1.d291e6bff81b0d67d3f3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret column="5679" selection-start-column="5679" selection-end-column="5679" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue2-management-platform/node_modules/element-ui/packages/dialog/src/component.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="149" column="24" selection-start-line="149" selection-start-column="6" selection-end-line="149" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-Project/src/components/itemDetail.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2052">
-          <caret line="128" column="17" selection-start-line="128" selection-start-column="17" selection-end-line="128" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#el-header#0;n#el-container#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#2429#2476#0" expanded="true" />
-            <element signature="e#3144#3185#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue2-management-platform/static/UE/third-party/video-js/video.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="36" column="177" selection-start-line="36" selection-start-column="177" selection-end-line="36" selection-end-column="177" />
+        <state relative-caret-position="66">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Vue-Project/src/components/loginDialog.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="9" column="113" selection-start-line="9" selection-start-column="113" selection-end-line="9" selection-end-column="113" />
+        <state relative-caret-position="154">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="n#style#0;n#el-form-item#4;n#el-form#0;n#el-dialog#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#el-button#0;n#el-form-item#4;n#el-form#0;n#el-dialog#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#1713#1744#0" expanded="true" />
-            <element signature="e#1909#2159#0" />
-            <element signature="e#2174#3046#0" />
-            <element signature="e#3761#5535#0" />
-            <element signature="e#5664#6123#0" />
-            <element signature="e#6146#6217#0" />
+            <element signature="e#2092#2123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/element/lib/element-ui.common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="21638" selection-start-line="21638" selection-end-line="21638" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/element/packages/dialog/src/component.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="170" column="9" lean-forward="true" selection-start-line="170" selection-start-column="9" selection-end-line="170" selection-end-column="9" />
+          <folding>
+            <element signature="e#1399#2307#0" />
           </folding>
         </state>
       </provider>

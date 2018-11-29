@@ -101,6 +101,7 @@
     methods: {
       change_loginDialogVisible(){
         this.$store.commit('mu_loginDialogVisible', true);
+        // this.$refs.loginDialog.focusInput('username');
       },
       handleSelect(key, keyPath) {
         console.log(key, keyPath)

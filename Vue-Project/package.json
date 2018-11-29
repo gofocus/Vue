@@ -15,7 +15,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "axios-mock-adapter": "^1.15.0",
-    "element-ui": "^2.4.8",
+    "element-ui": "^2.4.11",
     "font-awesome": "^4.7.0",
     "mockjs": "^1.0.1-beta3",
     "vue": "^2.5.2",
