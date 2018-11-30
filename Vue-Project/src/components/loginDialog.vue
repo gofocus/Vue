@@ -1,10 +1,9 @@
 <template>
-  <el-dialog :visible.sync="loginDialogVisible_" class="login-container" width="30%" :modal="true"
-             @open="focusInput('username')" @close="closeDialog"
-             :close-on-click-modal="false" ref="dialog">
-    <!--v-myOn:click="fn"-->
-    <!--@keydown.enter.native.capture.prevent="test"-->
-    <!--@keydown.enter.prevent.native="test"-->
+  <el-dialog :visible.sync="loginDialogVisible_" class="login-container" width="30%" :modal="true" ref="dialog"
+             @open="focusInput('username')" @close="closeDialog" @keydown.native="stopPropagation"
+             :close-on-click-modal="true"
+             v-myOn:click="fn"
+  >
 
     <el-form :model="form" :rules="rules" ref="form">
       <h3 class="title">Sign In</h3>
@@ -47,10 +46,8 @@
 <script>
   import {mapGetters} from 'vuex'
   import {mapMutations} from 'vuex'
-  import Vue from 'vue'
 
   export default {
-    // props: ['dialogFormVisibleParent'],
     data: function () {
       const captchaRule = (rule, value, callback) => {
         if (this.form.requireCaptcha) {
@@ -92,25 +89,22 @@
       ...mapGetters(['loginDialogVisible', 'authUrl']),
     },
     directives: {
-      // myOn: {
-      //   bind(el, binding, vnode) {
-      //     const event = binding.arg;
-      //     const fn = binding.value;
-      //     console.log(binding);
-      //     console.log(vnode);
-      //     console.log(el);
-      //     el.addEventListener(event, fn);
-      //   }
-      // }
+      myOn: {
+        bind(el, binding, vnode) {
+          const event = binding.arg;
+          const fn = binding.value;
+          console.log(binding);
+          console.log(el);
+          el.addEventListener(event, fn);
+        },
+      }
     },
     methods: {
       fn() {
         console.log(this);
       },
-      test() {
-        document.addEventListener('keydown', function (event) {
-          console.log("event:", event);
-        });
+      stopPropagation(event) {
+        event.stopImmediatePropagation();
       },
       ...mapMutations(['mu_loginDialogVisible', 'userStatus']),
       closeDialog() {
@@ -190,12 +184,6 @@
       },
     },
     watch: {
-      /*      dialogFormVisibleParent: function (v) {
-              if (v) this.dialogFormVisibleChild = v
-            },
-            dialogFormVisibleChild: function (v) {
-              if (!v) this.$emit('update:dialogFormVisibleParent', v);
-            },*/
       loginDialogVisible_: function (v) {
         if (!v) {
           this.mu_loginDialogVisible(v);
