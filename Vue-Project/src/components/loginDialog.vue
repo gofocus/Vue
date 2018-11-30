@@ -1,13 +1,11 @@
 <template>
-  <!--<el-dialog :visible.sync="dialogFormVisibleChild" class="login-container" width="30%" :modal="true">-->
-  <!--<el-dialog :visible.sync="loginDialogVisible_" class="login-container"  width="30%" :modal="true" @close="closeDialog" :close-on-click-modal="false">-->
   <el-dialog :visible.sync="loginDialogVisible_" class="login-container" width="30%" :modal="true"
              @open="focusInput('username')" @close="closeDialog" @keydown.enter.native.prevent="test" :close-on-click-modal="false">
     <el-form :model="form" :rules="rules" ref="form">
       <h3 class="title">Sign In</h3>
 
       <el-form-item prop="username">
-        <el-input type="email" v-model="form.username" auto-complete="off" placeholder="Email"
+        <el-input type="text" v-model="form.username" auto-complete="off" placeholder="Email"
                   @keyup.enter.native="focusInput('password')" ref="username"></el-input>
       </el-form-item>
 
@@ -90,7 +88,7 @@
     },
     methods: {
       test() {
-        console.log(123);
+        // console.log(123);
       },
       ...mapMutations(['mu_loginDialogVisible', 'userStatus']),
       closeDialog() {
