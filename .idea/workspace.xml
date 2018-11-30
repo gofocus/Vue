@@ -7,7 +7,6 @@
     <list default="true" id="c3f59b57-54ee-45a1-bfc5-0f93cafb0a32" name="Default Changelist" comment="test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Element/element.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue-Project/src/components/loginDialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Vue-Project/src/components/loginDialog.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/element" beforeDir="false" afterPath="$PROJECT_DIR$/element" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -82,7 +81,7 @@
           <entry key="js" value="10002" />
           <entry key="json" value="6" />
           <entry key="scss" value="1350" />
-          <entry key="txt" value="648" />
+          <entry key="txt" value="686" />
           <entry key="vue" value="27282" />
         </counts>
       </usages-collector>
@@ -93,7 +92,7 @@
           <entry key="HTML" value="7182" />
           <entry key="JSON" value="6" />
           <entry key="JavaScript" value="9996" />
-          <entry key="PLAIN_TEXT" value="648" />
+          <entry key="PLAIN_TEXT" value="686" />
           <entry key="SCSS" value="1350" />
           <entry key="Vue.js" value="27282" />
         </counts>
@@ -122,13 +121,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Vue-Project/src/components/loginDialog.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="97" column="30" lean-forward="true" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="30" />
+            <state relative-caret-position="76">
+              <caret line="4" column="30" lean-forward="true" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
               <folding>
                 <element signature="n#style#0;n#el-form-item#4;n#el-form#0;n#el-dialog#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#el-button#0;n#el-form-item#4;n#el-form#0;n#el-dialog#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="e#1966#1997#0" expanded="true" />
                 <element signature="e#2319#3517#0" />
+                <element signature="e#3428#3656#0" />
                 <element signature="e#3976#5688#0" />
                 <element signature="e#5709#6168#0" />
                 <element signature="e#6191#6262#0" />
@@ -406,20 +406,13 @@
             <path>
               <item name="Vue" type="b2602c69:ProjectViewProjectNode" />
               <item name="Vue" type="462c0819:PsiDirectoryNode" />
-              <item name="Vue-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="vue2-elm" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Vue" type="b2602c69:ProjectViewProjectNode" />
               <item name="Vue" type="462c0819:PsiDirectoryNode" />
-              <item name="Vue-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vue" type="462c0819:PsiDirectoryNode" />
-              <item name="Vue-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="vue2-elm" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -435,7 +428,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2018.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/Vue-Project/src/components/carousel" />
   </component>
@@ -1391,13 +1384,6 @@
       <workItem from="1543403996576" duration="599000" />
       <workItem from="1543492941007" duration="13992000" />
     </task>
-    <task id="LOCAL-00002" summary="test">
-      <created>1538013629912</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1538013629912</updated>
-    </task>
     <task id="LOCAL-00003" summary="test">
       <created>1538013680526</created>
       <option name="number" value="00003" />
@@ -1734,11 +1720,18 @@
       <option name="project" value="LOCAL" />
       <updated>1543558533852</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="阻止elementUI在dialog中绑定的keydown事件">
+      <created>1543568797134</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1543568797134</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="584209000" />
+    <option name="totallyTimeSpent" value="584513000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1751,7 +1744,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2613185" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1823,10 +1815,9 @@
       <path value="$PROJECT_DIR$/vue-admin" />
       <path value="$PROJECT_DIR$/vue2-management-platform" />
       <path value="$PROJECT_DIR$/Vue-Project/element" />
-      <path value="$PROJECT_DIR$/vue2-elm" />
       <path value="$PROJECT_DIR$/element" />
+      <path value="$PROJECT_DIR$/vue2-elm" />
     </ignored-roots>
-    <MESSAGE value="css layout" />
     <MESSAGE value="css" />
     <MESSAGE value="element layout 初步" />
     <MESSAGE value="css  relative absolute  transform" />
@@ -1851,7 +1842,8 @@
     <MESSAGE value="2018-11-27" />
     <MESSAGE value="生命周期 test" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="阻止elementUI在dialog中绑定的keydown事件" />
+    <option name="LAST_COMMIT_MESSAGE" value="阻止elementUI在dialog中绑定的keydown事件" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Vue-Project/index.html">
@@ -2150,13 +2142,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Vue-Project/src/components/loginDialog.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="97" column="30" lean-forward="true" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="30" />
+        <state relative-caret-position="76">
+          <caret line="4" column="30" lean-forward="true" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
           <folding>
             <element signature="n#style#0;n#el-form-item#4;n#el-form#0;n#el-dialog#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#el-button#0;n#el-form-item#4;n#el-form#0;n#el-dialog#0;n#template#0;n#!!top" expanded="true" />
             <element signature="e#1966#1997#0" expanded="true" />
             <element signature="e#2319#3517#0" />
+            <element signature="e#3428#3656#0" />
             <element signature="e#3976#5688#0" />
             <element signature="e#5709#6168#0" />
             <element signature="e#6191#6262#0" />
