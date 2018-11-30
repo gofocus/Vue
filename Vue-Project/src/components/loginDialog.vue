@@ -2,7 +2,7 @@
   <!--<el-dialog :visible.sync="dialogFormVisibleChild" class="login-container" width="30%" :modal="true">-->
   <!--<el-dialog :visible.sync="loginDialogVisible_" class="login-container"  width="30%" :modal="true" @close="closeDialog" :close-on-click-modal="false">-->
   <el-dialog :visible.sync="loginDialogVisible_" class="login-container" width="30%" :modal="true"
-             @open="focusInput('username')" @close="closeDialog" @keydown.enter.native="test">
+             @open="focusInput('username')" @close="closeDialog" @keydown.enter.native.prevent="test" :close-on-click-modal="false">
     <el-form :model="form" :rules="rules" ref="form">
       <h3 class="title">Sign In</h3>
 
@@ -90,13 +90,14 @@
     },
     methods: {
       test() {
-        // console.log(123);
+        console.log(123);
       },
       ...mapMutations(['mu_loginDialogVisible', 'userStatus']),
       closeDialog() {
         this.$refs.form.resetFields();
       },
       focusInput(refName) {
+        console.log("focusINput:", refName);
         this.$nextTick(() => {
           this.$refs[refName].$el.getElementsByTagName('input')[0].focus();
         })
