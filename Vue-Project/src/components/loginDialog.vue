@@ -1,6 +1,11 @@
 <template>
   <el-dialog :visible.sync="loginDialogVisible_" class="login-container" width="30%" :modal="true"
-             @open="focusInput('username')" @close="closeDialog" @keydown.enter.native.prevent="test" :close-on-click-modal="false">
+             @open="focusInput('username')" @close="closeDialog"
+             :close-on-click-modal="false" ref="dialog">
+    <!--v-myOn:click="fn"-->
+    <!--@keydown.enter.native.capture.prevent="test"-->
+    <!--@keydown.enter.prevent.native="test"-->
+
     <el-form :model="form" :rules="rules" ref="form">
       <h3 class="title">Sign In</h3>
 
@@ -86,16 +91,32 @@
     computed: {
       ...mapGetters(['loginDialogVisible', 'authUrl']),
     },
+    directives: {
+      // myOn: {
+      //   bind(el, binding, vnode) {
+      //     const event = binding.arg;
+      //     const fn = binding.value;
+      //     console.log(binding);
+      //     console.log(vnode);
+      //     console.log(el);
+      //     el.addEventListener(event, fn);
+      //   }
+      // }
+    },
     methods: {
+      fn() {
+        console.log(this);
+      },
       test() {
-        // console.log(123);
+        document.addEventListener('keydown', function (event) {
+          console.log("event:", event);
+        });
       },
       ...mapMutations(['mu_loginDialogVisible', 'userStatus']),
       closeDialog() {
         this.$refs.form.resetFields();
       },
       focusInput(refName) {
-        console.log("focusINput:", refName);
         this.$nextTick(() => {
           this.$refs[refName].$el.getElementsByTagName('input')[0].focus();
         })
@@ -192,8 +213,8 @@
     created() {
     },
     mounted() {
-      console.log(Vue.TestData);
-      console.log("hasPermissionQ", Vue.hasPermissionQ('captcha'));
+      // console.log(Vue.TestData);
+      // console.log("hasPermissionQ", Vue.hasPermissionQ('captcha'));
     }
 
   }

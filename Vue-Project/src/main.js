@@ -37,47 +37,45 @@ const router = new VueRouter({
 });
 
 function auth(to, from, next) {
-  console.log("auth() to:", to);
   //如果未登录，拦截需要认证的路由
   if (!store.state.isLogin) {
     if (to.matched.some(record => record.meta.requireAuth)) {
       store.commit('mu_loginDialogVisible', true);
-      console.log("committed");
-      console.log("需要认证，跳转到首页，弹出登录框");
+      // console.log("committed");
+      // console.log("需要认证，跳转到首页，弹出登录框");
       store.commit('mu_authUrl', to.fullPath);
       next(false);
     }
     else {
-      console.log("无需认证，直接访问");
+      // console.log("无需认证，直接访问");
       next();
     }
   }
   //拦截需要权限的路由
   else {
+    // console.log("需要授权。。。");
     if (to.meta.requirePermission) {
-      console.log("需要授权。。。");
       if (store.state.currentUser.permissionList.includes(to.matched[0].meta.requirePermission)) {
-        console.log("授权成功，拥有权限：", to.matched[0].meta.requirePermission);
+        // console.log("授权成功，拥有权限：", to.matched[0].meta.requirePermission);
         next();
       }
       else {
-        console.log("没有访问权限：", to.matched[0].meta.requirePermission);
+        // console.log("没有访问权限：", to.matched[0].meta.requirePermission);
         next(false);
       }
     }
     else {
-      console.log("无需权限，直接访问");
+      // console.log("无需权限，直接访问");
       next();
     }
   }
 }
 
 router.beforeEach((to, from, next) => {
-    console.log("beforeEach");
     //刷新页面后初始化用户session,再拦截认证和授权
     if (!store.state.sessionFetched) {
       axios.get(`/api/user/currentUser`).then(res => {
-          console.log("then")
+          // console.log("then");
           if (res.data === "") {
             store.commit('userStatus', null);
           }
@@ -85,7 +83,7 @@ router.beforeEach((to, from, next) => {
           auth(to, from, next);
         }
       );
-      console.log("after axios");
+      // console.log("after axios");
     } else {
       auth(to, from, next);
     }

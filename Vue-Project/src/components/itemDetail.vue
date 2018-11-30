@@ -95,7 +95,6 @@
       goIndex: function () {
         this.$router.push('/');
       },
-      test:()=> console.log("123321")
     },
     created: function () {
       const id = this.itemId;
@@ -125,8 +124,6 @@
 //       })
 //     }
     mounted:function () {
-      console.log("mounted");
-      this.test()
     }
   }
 
