@@ -93,34 +93,47 @@
         bind(el, binding, vnode) {
           const event = binding.arg;
           const fn = binding.value;
-          console.log(binding);
-          console.log(el);
-          el.addEventListener(event, fn);
+          // console.log(binding);
+          // console.log(el);
+          // el.addEventListener(event, fn);
         },
       }
     },
     methods: {
+      ...mapMutations(['mu_loginDialogVisible', 'userStatus']),
+
       fn() {
-        console.log(this);
+        // console.log(this);
       },
+      /**
+       * 阻止事件传播，同时阻止该元素上其他函数的执行
+       * @param event
+       */
       stopPropagation(event) {
         event.stopImmediatePropagation();
       },
-      ...mapMutations(['mu_loginDialogVisible', 'userStatus']),
+      //对整个表单进行重置，将所有字段值重置为初始值并移除校验结果
       closeDialog() {
         this.$refs.form.resetFields();
       },
+      /**
+       * 将焦点聚焦到指定的input
+       * @param refName
+       */
       focusInput(refName) {
         this.$nextTick(() => {
           this.$refs[refName].$el.getElementsByTagName('input')[0].focus();
         })
       },
+      /**
+       * 验证表单，请求登录
+       */
       handleSubmit() {
         this.$refs.form.validate((valid) => {
           if (valid) {
             this.loginIng = true;
             const url = `/api/user/login`;
-            //shiro使用表单认证，因此这里将JSON数据转换格式（转成了form-xxx..?）
+            //shiro使用表单认证，因此这里使用qs将JSON数据转换格式（转成了form-xxx..?）
             const loginParams = this.$qs.stringify({
               username: this.form.username,
               password: this.form.password,
@@ -166,6 +179,9 @@
           }
         });
       },
+      /**
+       * 获取验证码图片
+       */
       getCaptcha() {
         // console.log("ref:methods " + this.$refs.captcha);
         this.$axios.get(`/api/user/getGifCode`, {responseType: 'arraybuffer'}
@@ -179,6 +195,9 @@
           console.error(ex);
         });
       },
+      /**
+       * 启用或停用验证码功能
+       */
       turn_captcha() {
         this.form.requireCaptcha = !this.form.requireCaptcha;
       },

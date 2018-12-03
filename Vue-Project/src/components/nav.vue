@@ -7,6 +7,7 @@
       <!--<el-menu-item class="header-login" index="5"><span @click="$router.push('login')" >Sign in</span></el-menu-item>-->
       <!--.sync实现双向数据绑定-->
       <!--<loginDialog :dialogFormVisibleParent.sync="dialogFormVisibleParent" ref="loginDialog"></loginDialog>-->
+      <!--组件：登录dialog-->
       <loginDialog ref="loginDialog" @keyup.enter="handleSubmit"></loginDialog>
 
       <div class="hd_indxProvce">
@@ -60,7 +61,7 @@
 <script>
   import loginDialog from "./loginDialog.vue";
   import {mapGetters} from 'vuex';
-  import {currentUser} from "../vuex/getters";
+  import {mapMutations} from 'vuex';
 
   export default {
     data: function () {
@@ -99,28 +100,29 @@
         ['currentUser','isLogin']),
     },
     methods: {
-      change_loginDialogVisible(){
-        this.$store.commit('mu_loginDialogVisible', true);
-        // this.$refs.loginDialog.focusInput('username');
+      ...mapMutations(['mu_loginDialogVisible']),
+      /**
+       * 将vuex中的loginDialogVisible属性设为true =>显示登录dialog
+       */
+      change_loginDialogVisible() {
+        this.mu_loginDialogVisible(true);
       },
+      /**
+       *
+       * @param key
+       * @param keyPath
+       */
       handleSelect(key, keyPath) {
         console.log(key, keyPath)
       },
+      /**
+       * 登出用户
+       */
       logout() {
         this.$axios.post("/api/logout").then(() => this.$refs.loginDialog.getCaptcha());
         this.$store.commit('userStatus', null);
       },
-      // initial_vuex_currentUser() {
-      //   // 通过sessionStorage将currentUser重新赋值给vuex
-      //   /*        const currentUser_storage = sessionStorage.getItem("currentUser");
-      //           if (currentUser_storage) {
-      //             this.$store.commit('userStatus', JSON.parse(currentUser_storage));
-      //           }*/
-      //   console.log("initial_vuex_currentUser")
-      //   this.$axios.get(`/api/user/currentUser`).then(res => {
-      //     this.$store.commit('userStatus', res.data);
-      //   });
-      // },
+
     },
     mounted: function () {
     },
