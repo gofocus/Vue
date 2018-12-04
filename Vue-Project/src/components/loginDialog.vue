@@ -109,8 +109,9 @@
        * 阻止事件传播，同时阻止该元素上其他函数的执行
        * @param event
        */
-      stopPropagation(event) {
-        event.stopImmediatePropagation();
+      stopPropagation(e) {
+        console.log(e);
+        e.stopImmediatePropagation();
       },
       //对整个表单进行重置，将所有字段值重置为初始值并移除校验结果
       closeDialog() {
@@ -122,6 +123,7 @@
        */
       focusInput(refName) {
         this.$nextTick(() => {
+          console.log("refs",this.$refs)
           this.$refs[refName].$el.getElementsByTagName('input')[0].focus();
         })
       },
@@ -149,7 +151,7 @@
                   type: 'error'
                 });
               }
-              else if (res.data === "") {
+              else if (!res.data) {
                 this.$axios.post("/api/user/currentUser").then(res => {
                   this.userStatus(res.data);
                   this.$message({

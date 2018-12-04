@@ -16,7 +16,7 @@ Vue.prototype.$hasPermission = function (permission) {
 
 
 export default {
-  install(Vue,options){
+  install(Vue, options) {
     Vue.prototype.$test = "123";
     Vue.prototype.$axios = axios;
     Vue.prototype.$itemPicUrl = "http://localhost:8080/pic/";

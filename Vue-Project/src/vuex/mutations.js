@@ -4,7 +4,7 @@ export const userStatus = (state, user) => {
     state.currentUser = user;
     // sessionStorage.setItem('currentUser', JSON.stringify(user));
   }
-  else if (user === null) {
+  else {
     // sessionStorage.removeItem('username');
     // sessionStorage.removeItem('userToken');
     // sessionStorage.removeItem('currentUser');
@@ -17,9 +17,7 @@ export const userStatus = (state, user) => {
 };
 
 export const mu_authUrl = (state, authUrl) => {
-  if (authUrl !== "") {
     state.authUrl = authUrl;
-  }
 };
 export const mu_loginDialogVisible = (state, loginDialogVisible) => {
   state.loginDialogVisible = loginDialogVisible;
