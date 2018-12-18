@@ -21,6 +21,17 @@ export default {
     Vue.prototype.$axios = axios;
     Vue.prototype.$itemPicUrl = "http://localhost:8080/pic/";
     Vue.prototype.$qs = Qs;
+    Vue.prototype.$toast = (msg) => {
+      let toastTpl = Vue.extend({
+        template: `<div class="vue-toast">` + msg + `</div>`
+      });
+      let tpl = new toastTpl().$mount().$el;
+      document.body.appendChild(tpl);
+      setTimeout(function () {
+        document.body.removeChild(tpl);
+      }, 51000);
+
+    };
 
     Vue.TestData = "test_data";
 

@@ -1,3 +1,4 @@
+// @flow
 <template>
   <el-dialog :visible.sync="loginDialogVisible_" class="login-container" width="30%" :modal="true" ref="dialog"
              @open="focusInput('username')" @close="closeDialog" @keydown.native="stopPropagation"
@@ -107,7 +108,7 @@
       },
       /**
        * 阻止事件传播，同时阻止该元素上其他函数的执行
-       * @param event
+       * @param e
        */
       stopPropagation(e) {
         console.log(e);
@@ -123,7 +124,7 @@
        */
       focusInput(refName) {
         this.$nextTick(() => {
-          console.log("refs",this.$refs)
+          console.log("refs", this.$refs);
           this.$refs[refName].$el.getElementsByTagName('input')[0].focus();
         })
       },
@@ -158,6 +159,7 @@
                     message: '登陆成功',
                     type: 'success'
                   });
+                  this.$toast("test");
                   this.loginDialogVisible_ = false;
                   // console.log("认证成功，跳转到：", this.authUrl);
                   this.$router.push(this.authUrl)
@@ -224,6 +226,10 @@
     mounted() {
       // console.log(Vue.TestData);
       // console.log("hasPermissionQ", Vue.hasPermissionQ('captcha'));
+      var var1: number = 10;
+      const var2: number = 'asdaf';
+      console.log("number", var1);
+      console.log("number", var2);
     }
 
   }

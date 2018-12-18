@@ -1,56 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-  <style>
-    li:first-child {
-      color: red;
-    }
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        li:first-child {
+            color: red;
+        }
 
-    input:checked+span { color:green}
-    input:checked+span::after { content:'被选中'}
+        input:checked + span {
+            color: green
+        }
 
-    li {
-      /*display: inline-block;*/
-    }
+        input:checked + span::after {
+            content: '被选中'
+        }
 
-  </style>
+        li {
+            /*display: inline-block;*/
+        }
+
+    </style>
+    <script>
+        /*      var fn;
+              function foo() {
+                  var a = 2;
+                  function baz() {
+                      console.log( a );
+                  }
+                  fn = baz;
+              }
+              function bar() {
+                  fn();
+              }
+
+              foo();
+              bar();*/
+
+        var a = 20;
+
+        function fn(a) {
+            a = a + 10;
+            return a;
+        }
+
+        fn(a);
+        console.log(a);
+
+    </script>
+
 </head>
 <body>
 
 <div>
 
-  <fieldset>
-    <ul>
-      <li><label>
-        <input type="checkbox" value=""/>
-      </label><span>A</span>
-      </li>
-      <li><label>
-        <input type="checkbox" value=""/>
-      </label><span>b</span>
-      </li>
-      <li><label>
-        <input type="checkbox" value=""/>
-      </label><span>c</span>
-      </li>
-    </ul>
-  </fieldset>
+    <fieldset>
+        <ul>
+            <li><label>
+                <input type="checkbox" value=""/>
+            </label><span>A</span>
+            </li>
+            <li><label>
+                <input type="checkbox" value=""/>
+            </label><span>b</span>
+            </li>
+            <li><label>
+                <input type="checkbox" value=""/>
+            </label><span>c</span>
+            </li>
+        </ul>
+    </fieldset>
 
 </div>
 
 <ul>
-  <p>p</p>
-  <li>t1</li>
-  <li>t2</li>
-  <li>t3</li>
+    <p>p</p>
+    <li>t1</li>
+    <li>t2</li>
+    <li>t3</li>
 </ul>
 
 <ol>
-  <li>t4</li>
-  <li>t5</li>
-  <li>t6</li>
+    <li>t4</li>
+    <li>t5</li>
+    <li>t6</li>
 </ol>
 
 </body>

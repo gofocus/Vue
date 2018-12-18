@@ -92,11 +92,12 @@ router.beforeEach((to, from, next) => {
 
 
 new Vue({
-  el: '#app',
+  el: '#app2',
   router,
   store,
-  template: '<App/>',
-  components: {App},
+  // template:`<App/>`,
+  template:`<div>123</div>`,
+  // components: {App},
   created() {
     axios({
       method: 'get',
