@@ -8,7 +8,7 @@
       <!--.sync实现双向数据绑定-->
       <!--<loginDialog :dialogFormVisibleParent.sync="dialogFormVisibleParent" ref="loginDialog"></loginDialog>-->
       <!--组件：登录dialog-->
-      <loginDialog ref="loginDialog" @keyup.enter="handleSubmit"></loginDialog>
+      <loginDialog ref="loginDialog" @keyup.enter="handleSubmit" @customEvent="foo"></loginDialog>
 
       <div class="hd_indxProvce">
         <a href="">
@@ -122,6 +122,9 @@
         this.$axios.post("/api/logout").then(() => this.$refs.loginDialog.getCaptcha());
         this.$store.commit('userStatus', null);
       },
+      foo(){
+        // console.log("customEvent proceeded!")
+      }
 
     },
     mounted: function () {

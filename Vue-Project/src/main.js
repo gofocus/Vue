@@ -95,9 +95,8 @@ new Vue({
   el: '#app2',
   router,
   store,
-  // template:`<App/>`,
-  template:`<div>123</div>`,
-  // components: {App},
+  template:`<App/>`,
+  components: {App},
   created() {
     axios({
       method: 'get',

@@ -102,16 +102,14 @@
     },
     methods: {
       ...mapMutations(['mu_loginDialogVisible', 'userStatus']),
-
       fn() {
         // console.log(this);
       },
       /**
-       * 阻止事件传播，同时阻止该元素上其他函数的执行
+       * 阻止事件传播，同时阻止该元素上其他监听函数的执行
        * @param e
        */
       stopPropagation(e) {
-        console.log(e);
         e.stopImmediatePropagation();
       },
       //对整个表单进行重置，将所有字段值重置为初始值并移除校验结果
@@ -123,8 +121,8 @@
        * @param refName
        */
       focusInput(refName) {
+        console.log(e);
         this.$nextTick(() => {
-          console.log("refs", this.$refs);
           this.$refs[refName].$el.getElementsByTagName('input')[0].focus();
         })
       },
@@ -224,12 +222,15 @@
     created() {
     },
     mounted() {
+      this.$emit('customEvent');
+
       // console.log(Vue.TestData);
       // console.log("hasPermissionQ", Vue.hasPermissionQ('captcha'));
+
       var var1: number = 10;
       const var2: number = 'asdaf';
-      console.log("number", var1);
-      console.log("number", var2);
+      // console.log("number", var1);
+      // console.log("number", var2);
     }
 
   }
