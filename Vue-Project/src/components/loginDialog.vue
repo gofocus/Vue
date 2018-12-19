@@ -121,7 +121,6 @@
        * @param refName
        */
       focusInput(refName) {
-        console.log(e);
         this.$nextTick(() => {
           this.$refs[refName].$el.getElementsByTagName('input')[0].focus();
         })
@@ -222,7 +221,7 @@
     created() {
     },
     mounted() {
-      this.$emit('customEvent');
+      // this.$emit('customEvent');
 
       // console.log(Vue.TestData);
       // console.log("hasPermissionQ", Vue.hasPermissionQ('captcha'));
