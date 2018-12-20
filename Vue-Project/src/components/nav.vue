@@ -1,4 +1,4 @@
-<template xmlns:shiro="http://www.w3.org/1999/xhtml">
+<template>
   <div class="nav">
     <!--<img src="./assets/logo.png">-->
     <el-menu :default-active="activeIndex" mode="horizontal" @select="handleSelect"
@@ -30,7 +30,7 @@
             <template v-else>
               <!--<a href="javascript:" class="hd_login_link" target="_self" @click="dialogFormVisibleParent=true">登录</a>-->
               <a href="javascript:" class="hd_login_link" target="_self" @click="change_loginDialogVisible">登录</a>
-              <a href="" class="hd_register_link" target="_blank">注册</a>
+              <a href="" class="hd_register_link" target="_blank" @customEvent="foo">注册</a>
               <a href="javascript:" class="hd_login_logout" @click="logout">登出</a>
             </template>
 
@@ -105,6 +105,8 @@
        * 将vuex中的loginDialogVisible属性设为true =>显示登录dialog
        */
       change_loginDialogVisible() {
+        this.$emit('customEvent');
+
         this.mu_loginDialogVisible(true);
       },
       /**
@@ -123,7 +125,7 @@
         this.$store.commit('userStatus', null);
       },
       foo(){
-        // console.log("customEvent proceeded!")
+        console.log("customEvent proceeded!")
       }
 
     },
