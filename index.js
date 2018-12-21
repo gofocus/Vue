@@ -1,3 +1,8 @@
+// @flow
+
+const randomThing: number = "boo";
+let a:number = 3;
+
 var app = new Vue({
     el: '#app',
     data: {

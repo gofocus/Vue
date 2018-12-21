@@ -1,10 +1,5 @@
-// @flow
 <template>
-  <el-dialog :visible.sync="loginDialogVisible_" class="login-container" width="30%" :modal="true" ref="dialog"
-             @open="focusInput('username')" @close="closeDialog" @keydown.native="stopPropagation"
-             :close-on-click-modal="true"
-             v-myOn:click="fn"
-  >
+  <el-dialog :visible.sync="loginDialogVisible_" class="login-container" width="30%" :modal="true" ref="dialog" @open="focusInput('username')" @close="closeDialog" @keydown.native="stopPropagation" :close-on-click-modal="true">
 
     <el-form :model="form" :rules="rules" ref="form">
       <h3 class="title">Sign In</h3>
