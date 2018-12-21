@@ -231,35 +231,31 @@
       // console.log("number", var1);
       // console.log("number", var2);
 
+      /*
+            setTimeout(function () {
+              console.log("setTimeout")
+            }, 1);
 
-      setTimeout(function () {
-        console.log("setTimeout")
-      }, 1);
+            this.form.username = "testqwe";
+            this.$nextTick(function () {
+              console.log(" nextTick ->username:", this.form.username);
+            });
 
-      this.form.username = "testqwe";
-      this.$nextTick(function () {
-        console.log(" nextTick ->username:", this.form.username);
-      });
+            new Promise(function (resolve, reject) {
+              console.log("promise1");
+              resolve();
+            }).then(function () {
+              console.log("then1")
+            }).then(function () {
+              console.log("then3")
+            });
 
-      new Promise(function (resolve, reject) {
-        console.log("promise1");
-        resolve();
-      }).then(function () {
-        console.log("then1")
-      }).then(function () {
-        console.log("then3")
-      });
-
-      new Promise(function (resolve, reject) {
-        console.log("promise2");
-        resolve();
-      }).then(function () {
-        console.log("then2")
-      });
-
-
-
-
+            new Promise(function (resolve, reject) {
+              console.log("promise2");
+              resolve();
+            }).then(function () {
+              console.log("then2")
+            });*/
 
 
     }

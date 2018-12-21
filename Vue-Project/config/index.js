@@ -16,12 +16,10 @@ module.exports = {
     //跨域问题用proxyTable
     proxyTable: {
       '/api': {
-        // target: 'localhost:8080',//目标接口域名
         target: 'http://127.0.0.1:8080/',//目标接口域名
-        // target: 'http://127.0.0.1/VIP_221/?c=list&cs=cp',//目标接口域名
         changeOrigin: true,//是否跨域
         pathRewrite: {
-          '^/api': '/'//重写接口,后面可以使重写的新路径，一般不做更改
+          '^/api': ''//重写接口,后面可以使重写的新路径，一般不做更改
         }
       }
     },
