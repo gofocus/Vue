@@ -97,7 +97,7 @@
         else return "晚上好,";
       },
       ...mapGetters(
-        ['currentUser','isLogin']),
+        ['currentUser','isLogin'])
     },
     methods: {
       ...mapMutations(['mu_loginDialogVisible']),

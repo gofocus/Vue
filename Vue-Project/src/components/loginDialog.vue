@@ -12,13 +12,14 @@
       </el-form-item>
 
       <el-form-item prop="password">
-        <el-input type="password" v-model="form.password" placeholder="Password" @keyup.enter.native="handleSubmit"
+        <el-input type="password" v-model="form.password" placeholder="Password"
+                  @keyup.enter.native="focusInput('captcha')"
                   ref="password"></el-input>
       </el-form-item>
 
-      <el-form-item prop="captcha" v-if="form.requireCaptcha" class="captcha">
-        <!--<el-input type="text" v-model="form.captcha" placeholder="验证码" v-focus></el-input>-->
-        <el-input type="text" v-model="form.captcha" placeholder="验证码" v-focus2="form.requireCaptcha"></el-input>
+      <el-form-item prop="captcha" v-if="form.requireCaptcha" class="captcha" ref="captcha">
+        <el-input id="captcha_input" class="captcha_input" type="text" v-model="form.captcha"
+                  placeholder="验证码" @keyup.enter.native="handleSubmit" v-focus ></el-input>
         <div id="captcha">
           <img :src="captchaBit" alt="" @click="getCaptcha">
           <!--<img  src="" alt="" ref="captcha" @click="getCaptcha">-->
@@ -97,10 +98,9 @@
           // el.addEventListener(event, fn);
         },
       },
-      focus2: {
-        update(el, binding) {
-          console.log("focus2");
-          el.getElementsByTagName('input')[0].focus()
+      focus: {
+        inserted(el, binding) {
+          el.getElementsByTagName('input')[0].focus();
         }
       }
     },
@@ -109,7 +109,9 @@
     methods: {
 
       ...mapMutations(['mu_loginDialogVisible', 'userStatus']),
-
+      /**
+       * 自定义指令myOn测试用函数
+       */
       fn() {
         console.log(this);
       },
@@ -130,10 +132,12 @@
        */
       focusInput(refName) {
         this.$nextTick(() => {
-          console.log(this.$refs[refName].$el);
-          console.log(this.$refs[refName].$el.getElementsByTagName('input'));
-          console.log(this.$refs[refName].$el.getElementsByTagName('input')[0]);
-          this.$refs[refName].$el.getElementsByTagName('input')[0].focus();
+          if (this.$refs[refName]) {
+            this.$refs[refName].$el.getElementsByTagName('input')[0].focus();
+          }
+          else {
+            this.handleSubmit();
+          }
         })
       },
       /**

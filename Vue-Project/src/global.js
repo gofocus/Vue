@@ -48,8 +48,10 @@ export default {
     Vue.directive('focus', {
       // When the bound element is inserted into the DOM...
       inserted: function (el) {
+        console.log("qunajv")
         // Focus the element
-        el.focus()
+        // el.focus()
+        el.getElementsByTagName('input')[0].focus()
       }
     })
 
