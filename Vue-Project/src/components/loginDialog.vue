@@ -1,5 +1,7 @@
 <template>
-  <el-dialog :visible.sync="loginDialogVisible_" class="login-container" width="30%" :modal="true" ref="dialog" @open="focusInput('username')" @close="closeDialog" @keydown.native="stopPropagation" :close-on-click-modal="true">
+  <el-dialog :visible.sync="loginDialogVisible_" class="login-container" width="30%" :modal="true" ref="dialog"
+             @open="focusInput('username')" @close="closeDialog" @keydown.native="stopPropagation"
+             :close-on-click-modal="true">
 
     <el-form :model="form" :rules="rules" ref="form">
       <h3 class="title">Sign In</h3>
@@ -15,7 +17,8 @@
       </el-form-item>
 
       <el-form-item prop="captcha" v-if="form.requireCaptcha" class="captcha">
-        <el-input type="text" v-model="form.captcha" placeholder="验证码"></el-input>
+        <!--<el-input type="text" v-model="form.captcha" placeholder="验证码" v-focus></el-input>-->
+        <el-input type="text" v-model="form.captcha" placeholder="验证码" v-focus2="form.requireCaptcha"></el-input>
         <div id="captcha">
           <img :src="captchaBit" alt="" @click="getCaptcha">
           <!--<img  src="" alt="" ref="captcha" @click="getCaptcha">-->
@@ -93,12 +96,22 @@
           // console.log(el);
           // el.addEventListener(event, fn);
         },
+      },
+      focus2: {
+        update(el, binding) {
+          console.log("focus2");
+          el.getElementsByTagName('input')[0].focus()
+        }
       }
     },
+
+
     methods: {
+
       ...mapMutations(['mu_loginDialogVisible', 'userStatus']),
+
       fn() {
-        // console.log(this);
+        console.log(this);
       },
       /**
        * 阻止事件传播，同时阻止该元素上其他监听函数的执行
@@ -117,6 +130,9 @@
        */
       focusInput(refName) {
         this.$nextTick(() => {
+          console.log(this.$refs[refName].$el);
+          console.log(this.$refs[refName].$el.getElementsByTagName('input'));
+          console.log(this.$refs[refName].$el.getElementsByTagName('input')[0]);
           this.$refs[refName].$el.getElementsByTagName('input')[0].focus();
         })
       },
@@ -221,8 +237,6 @@
       // console.log(Vue.TestData);
       // console.log("hasPermissionQ", Vue.hasPermissionQ('captcha'));
 
-      var var1: number = 10;
-      const var2: number = 'asdaf';
       // console.log("number", var1);
       // console.log("number", var2);
 
