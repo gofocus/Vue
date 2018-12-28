@@ -59,7 +59,7 @@
 </template>
 
 <script>
-  import loginDialog from "./loginDialog.vue";
+  import LoginDialog from "./LoginDialog.vue";
   import {mapGetters} from 'vuex';
   import {mapMutations} from 'vuex';
 
@@ -132,7 +132,7 @@
     mounted: function () {
     },
     components: {
-      loginDialog: loginDialog,
+      loginDialog: LoginDialog,
     },
   }
 </script>

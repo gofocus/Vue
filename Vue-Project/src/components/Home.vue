@@ -52,7 +52,7 @@
                 </el-row>
                 <!--第二行-->
                 <el-row :gutter="0">
-                  <el-col :span="(index===4)? 4 : 5" v-for="(item,index) in itemList" v-if="index >= 4 && index < 9"
+                  <el-col :span="(index===4)? 4 : 5" v-for="(item,index) in itemList" v-if="index >3 && index < 9"
                           :key="item.id">
                     <div class="grid-content bg-purple">
                       <a href="javascript:" @click="goItemDetails(item.id)" target="_blank"
@@ -195,8 +195,8 @@
 </template>
 
 <script>
-  import carousel from '../components/carousel'
-  import header_bp from '../components/header-bp'
+  import carousel from './Carousel'
+  import header_bp from './header-bp'
 
   export default {
     name: "Home",

@@ -1,6 +1,6 @@
 import Home from '../components/Home'
-import layout from '../components/layout'
-import itemDetail from '../components/itemDetail'
+import layout from '../components/Layout'
+import itemDetail from '../components/ItemDetail'
 
 
 let routes = [

@@ -74,8 +74,8 @@
 </template>
 
 <script>
-  import header_bp from '../components/header-bp'
-  import inputNumber from '../components/inputNumber';
+  import header_bp from './header-bp'
+  import inputNumber from './InputNumber';
 
   export default {
     name: "itemDetail",

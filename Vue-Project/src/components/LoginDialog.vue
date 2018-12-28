@@ -3,7 +3,7 @@
              @open="focusInput('username')" @close="closeDialog" @keydown.native="stopPropagation"
              :close-on-click-modal="true">
 
-    <el-form :model="form" :rules="rules" ref="form">
+    <el-form :model="form" :rules="rules" ref="form" v-focus2>
       <h3 class="title">Sign In</h3>
 
       <el-form-item prop="username">
@@ -17,9 +17,9 @@
                   ref="password"></el-input>
       </el-form-item>
 
-      <el-form-item prop="captcha" v-if="form.requireCaptcha" class="captcha" ref="captcha">
+      <el-form-item prop="captcha" v-if="form.requireCaptcha" class="captcha" ref="captcha" v-focus>
         <el-input id="captcha_input" class="captcha_input" type="text" v-model="form.captcha"
-                  placeholder="验证码" @keyup.enter.native="handleSubmit" v-focus ></el-input>
+                  placeholder="验证码" @keyup.enter.native="handleSubmit" ></el-input>
         <div id="captcha">
           <img :src="captchaBit" alt="" @click="getCaptcha">
           <!--<img  src="" alt="" ref="captcha" @click="getCaptcha">-->
@@ -99,8 +99,21 @@
         },
       },
       focus: {
-        inserted(el, binding) {
+        inserted(el,vnode) {
           el.getElementsByTagName('input')[0].focus();
+          // el.querySelector('input').focus();
+          // console.log(el.querySelector('input'));
+          // console.log("inserted")
+          // console.log(vnode, "vnode");
+        },
+        unbind() {
+          // console.log("unbind");
+        }
+      },
+      focus2:{
+        update(el){
+          console.log(el.querySelectorAll('input'));
+          console.log(el);
         }
       }
     },
@@ -133,7 +146,9 @@
       focusInput(refName) {
         this.$nextTick(() => {
           if (this.$refs[refName]) {
-            this.$refs[refName].$el.getElementsByTagName('input')[0].focus();
+            // this.$refs[refName].$el.getElementsByTagName('input')[0].focus();
+            // console.log(this.$refs[refName].$el.querySelectorAll('input')[0]);
+            this.$refs[refName].$el.querySelector('input').focus();
           }
           else {
             this.handleSubmit();
@@ -236,40 +251,11 @@
     created() {
     },
     mounted() {
+      // console.log(this.$refs)
       // this.$emit('customEvent');
 
       // console.log(Vue.TestData);
       // console.log("hasPermissionQ", Vue.hasPermissionQ('captcha'));
-
-      // console.log("number", var1);
-      // console.log("number", var2);
-
-      /*
-            setTimeout(function () {
-              console.log("setTimeout")
-            }, 1);
-
-            this.form.username = "testqwe";
-            this.$nextTick(function () {
-              console.log(" nextTick ->username:", this.form.username);
-            });
-
-            new Promise(function (resolve, reject) {
-              console.log("promise1");
-              resolve();
-            }).then(function () {
-              console.log("then1")
-            }).then(function () {
-              console.log("then3")
-            });
-
-            new Promise(function (resolve, reject) {
-              console.log("promise2");
-              resolve();
-            }).then(function () {
-              console.log("then2")
-            });*/
-
 
     }
 

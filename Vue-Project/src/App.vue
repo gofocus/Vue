@@ -2,7 +2,7 @@
   <div id="app">
     <el-container class="el-container myNav">
       <el-main>
-        <nav-bar></nav-bar>
+        <nav-bar/>
       </el-main>
     </el-container>
 
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-  import nav from './components/nav'
+  import nav from './components/Nav'
 
   export default {
     name: 'app',
