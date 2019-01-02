@@ -17,7 +17,7 @@
   // import {getCarousel}from "../axios/api";
 
   export default {
-    name: "carousel",
+    name: "Carousel",
     data: function () {
       return {
         carouselList: []

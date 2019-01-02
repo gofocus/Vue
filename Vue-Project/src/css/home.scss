@@ -1,11 +1,11 @@
 
 .home {
 
-  .header_bp .hd_header_right .hd_search {
+  .header-bp.hd-header-right.hd-search {
     //border: 2px solid black;
   }
 
-  .header_bp {
+  .header-bp {
     background: url(//img10.360buyimg.com/img/jfs/t1/9777/13/4381/33990/5bdab14eEe1811832/634b2008eab9f84e.jpg) center no-repeat;
   }
 
@@ -22,7 +22,7 @@
       min-height: 200px;
       background: white;
     }
-    .el-row > div:not(.single_one):hover {
+    .el-row > div:not(.single-one):hover {
       transform: translate3d(0px, 0px, -65px);
       box-shadow: 0 0 40px rgba(0, 0, 0, .4);
       background: whitesmoke;
@@ -31,7 +31,7 @@
       width: 140px;
       height: 110px;
     }
-    .single_top {
+    .single-top {
       top: 10px;
       height: 135px;
       background: no-repeat center;
@@ -41,10 +41,10 @@
 
   }
 
-  .main1 .single_one {
+  .main1 .single-one {
     background-color: transparent !important;
 
-    .single_text {
+    .single-text {
       position: absolute;
       top: 60px;
       left: 4px;
@@ -53,7 +53,7 @@
       font-weight: bold;
     }
 
-    .single_logo {
+    .single-logo {
       width: 129px !important;
       height: 36px !important;
       position: absolute;
@@ -62,13 +62,13 @@
     }
   }
 
-  .main1 .single_bottom {
+  .main1 .single-bottom {
     height: 61px;
     width: 150px;
     margin: 0 auto;
     position: relative;
 
-    .s_title {
+    .s-title {
       width: 153px;
       height: 20px;
       overflow: hidden;
@@ -80,20 +80,20 @@
       text-align: center;
     }
 
-    .s_con {
+    .s-con {
       height: 33px;
       padding-top: 12px;
       position: relative;
       overflow: hidden;
       text-align: center;
-      .s_num {
+      .s-num {
         display: inline-block;
         color: #e50113;
         font-weight: bold;
         font-size: 14px;
         height: 20px;
       }
-      .s_num_underline {
+      .s-num-underline {
         text-decoration: line-through;
         font-size: 12px;
         color: #999;
@@ -113,7 +113,7 @@
       line-height: 67px;
       overflow: hidden;
     }
-    .brand_bg_img_mc {
+    .brand-bg-img-mc {
       opacity: 0.4;
       background-color: #000;
       width: 490px;
@@ -141,7 +141,7 @@
   .main2-right {
     margin-left: 5px;
     background: #ffffff;
-    .floor_left {
+    .floor-left {
       width: 210px !important;
     }
     .main2-right-title-big {
@@ -184,7 +184,7 @@
     }
   }
 
-  .brand_sp_bg {
+  .brand-sp-bg {
     float: left;
     position: relative;
     width: 80px;
@@ -196,7 +196,7 @@
     }
   }
 
-  .brand_pinpai {
+  .brand-pinpai {
     position: relative;
     color: white;
     width: 140px;

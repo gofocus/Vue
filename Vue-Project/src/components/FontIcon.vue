@@ -4,7 +4,7 @@
 
 <script>
   export default {
-    name: "font-icon",
+    name: "FontIcon",
     props: {
       id: {
         type: String,

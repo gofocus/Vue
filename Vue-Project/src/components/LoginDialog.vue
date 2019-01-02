@@ -1,9 +1,18 @@
 <template>
-  <el-dialog :visible.sync="loginDialogVisible_" class="login-container" width="30%" :modal="true" ref="dialog"
-             @open="focusInput('username')" @close="closeDialog" @keydown.native="stopPropagation"
+  <el-dialog :visible.sync="loginDialogVisible_"
+             class="login-container"
+             width="30%"
+             :modal="true"
+             ref="dialog"
+             @open="focusInput('username')"
+             @close="closeDialog"
+             @keydown.native="stopPropagation"
              :close-on-click-modal="true">
 
-    <el-form :model="form" :rules="rules" ref="form" v-focus2>
+    <el-form :model="form"
+             :rules="rules"
+             ref="form"
+             v-focus2>
       <h3 class="title">Sign In</h3>
 
       <el-form-item prop="username">
@@ -19,7 +28,7 @@
 
       <el-form-item prop="captcha" v-if="form.requireCaptcha" class="captcha" ref="captcha" v-focus>
         <el-input id="captcha_input" class="captcha_input" type="text" v-model="form.captcha"
-                  placeholder="验证码" @keyup.enter.native="handleSubmit" ></el-input>
+                  placeholder="验证码" @keyup.enter.native="handleSubmit"></el-input>
         <div id="captcha">
           <img :src="captchaBit" alt="" @click="getCaptcha">
           <!--<img  src="" alt="" ref="captcha" @click="getCaptcha">-->
@@ -48,6 +57,7 @@
   import {mapMutations} from 'vuex'
 
   export default {
+    name:'LoginDialog',
     data: function () {
       const captchaRule = (rule, value, callback) => {
         if (this.form.requireCaptcha) {
@@ -99,7 +109,7 @@
         },
       },
       focus: {
-        inserted(el,vnode) {
+        inserted(el, vnode) {
           el.getElementsByTagName('input')[0].focus();
           // el.querySelector('input').focus();
           // console.log(el.querySelector('input'));
@@ -110,10 +120,10 @@
           // console.log("unbind");
         }
       },
-      focus2:{
-        update(el){
-          console.log(el.querySelectorAll('input'));
-          console.log(el);
+      focus2: {
+        update(el) {
+          // console.log(el.querySelectorAll('input'));
+          // console.log(el);
         }
       }
     },

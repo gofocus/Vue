@@ -1,26 +1,26 @@
 <template>
-  <div class="itemDetail">
+  <div class="item-detail">
     <router-view></router-view>
-    <header-bp class="itemDetail_header_bp"></header-bp>
+    <HeaderBp class="item-detail-header-bp"/>
 
     <el-container>
       <el-header style="height: 20px;">
-        <div class="detail_crumb">
+        <div class="detail-crumb">
           <!--<router-link to="/">首页</router-link>-->
           <button @click="goIndex">首页</button>
         </div>
 
       </el-header>
       <el-main>
-        <el-container class="detail_1" v-if="item!==null">
+        <el-container class="detail-1" v-if="item!==null">
           <el-main>
             <el-row>
               <el-col :span="8">
-                <div class="detail_1_left">
-                  <div class="detail1_pic">
+                <div class="detail-1-left">
+                  <div class="detail1-pic">
                     <img :src="$itemPicUrl + item.pic" alt="">
                   </div>
-                  <div class="detail1_itemInfo">
+                  <div class="detail1-itemInfo">
                     <span>商品编号&nbsp;{{item.id}}</span>
                     <span @mouseover="collectIcon=true" @mouseleave="collectIcon=false">
                       <font-icon :id="collectIcon?'icon-jushoucanggift':'icon-jushoucang'"></font-icon>&nbsp;关注</span>
@@ -28,8 +28,8 @@
                 </div>
               </el-col>
               <el-col :span="12">
-                <div class="detail_1_middle">
-                  <div class="name_detail">
+                <div class="detail-1-middle">
+                  <div class="name-detail">
                     <span>{{item.name}}&nbsp;{{item.detail}}</span>
                   </div>
                   <div class="price">
@@ -46,20 +46,20 @@
                 </div>
               </el-col>
               <el-col :span="4">
-                <div class="detail_1_right"></div>
+                <div class="detail-1-right"></div>
               </el-col>
             </el-row>
           </el-main>
         </el-container>
 
-        <el-container class="detail_2">
+        <el-container class="detail-2">
           <el-aside width="250px">
             <div>用户还购买了</div>
           </el-aside>
-          <el-main class="detail_2">
+          <el-main class="detail-2">
             <el-row>
               <el-col :span="24">
-                <div class="grid-content detail_one">详情2</div>
+                <div class="grid-content detail-one">详情2</div>
               </el-col>
             </el-row>
           </el-main>
@@ -74,14 +74,14 @@
 </template>
 
 <script>
-  import header_bp from './header-bp'
-  import inputNumber from './InputNumber';
+  import HeaderBp from './HeaderBp'
+  import InputNumber from './BaseInputNumber';
 
   export default {
-    name: "itemDetail",
+    name: "ItemDetail",
     components: {
-      'header-bp': header_bp,
-      inputNumber: inputNumber
+      HeaderBp: HeaderBp,
+      InputNumber: InputNumber
     },
     props: ['itemId'],
     data: function () {
@@ -123,7 +123,7 @@
 //         }*/
 //       })
 //     }
-    mounted:function () {
+    mounted: function () {
     }
   }
 

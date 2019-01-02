@@ -4,7 +4,7 @@
 
 <script>
   export default {
-    name: "inputNumber",
+    name: "BaseInputNumber",
     data: function () {
       return {
         cartNum: 0

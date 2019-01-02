@@ -12,7 +12,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 // import 'element-ui/lib/theme-chalk/reset.css';
 import 'font-awesome/css/font-awesome.min.css';
 // import SvgIcon from './components/svg-icon.vue';
-import FontIcon from './components/font-icon.vue';
+import FontIcon from './components/FontIcon.vue';
 import './assets/icon/iconfont.css';
 import './assets/icon/iconfont.js';
 import global from './global';

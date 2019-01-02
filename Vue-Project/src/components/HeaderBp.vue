@@ -1,23 +1,23 @@
 <template>
 
   <div style="height: 180px;">
-    <div class="header_bp">
+    <div class="header-bp">
 
-      <div class="hd_header">
+      <div class="hd-header">
 
-        <div class="hd_logo_area">
-          <a href="" class="hd_logo">
-            <img src="//img.yihaodianimg.com/front-homepage/global/images/logo/logo_new@2x.png" alt="" title="logo">
+        <div class="hd-logo-area">
+          <a href="" class="hd-logo">
+            <img src="//img.yihaodianimg.com/front-homepage/global/images/logo/logo-new@2x.png" alt="" title="logo">
           </a>
-          <a href="" class="hd_logo hd_slogan">
+          <a href="" class="hd-logo hd-slogan">
             <img src="//img13.360buyimg.com/img/jfs/t1/1396/16/14352/76151/5bdabbfaE8361975e/00939743b8194909.png"
                  alt="" title="slogan">
           </a>
         </div>
 
-        <div class="hd_header_right">
-          <div class="hd_head_search">
-            <div class="hd_search">
+        <div class="hd-header-right">
+          <div class="hd-head-search">
+            <div class="hd-search">
               <input type="text" placeholder="图书超级品类日 满199减100">
               <button onclick="">
                 <font-icon id="icon-sousuo"><a href="#"></a></font-icon>
@@ -34,8 +34,8 @@
             </div>
           </div>
 
-          <div class="hd_mini_cart">
-            <a href="" class="mini_cart">
+          <div class="hd-mini-cart">
+            <a href="" class="mini-cart">
               <font-icon id="icon-gouwuche"></font-icon>
               <span>购物车</span>
             </a>
@@ -43,7 +43,7 @@
 
         </div>
 
-        <div class="hd_header_nav">
+        <div class="hd-header-nav">
           <ul>
             <li class="category-list">
               <a href="">
@@ -68,7 +68,7 @@
 
 <script>
   export default {
-    name: "header-bp",
+    name: "HeaderBp",
     data:function () {
       return {
       }

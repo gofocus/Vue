@@ -1,18 +1,25 @@
 <template>
   <div class="nav">
     <!--<img src="./assets/logo.png">-->
-    <el-menu :default-active="activeIndex" mode="horizontal" @select="handleSelect"
-             background-color="#f4f4f4" text-color="black" active-text-color="#ffd04b">
+    <el-menu :default-active="activeIndex"
+             mode="horizontal"
+             @select="handleSelect"
+             background-color="#f4f4f4"
+             text-color="black"
+             active-text-color="#ffd04b">
 
       <!--<el-menu-item class="header-login" index="5"><span @click="$router.push('login')" >Sign in</span></el-menu-item>-->
       <!--.sync实现双向数据绑定-->
       <!--<loginDialog :dialogFormVisibleParent.sync="dialogFormVisibleParent" ref="loginDialog"></loginDialog>-->
       <!--组件：登录dialog-->
-      <loginDialog ref="loginDialog" @keyup.enter="handleSubmit" @customEvent="foo"></loginDialog>
+      <LoginDialog ref="loginDialog"
+                   @keyup.enter="handleSubmit"
+                   @customEvent="foo"
+      />
 
       <div class="hd_indxProvce">
         <a href="">
-          <font-icon id="icon-shouhuodizhi"></font-icon>
+          <FontIcon id="icon-shouhuodizhi"/>
           <span>送货地址</span>
         </a>
       </div>
@@ -39,7 +46,7 @@
         <li>
           <div class="hd_menu">
             <a href="" target="_blank">
-              <font-icon id="icon-wodejuhuasuan"></font-icon>
+              <FontIcon id="icon-wodejuhuasuan" />
               <span>会员俱乐部</span>
             </a>
           </div>
@@ -47,7 +54,7 @@
         <li>
           <div class="hd_menu">
             <a href="" target="_blank">
-              <font-icon id="icon-wodedingdan"></font-icon>
+              <FontIcon id="icon-wodedingdan" />
               <span>我的订单</span>
             </a>
           </div>
@@ -132,7 +139,7 @@
     mounted: function () {
     },
     components: {
-      loginDialog: LoginDialog,
+      LoginDialog: LoginDialog,
     },
   }
 </script>

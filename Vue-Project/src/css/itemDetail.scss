@@ -1,29 +1,29 @@
 
-.itemDetail {
+.item-detail {
   margin: 0 0;
   background-color: white;
 
-  .header_bp .hd_header_right .hd_search {
+  .header-bp .hd-header-right .hd-search {
     border: 1px solid red;
   }
 
-  .itemDetail_header_bp {
+  .item-detail-header-bp {
     border-bottom: 2px solid #ff4040;
   }
 
-  .detail_crumb {
+  .detail-crumb {
     padding-left: 18px;
     padding-top: 12px;
     font-size: 14px;
   }
-  .detail_1 {
+  .detail-1 {
 
     .el-main {
       height: 500px;
     }
-    .detail_1_left {
+    .detail-1-left {
 
-      .detail1_pic {
+      .detail1-pic {
         height: 360px;
         width: 354px;
         padding: 19px;
@@ -33,7 +33,7 @@
         }
       }
 
-      .detail1_itemInfo {
+      .detail1-itemInfo {
         height: 16px;
         margin-top: 10px;
         span {
@@ -63,10 +63,10 @@
 
     }
 
-    .detail_1_middle {
+    .detail-1-middle {
       margin-left: 25px;
 
-      .name_detail {
+      .name-detail {
         font-weight: bold;
         font-size: 16px;
       }
@@ -118,12 +118,12 @@
       }
     }
 
-    .detail_1_right {
+    .detail-1-right {
 
     }
   }
 
-  .detail_2 {
+  .detail-2 {
     border: 1px solid;
   }
 
