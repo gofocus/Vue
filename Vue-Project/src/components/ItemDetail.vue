@@ -79,11 +79,14 @@
 
   export default {
     name: "ItemDetail",
+
     components: {
       HeaderBp: HeaderBp,
       InputNumber: InputNumber
     },
+
     props: ['itemId'],
+
     data: function () {
       return {
         // itemId: this.$route.params.itemId,
@@ -91,11 +94,7 @@
         collectIcon: false,
       }
     },
-    methods: {
-      goIndex: function () {
-        this.$router.push('/');
-      },
-    },
+
     created: function () {
       const id = this.itemId;
       this.$axios.post(`/api/items/getItemInfo`, id, {headers: {'Content-Type': 'application/json'}}).then(res => {
@@ -124,7 +123,13 @@
 //       })
 //     }
     mounted: function () {
-    }
+    },
+    methods: {
+      goIndex: function () {
+        this.$router.push('/');
+      },
+    },
+
   }
 
 </script>

@@ -1,5 +1,5 @@
-import Home from '../components/Home'
-import layout from '../components/Layout'
+import Home from '../components/BaseHome'
+import layout from '../components/BaseLayout'
 import itemDetail from '../components/ItemDetail'
 
 

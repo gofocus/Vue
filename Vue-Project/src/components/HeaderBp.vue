@@ -7,10 +7,10 @@
 
         <div class="hd-logo-area">
           <a href="" class="hd-logo">
-            <img src="//img.yihaodianimg.com/front-homepage/global/images/logo/logo-new@2x.png" alt="" title="logo">
+            <img src="../../static/img/logo_new@2x.png" alt="" title="logo">
           </a>
           <a href="" class="hd-logo hd-slogan">
-            <img src="//img13.360buyimg.com/img/jfs/t1/1396/16/14352/76151/5bdabbfaE8361975e/00939743b8194909.png"
+            <img src=""
                  alt="" title="slogan">
           </a>
         </div>

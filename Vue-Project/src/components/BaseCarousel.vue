@@ -18,11 +18,13 @@
 
   export default {
     name: "Carousel",
+
     data: function () {
       return {
         carouselList: []
       }
     },
+
     mounted: function () {
       const _this = this;                                      // axios中的this不会指向当前实例，需要将当前实例提前存储起来
       this.$axios.get(`${base}/carouselList`)

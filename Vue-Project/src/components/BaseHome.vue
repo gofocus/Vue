@@ -21,7 +21,7 @@
                   <el-col :span="4" class="single-one">
                     <div class="grid-content bg-purple single-one">
                       <a href="">
-                        <img class="single-logo" src="//img.yihaodianimg.com/front-homepage/index/images/single-img.png"
+                        <img class="single-logo" src="../../static/img/single_img.png"
                              alt="">
                         <div class="single-text">限时 限量 品质 超值</div>
                       </a>
@@ -30,12 +30,11 @@
                   <!--第一行商品-->
                   <el-col :span="5" v-for="(item,index) in itemList" v-if="index < 4" :key="item.id">
                     <div class="grid-content bg-purple">
-                      <a target="_blank" href="javascript:" @click="goItemDetails(item.id)"
-                         :title="item.detail" class="superSingle-a">
+                      <a class="superSingle-a" target="_blank" href="javascript:"
+                         :title="item.detail"
+                         @click="goItemDetails(item.id)">
                         <div class="single-top">
-                          <img class="single-top-img"
-                               :src="'http://localhost:8080/pic/'+item.pic"
-                               alt="">
+                          <img class="single-top-img" :src="'http://localhost:8080/pic/'+item.pic" alt="">
                         </div>
                         <div class="single-bottom">
                           <div class="s-title">{{ item.name}}</div>
@@ -52,15 +51,16 @@
                 </el-row>
                 <!--第二行-->
                 <el-row :gutter="0">
-                  <el-col :span="(index===4)? 4 : 5" v-for="(item,index) in itemList" v-if="index >3 && index < 9"
-                          :key="item.id">
+                  <el-col
+                    :key="item.id"
+                    :span="(index===4)? 4 : 5" v-for="(item,index) in itemList"
+                    v-if="index >3 && index < 9">
                     <div class="grid-content bg-purple">
-                      <a href="javascript:" @click="goItemDetails(item.id)" target="_blank"
-                         :title="item.detail">
+                      <a href="javascript:" target="_blank"
+                         :title="item.detail"
+                         @click="goItemDetails(item.id)">
                         <div class="single-top" :class="(index===4)?'unique':''">
-                          <img class="single-top-img"
-                               :src="'http://localhost:8080/pic/' + item.pic"
-                               alt="">
+                          <img class="single-top-img" :src="'http://localhost:8080/pic/' + item.pic" alt="">
                         </div>
                         <div class="single-bottom">
                           <div class="s-title">{{ item.name}}</div>
@@ -195,11 +195,17 @@
 </template>
 
 <script>
-  import Carousel from './Carousel'
+  import Carousel from './BaseCarousel'
   import HeaderBp from './HeaderBp'
 
   export default {
     name: "Home",
+
+    components: {
+      Carousel: Carousel,
+      HeaderBp: HeaderBp,
+    },
+
     data: function () {
       return {
         itemList: this.$axios.get('/api').then(res => {
@@ -207,20 +213,7 @@
         }),
       }
     },
-    components: {
-      Carousel: Carousel,
-      HeaderBp: HeaderBp,
-    },
-    methods: {
-      goItemDetails: function (itemId) {
-        // this.$router.push("/item/" + itemId)
-        //对于上面，假如itemDetail的路由变化，就需要相应的修改路径。这种写法可维护性（适应性）更高，
-        // if (this.$hasPermission('item:query')) {
-        this.$router.push({name: 'itemDetail', params: {itemId: itemId}});
-        // }
 
-      }
-    },
     mounted: function () {
       // console.log(JSON.parse('{"fruit":"apple"}'));       // {fruit: "apple"}
       // console.log(JSON.parse({"fruit":"apple"}));      // 报错
@@ -228,7 +221,17 @@
       // console.log(JSON.stringify({"fruit": "apple"}));    // {"fruit":"apple"}
       // console.log(JSON.stringify({fruit: "apple"}));      // {"fruit":"apple"}
 
-    }
+    },
+
+    methods: {
+      goItemDetails: function (itemId) {
+        // this.$router.push("/item/" + itemId)
+        //对于上面，假如itemDetail的路由变化，就需要相应的修改路径。这种写法可维护性（适应性）更高，
+        // if (this.$hasPermission('item:query')) {
+        this.$router.push({name: 'itemDetail', params: {itemId: itemId}});
+        // }
+      }
+    },
 
   }
 </script>

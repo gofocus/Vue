@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+
     <el-container class="el-container myNav">
       <el-main>
         <nav-bar/>
@@ -10,11 +11,12 @@
     <transition name="fade">
       <router-view></router-view>
     </transition>
+
   </div>
 </template>
 
 <script>
-  import nav from './components/Nav'
+  import nav from './components/BaseNav'
 
   export default {
     name: 'app',
@@ -48,7 +50,9 @@
   .fade-enter-active, .fade-leave-active {
     transition: opacity 1s;
   }
-  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
+  {
     opacity: 0.1;
   }
 

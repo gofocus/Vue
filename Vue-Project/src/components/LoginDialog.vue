@@ -1,34 +1,37 @@
 <template>
-  <el-dialog :visible.sync="loginDialogVisible_"
-             class="login-container"
-             width="30%"
-             :modal="true"
-             ref="dialog"
-             @open="focusInput('username')"
-             @close="closeDialog"
-             @keydown.native="stopPropagation"
-             :close-on-click-modal="true">
+  <el-dialog
+    class="login-container" width="30%"
+    ref="dialog"
+    :visible.sync="loginDialogVisible_" :modal="true" :close-on-click-modal="true"
+    @open="focusInput('username')" @close="closeDialog" @keydown.native="stopPropagation">
 
-    <el-form :model="form"
-             :rules="rules"
-             ref="form"
-             v-focus2>
+    <el-form ref="form" :model="form" :rules="rules" v-focus2>
       <h3 class="title">Sign In</h3>
-
       <el-form-item prop="username">
-        <el-input type="text" v-model="form.username" auto-complete="off" placeholder="Email"
-                  @keyup.enter.native="focusInput('password')" ref="username"></el-input>
+        <el-input
+          type="text" auto-complete="off" placeholder="Email"
+          v-model="form.username"
+          ref="username"
+          @keyup.enter.native="focusInput('password')">
+        </el-input>
       </el-form-item>
 
       <el-form-item prop="password">
-        <el-input type="password" v-model="form.password" placeholder="Password"
-                  @keyup.enter.native="focusInput('captcha')"
-                  ref="password"></el-input>
+        <el-input
+          type="password" placeholder="Password"
+          ref="password"
+          v-model="form.password"
+          @keyup.enter.native="focusInput('captcha')">
+        </el-input>
       </el-form-item>
 
-      <el-form-item prop="captcha" v-if="form.requireCaptcha" class="captcha" ref="captcha" v-focus>
-        <el-input id="captcha_input" class="captcha_input" type="text" v-model="form.captcha"
-                  placeholder="验证码" @keyup.enter.native="handleSubmit"></el-input>
+      <el-form-item class="captcha" v-if="form.requireCaptcha" prop="captcha" ref="captcha" v-focus>
+        <el-input
+          class="captcha_input" type="text" placeholder="验证码"
+          id="captcha_input"
+          v-model="form.captcha"
+          @keyup.enter.native="handleSubmit">
+        </el-input>
         <div id="captcha">
           <img :src="captchaBit" alt="" @click="getCaptcha">
           <!--<img  src="" alt="" ref="captcha" @click="getCaptcha">-->
@@ -38,14 +41,19 @@
       </el-form-item>
 
       <el-form-item>
-        <a v-if="this.$hasPermission('captcha')" href="javascript:" @click="turn_captcha">{{form.requireCaptcha?"关闭":"开启"}}验证码 </a>
+        <a
+          href="javascript:"
+          v-if="this.$hasPermission('captcha')"
+          @click="turn_captcha">{{form.requireCaptcha?"关闭":"开启"}}验证码 </a>
         <!--<a v-if="hasPermissionQ('captcha')" href="javascript:" @click="turn_captcha">{{form.requireCaptcha?"关闭":"开启"}}验证码 </a>-->
-        <el-checkbox v-model="checked" checked class="remember">Stay signed in</el-checkbox>
+        <el-checkbox class="remember" v-model="checked" checked>Stay signed in</el-checkbox>
       </el-form-item>
 
       <el-form-item style="width: 100%;">
-        <el-button type="primary" style="width: 100%;" @click.native.prevent="handleSubmit" :loading="loginIng">Submit
-        </el-button>
+        <el-button
+          type="primary" style="width: 100%;"
+          :loading="loginIng"
+          @click.native.prevent="handleSubmit">Submit</el-button>
       </el-form-item>
     </el-form>
   </el-dialog>
@@ -57,8 +65,43 @@
   import {mapMutations} from 'vuex'
 
   export default {
-    name:'LoginDialog',
+    name: 'LoginDialog',
+
+    directives: {
+
+      myOn: {
+        bind(el, binding, vnode) {
+          const event = binding.arg;
+          const fn = binding.value;
+          // console.log(binding);
+          // console.log(el);
+          // el.addEventListener(event, fn);
+        },
+      },
+
+      focus: {
+        inserted(el, vnode) {
+          el.getElementsByTagName('input')[0].focus();
+          // el.querySelector('input').focus();
+          // console.log(el.querySelector('input'));
+          // console.log("inserted")
+          // console.log(vnode, "vnode");
+        },
+        unbind() {
+          // console.log("unbind");
+        }
+      },
+
+      focus2: {
+        update(el) {
+          // console.log(el.querySelectorAll('input'));
+          // console.log(el);
+        }
+      }
+    },
+
     data: function () {
+
       const captchaRule = (rule, value, callback) => {
         if (this.form.requireCaptcha) {
           if (!value) return callback(new Error('请输入验证码！'));
@@ -67,18 +110,22 @@
         }
         else callback();
       };
+
       return {
         loginDialogVisible_: this.$store.state.loginDialogVisible,
         captchaBit: this.getCaptcha(),
         // dialogFormVisibleChild: this.dialogFormVisibleParent,
+
         form: {
           username: "ddd",
           password: 123,
           captcha: "",
           requireCaptcha: false,
         },
+
         checked: true,
         loginIng: false,
+
         rules: {
           username: [
             {required: true, message: '输入用户名', trigger: 'change'},
@@ -93,41 +140,41 @@
             {validator: captchaRule, trigger: 'change'},
           ]
         }
+
       }
     },
+
     computed: {
       ...mapGetters(['loginDialogVisible', 'authUrl']),
     },
-    directives: {
-      myOn: {
-        bind(el, binding, vnode) {
-          const event = binding.arg;
-          const fn = binding.value;
-          // console.log(binding);
-          // console.log(el);
-          // el.addEventListener(event, fn);
-        },
-      },
-      focus: {
-        inserted(el, vnode) {
-          el.getElementsByTagName('input')[0].focus();
-          // el.querySelector('input').focus();
-          // console.log(el.querySelector('input'));
-          // console.log("inserted")
-          // console.log(vnode, "vnode");
-        },
-        unbind() {
-          // console.log("unbind");
+
+    watch: {
+      loginDialogVisible_: function (v) {
+        if (!v) {
+          this.mu_loginDialogVisible(v);
         }
       },
-      focus2: {
-        update(el) {
-          // console.log(el.querySelectorAll('input'));
-          // console.log(el);
+      loginDialogVisible: function (v) {
+        if (v) {
+          this.loginDialogVisible_ = v;
         }
       }
     },
 
+    beforeCreate() {
+    },
+
+    created() {
+    },
+
+    mounted() {
+      // console.log(this.$refs)
+      // this.$emit('customEvent');
+
+      // console.log(Vue.TestData);
+      // console.log("hasPermissionQ", Vue.hasPermissionQ('captcha'));
+
+    },
 
     methods: {
 
@@ -149,6 +196,7 @@
       closeDialog() {
         this.$refs.form.resetFields();
       },
+
       /**
        * 将焦点聚焦到指定的input
        * @param refName
@@ -165,6 +213,7 @@
           }
         })
       },
+
       /**
        * 验证表单，请求登录
        */
@@ -220,6 +269,7 @@
           }
         });
       },
+
       /**
        * 获取验证码图片
        */
@@ -236,6 +286,7 @@
           console.error(ex);
         });
       },
+
       /**
        * 启用或停用验证码功能
        */
@@ -243,31 +294,6 @@
         this.form.requireCaptcha = !this.form.requireCaptcha;
       },
     },
-    watch: {
-      loginDialogVisible_: function (v) {
-        if (!v) {
-          this.mu_loginDialogVisible(v);
-        }
-      },
-      loginDialogVisible: function (v) {
-        if (v) {
-          this.loginDialogVisible_ = v;
-        }
-      }
-    },
-
-    beforeCreate() {
-    },
-    created() {
-    },
-    mounted() {
-      // console.log(this.$refs)
-      // this.$emit('customEvent');
-
-      // console.log(Vue.TestData);
-      // console.log("hasPermissionQ", Vue.hasPermissionQ('captcha'));
-
-    }
 
   }
 </script>

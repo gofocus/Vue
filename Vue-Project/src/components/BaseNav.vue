@@ -1,21 +1,17 @@
 <template>
   <div class="nav">
     <!--<img src="./assets/logo.png">-->
-    <el-menu :default-active="activeIndex"
-             mode="horizontal"
-             @select="handleSelect"
-             background-color="#f4f4f4"
-             text-color="black"
-             active-text-color="#ffd04b">
+    <el-menu
+      background-color="#f4f4f4" text-color="black" active-text-color="#ffd04b"
+      :default-active="activeIndex"
+      mode="horizontal"
+      @select="handleSelect">
 
       <!--<el-menu-item class="header-login" index="5"><span @click="$router.push('login')" >Sign in</span></el-menu-item>-->
       <!--.sync实现双向数据绑定-->
       <!--<loginDialog :dialogFormVisibleParent.sync="dialogFormVisibleParent" ref="loginDialog"></loginDialog>-->
       <!--组件：登录dialog-->
-      <LoginDialog ref="loginDialog"
-                   @keyup.enter="handleSubmit"
-                   @customEvent="foo"
-      />
+      <LoginDialog ref="loginDialog" @keyup.enter="handleSubmit"/>
 
       <div class="hd_indxProvce">
         <a href="">
@@ -28,16 +24,18 @@
         <li class="global_unlogin">
           <div>
             <span class="hd_login_span">{{ greeting }}</span>
-            <!--<a href="javascript:" class="hd_login_link" target="_self" @click="dialogFormVisibleParent=true">登录2</a>-->
             <a href="javascript:" class="hd_login_link" target="_self" @click="change_loginDialogVisible">登录2</a>
             <template v-if="isLogin">
               <a class="hd_login_currentUser"><span>{{ currentUser.username }}</span></a>
               <a href="javascript:" class="hd_login_logout" @click="logout">登出</a>
             </template>
             <template v-else>
-              <!--<a href="javascript:" class="hd_login_link" target="_self" @click="dialogFormVisibleParent=true">登录</a>-->
-              <a href="javascript:" class="hd_login_link" target="_self" @click="change_loginDialogVisible">登录</a>
-              <a href="" class="hd_register_link" target="_blank" @customEvent="foo">注册</a>
+              <a
+                href="javascript:" class="hd_login_link" target="_self"
+                id="test134" ref="testClass"
+                @click="change_loginDialogVisible"
+              >登录</a>
+              <a href="javascript:" class="hd_register_link" target="_blank" @customEvent="foo">注册</a>
               <a href="javascript:" class="hd_login_logout" @click="logout">登出</a>
             </template>
 
@@ -46,7 +44,7 @@
         <li>
           <div class="hd_menu">
             <a href="" target="_blank">
-              <FontIcon id="icon-wodejuhuasuan" />
+              <FontIcon id="icon-wodejuhuasuan"/>
               <span>会员俱乐部</span>
             </a>
           </div>
@@ -54,7 +52,7 @@
         <li>
           <div class="hd_menu">
             <a href="" target="_blank">
-              <FontIcon id="icon-wodedingdan" />
+              <FontIcon id="icon-wodedingdan"/>
               <span>我的订单</span>
             </a>
           </div>
@@ -95,6 +93,7 @@
         },
       }
     },
+
     computed: {
       greeting() {
         const date = new Date();
@@ -103,19 +102,24 @@
         else if (hour >= 12 && hour < 18) return "下午好,";
         else return "晚上好,";
       },
+
       ...mapGetters(
-        ['currentUser','isLogin'])
+        ['currentUser', 'isLogin'])
+
     },
+
     methods: {
+
       ...mapMutations(['mu_loginDialogVisible']),
+
       /**
        * 将vuex中的loginDialogVisible属性设为true =>显示登录dialog
        */
       change_loginDialogVisible() {
         this.$emit('customEvent');
-
         this.mu_loginDialogVisible(true);
       },
+
       /**
        *
        * @param key
@@ -124,6 +128,7 @@
       handleSelect(key, keyPath) {
         console.log(key, keyPath)
       },
+
       /**
        * 登出用户
        */
@@ -131,16 +136,20 @@
         this.$axios.post("/api/logout").then(() => this.$refs.loginDialog.getCaptcha());
         this.$store.commit('userStatus', null);
       },
-      foo(){
+
+      foo() {
         console.log("customEvent proceeded!")
       }
 
     },
+
     mounted: function () {
     },
+
     components: {
       LoginDialog: LoginDialog,
     },
+
   }
 </script>
 
