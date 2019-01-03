@@ -33,7 +33,7 @@
           @keyup.enter.native="handleSubmit">
         </el-input>
         <div id="captcha">
-          <img :src="captchaBit" alt="" @click="getCaptcha">
+          <img :src="captchaBit" alt="验证码" @click="getCaptcha">
           <!--<img  src="" alt="" ref="captcha" @click="getCaptcha">-->
           <span>看不清？</span>
           <a href="javascript:" @click="getCaptcha">换一个</a>

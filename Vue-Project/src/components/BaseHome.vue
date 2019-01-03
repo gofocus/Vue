@@ -2,9 +2,9 @@
   <el-container class="home">
     <HeaderBp class="home-header-bp"/>
 
-    <!--    <el-header style="height: 300px;">
+        <el-header style="height: 300px;">
           <Carousel class="home-carousel"/>
-        </el-header>-->
+        </el-header>
 
     <el-container>
       <!--<el-aside width="85px" class="left-aside" style="background-color: #f5f5f5;"></el-aside>-->
@@ -22,7 +22,7 @@
                     <div class="grid-content bg-purple single-one">
                       <a href="">
                         <img class="single-logo" src="../../static/img/single_img.png"
-                             alt="">
+                             alt="超级单品">
                         <div class="single-text">限时 限量 品质 超值</div>
                       </a>
                     </div>
@@ -34,7 +34,7 @@
                          :title="item.detail"
                          @click="goItemDetails(item.id)">
                         <div class="single-top">
-                          <img class="single-top-img" :src="'http://localhost:8080/pic/'+item.pic" alt="">
+                          <img class="single-top-img" :src="'http://localhost:8080/pic/'+item.pic" alt="商品图片">
                         </div>
                         <div class="single-bottom">
                           <div class="s-title">{{ item.name}}</div>
@@ -60,7 +60,7 @@
                          :title="item.detail"
                          @click="goItemDetails(item.id)">
                         <div class="single-top" :class="(index===4)?'unique':''">
-                          <img class="single-top-img" :src="'http://localhost:8080/pic/' + item.pic" alt="">
+                          <img class="single-top-img" :src="'http://localhost:8080/pic/' + item.pic" alt="商品图片">
                         </div>
                         <div class="single-bottom">
                           <div class="s-title">{{ item.name}}</div>

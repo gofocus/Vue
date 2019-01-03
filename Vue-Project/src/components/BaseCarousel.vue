@@ -5,7 +5,7 @@
     <el-carousel class="elCarousel">
       <!--<el-carousel height="150px" trigger="click">-->
       <el-carousel-item v-for="item in carouselList" :key="item">
-        <img class="img-box" :src="item" alt=""
+        <img class="img-box" :src="item" alt="轮播图"
              onerror="this.onerror=null; this.src='http://woxin2.jx139.com/cztx/images/ic_default_head.png'">
       </el-carousel-item>
     </el-carousel>

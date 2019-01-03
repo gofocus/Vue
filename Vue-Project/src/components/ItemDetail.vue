@@ -18,7 +18,7 @@
               <el-col :span="8">
                 <div class="detail-1-left">
                   <div class="detail1-pic">
-                    <img :src="$itemPicUrl + item.pic" alt="">
+                    <img :src="$itemPicUrl + item.pic" alt="商品图片">
                   </div>
                   <div class="detail1-itemInfo">
                     <span>商品编号&nbsp;{{item.id}}</span>

@@ -7,11 +7,10 @@
 
         <div class="hd-logo-area">
           <a href="" class="hd-logo">
-            <img src="../../static/img/logo_new@2x.png" alt="" title="logo">
+            <img src="../../static/img/logo_new@2x.png" alt="网站logo" title="logo">
           </a>
           <a href="" class="hd-logo hd-slogan">
-            <img src=""
-                 alt="" title="slogan">
+            <img src="" alt="" title="slogan">
           </a>
         </div>
 
