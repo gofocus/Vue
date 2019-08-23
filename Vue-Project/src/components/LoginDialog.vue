@@ -53,7 +53,8 @@
         <el-button
           type="primary" style="width: 100%;"
           :loading="loginIng"
-          @click.native.prevent="handleSubmit">Submit</el-button>
+          @click.native.prevent="handleSubmit">Submit
+        </el-button>
       </el-form-item>
     </el-form>
   </el-dialog>

@@ -1,16 +1,44 @@
+<!--首页-->
 <template>
   <el-container class="home">
     <HeaderBp class="home-header-bp"/>
 
-        <el-header style="height: 300px;">
-          <Carousel class="home-carousel"/>
-        </el-header>
+    <el-header style="height: 300px;">
+      <!--轮播图-->
+      <!--<Carousel class="home-carousel"/>-->
+
+      <el-row>
+        <el-col :span="6">
+          <div class="grid-content bg-purple"></div>
+        </el-col>
+        <el-col :span="6">
+          <div class="grid-content bg-purple-light"></div>
+        </el-col>
+        <el-col :span="6">
+          <div class="grid-content bg-purple"></div>
+        </el-col>
+        <el-col :span="6">
+          <div class="grid-content bg-purple-light"></div>
+        </el-col>
+      </el-row>
+
+    </el-header>
 
     <el-container>
       <!--<el-aside width="85px" class="left-aside" style="background-color: #f5f5f5;"></el-aside>-->
       <!--<el-aside></el-aside>-->
       <el-container class="main-content">
         <el-main class="mainSpecial">
+
+          <el-table :data="auctionHistoryList" style="width: 100%">
+            <el-table-column prop="gear" label="装备"></el-table-column>
+            <el-table-column prop="auctioneer" label="拍卖师"></el-table-column>
+            <el-table-column prop="highestBid" width="100" label="最高出分"></el-table-column>
+            <el-table-column prop="secondBid" width="100" label="第二出分"></el-table-column>
+            <el-table-column prop="successfulBidder" label="中标人"></el-table-column>
+            <el-table-column prop="auctionTime" label="拍卖时间"></el-table-column>
+
+          </el-table>
 
           <el-container class="main1">
             <el-main>
@@ -211,6 +239,9 @@
         itemList: this.$axios.get('/api').then(res => {
           this.itemList = res.data;
         }),
+        /*auctionHistoryList:this.$axios.get('/api/auction/history').then(res => {
+          this.auctionHistoryList = res.data;
+        })*/
       }
     },
 
