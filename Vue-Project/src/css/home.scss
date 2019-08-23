@@ -1,3 +1,30 @@
+.el-row {
+  margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.el-col {
+  border-radius: 4px;
+}
+.bg-purple-dark {
+  background: #99a9bf;
+}
+.bg-purple {
+  background: #d3dce6;
+}
+.bg-purple-light {
+  background: #e5e9f2;
+}
+.grid-content {
+  border-radius: 4px;
+  min-height: 36px;
+}
+.row-bg {
+  padding: 10px 0;
+  background-color: #f9fafc;
+}
+
 
 .home {
 
@@ -8,6 +35,7 @@
   .header-bp {
     background: url(//img10.360buyimg.com/img/jfs/t1/9777/13/4381/33990/5bdab14eEe1811832/634b2008eab9f84e.jpg) center no-repeat;
   }
+
 
   .mainSpecial {
     margin: 0 100px !important;
