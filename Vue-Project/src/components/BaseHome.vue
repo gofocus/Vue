@@ -241,6 +241,7 @@
           this.itemList = res.data;
         }),
         auctionHistoryList:[],
+        //test
       }
     },
 
