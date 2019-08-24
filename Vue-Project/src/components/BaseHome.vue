@@ -31,6 +31,7 @@
         <el-main class="mainSpecial">
 
           <el-table :data="auctionHistoryList" style="width: 100%">
+          <!--<el-table :data="tableData" style="width: 100%">-->
             <el-table-column prop="gear" label="装备"></el-table-column>
             <el-table-column prop="auctioneer" label="拍卖师"></el-table-column>
             <el-table-column prop="highestBid" width="100" label="最高出分"></el-table-column>
@@ -239,13 +240,14 @@
         itemList: this.$axios.get('/api').then(res => {
           this.itemList = res.data;
         }),
-        /*auctionHistoryList:this.$axios.get('/api/auction/history').then(res => {
-          this.auctionHistoryList = res.data;
-        })*/
+        auctionHistoryList:[],
       }
     },
 
     mounted: function () {
+      this.$axios.get('/api/auction/history').then(res => {
+        this.auctionHistoryList = res.data;
+      })
       // console.log(JSON.parse('{"fruit":"apple"}'));       // {fruit: "apple"}
       // console.log(JSON.parse({"fruit":"apple"}));      // 报错
       // console.log(JSON.parse({fruit: "apple"}));       // 报错
