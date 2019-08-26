@@ -1,7 +1,7 @@
 import Home from '../components/BaseHome'
 import layout from '../components/BaseLayout'
 import itemDetail from '../components/ItemDetail'
-
+import Auction from '../components/Auction'
 
 let routes = [
   {
@@ -12,25 +12,29 @@ let routes = [
     },
     // redirect: '/layout'
   },
-/*  {
-    path: '/layout',
-    component: layout
-  },*/
+  /*  {
+      path: '/layout',
+      component: layout
+    },*/
   {
     path: '/item/:itemId',
     name: 'itemDetail',
     component: itemDetail,
-    props:true,
+    props: true,
     meta: {
       requireAuth: true,
       requirePermission: "itemDetail"
     },
-    children:[
+    children: [
       {
-        path:'layout',
-        component:layout
+        path: 'layout',
+        component: layout
       }
     ]
+  },
+  {
+    path: '/auction',
+    component:Auction
   }
 
 ];

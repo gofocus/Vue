@@ -3,6 +3,7 @@
   <el-container class="home">
     <HeaderBp class="home-header-bp"/>
 
+    <button @click="gotoAuction">Auction</button>
     <el-header style="height: 300px;">
       <!--轮播图-->
       <!--<Carousel class="home-carousel"/>-->
@@ -31,7 +32,6 @@
         <el-main class="mainSpecial">
 
           <el-table :data="auctionHistoryList" style="width: 100%">
-          <!--<el-table :data="tableData" style="width: 100%">-->
             <el-table-column prop="gear" label="装备"></el-table-column>
             <el-table-column prop="auctioneer" label="拍卖师"></el-table-column>
             <el-table-column prop="highestBid" width="100" label="最高出分"></el-table-column>
@@ -241,7 +241,6 @@
           this.itemList = res.data;
         }),
         auctionHistoryList:[],
-        //test
       }
     },
 
@@ -264,6 +263,9 @@
         // if (this.$hasPermission('item:query')) {
         this.$router.push({name: 'itemDetail', params: {itemId: itemId}});
         // }
+      },
+      gotoAuction:function () {
+        this.$router.push("/auction")
       }
     },
 
