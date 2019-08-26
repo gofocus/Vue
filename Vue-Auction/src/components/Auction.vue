@@ -1,7 +1,7 @@
 <template>
   <el-container>
     <el-header></el-header>
-    <button @click="alert('test')">123</button>
+    <button v-on:click="alert('straight')">straight</button>
     <el-main>
       <!--TODO 中间显示剩余秒，倒计时结束显示拍卖结束-->
       <el-progress type="circle" :percentage="percentage"></el-progress>
@@ -159,6 +159,9 @@
 
     },
     methods: {
+      test:function(){
+        alert("method");
+      },
       bid: function () {
 
       },

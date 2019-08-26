@@ -1,34 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- 生产环境版本，优化了尺寸和速度 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
+<div id="app">
+    <button v-on:click="alert('123')">button</button>
 
-<ul id="ccc">
-    <li>aaa</li>
-    <li>ddd</li>
-    <li>ccc</li>
-    <button onclick="f()">123</button>
-</ul>
+</div>
+
 </body>
 <script>
-
-    // var ul = document.getElementById('ccc');
-    var ul = document.querySelectorAll('#ccc')[0];
-    // var ul = document.querySelectorAll('li');
-    console.log(ul);
-
-    var elementsByTagName = document.getElementsByTagName('ul')[0];
-
-    function f() {
-        for (var i = 0; i < 3; i++) {
-            elementsByTagName.appendChild(document.createElement("li"));
+    new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!'
         }
-        console.log(ul);
-    }
-
+    })
 </script>
 </html>
