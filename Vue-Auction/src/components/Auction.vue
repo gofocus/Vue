@@ -1,7 +1,6 @@
 <template>
   <el-container>
     <el-header></el-header>
-    <button v-on:click="alert('straight')">straight</button>
     <el-main>
       <!--TODO 中间显示剩余秒，倒计时结束显示拍卖结束-->
       <el-progress type="circle" :percentage="percentage"></el-progress>
@@ -28,15 +27,17 @@
           </el-table>
           <p>我的出分：</p>
 
+
           <el-form>
             <el-form-item>
               <el-input placeholder="输入分数" size="medium" style="width: 100px;" v-model="form.bid_point"></el-input>
+              <input type="hidden" :value="form.userId">
+
             </el-form-item>
             <el-form-item>
               <el-button type="primary" @click="onSubmit">出分</el-button>
               <el-button>取消</el-button>
             </el-form-item>
-            <el-input class="user_id" type="hidden" v-model="form.user_id"></el-input>
           </el-form>
 
         </el-tab-pane>
@@ -128,8 +129,8 @@
         }],
         form:{
           // auction_id: '',
-          user_id: '',
-          bid_point: '',
+          userId: '0',
+          bid_point: '10',
         },
         newAuction:{
           gear: '风剑',
@@ -154,13 +155,13 @@
         this.auctionHistoryList = res.data;
       });
       this.$axios.post("/api/user/currentUser").then(res => {
-        this.form.user_id = res.data.userid;
+        this.form.userId = res.data.userid;
       });
 
     },
     methods: {
-      test:function(){
-        alert("method");
+      test(val){
+        alert(val);
       },
       bid: function () {
 

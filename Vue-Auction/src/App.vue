@@ -2,11 +2,12 @@
   <div id="app">
 
     <el-container class="el-container myNav">
+      <input type="button" value="test">
+
       <el-main>
         <nav-bar/>
       </el-main>
     </el-container>
-
     <!--<router-view name="home"></router-view>-->
     <transition name="fade">
       <router-view></router-view>
